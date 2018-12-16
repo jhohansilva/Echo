@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+.material-icons {
+    font-family: 'Material Icons'!important;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-12 { font-size: 12px; }
+.material-icons.md-14 { font-size: 14px; }
+.material-icons.md-16 { font-size: 16px; }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-22 { font-size: 20px; }
+.material-icons.md-22 { font-size: 22px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+
+html,body{
+    margin: 0 auto;
+    padding: 0 ;
+    background: transparent;
+    font-size: 100%;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    // font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+body,
+div,
+main,
+ul,
+li,
+i,
+input,p {
+  text-rendering: optimizeLegibility !important;
+}
+
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+header{
+    background: linear-gradient(#005eea, #003e98);
+    width: 100%;
+    height: 70%;
+    
+    #nav-wall{
+        background-image: url(../images/prosoft_edificio_v5.png);
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: 59%;
+        background-position: 100% -19%;
+        /* background-size: cover; */
+        background-attachment: fixed;
+    }
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a,i.material-icons{
+    display:inline-block;
+    vertical-align: middle;
+}
+
+nav{
+    width: 100%;
+    margin: 0 auto;
+    background: #005be2;
+    position:fixed;
+    top: 0;
+    z-index: 999;
+
+    #sub-nav{
+        margin: 0 auto;
+        width: 70%;        
+        padding:15px 5px;
+    }
+
+    #logo{
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        display:inline-block;
+        vertical-align: middle;
+    }
+
+    #menu{        
+        display:inline-block;
+        vertical-align: middle;                
+        float: right;
+    }
+}
+
+ul#menu-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: none;
+
+    li{
+        display: inline-block;
+        // color: #FFF;
+        color: rgba(255,255,255,0.8);
+        font-weight: 500;
+        margin-right: 5px;
+        text-transform: uppercase;
+        font-size: 14px;
+        cursor: pointer;
+        padding: 8px 15px;
+        border-radius: 2px;
+        transition: all 0.3s ease;        
+    }
+
+    li:hover{
+        background: rgba(255,255,255,0.1);        
+        color: #FFF;
+    }
+
+    .row-right::before{
+        content: ' ';
+        position: relative;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+ul.sub-menu-list{
+    list-style:none;
+    position: absolute;
+    padding: 1px 0;
+    margin-top: 10px;
+    margin-left:-15px;
+    border-radius: 2px;
+    background: #fff;
+    box-shadow:0 0 15px 0 rgba(0, 0, 0, 0.1);
+    display: none;
+
+    li{
+        color: #333!important;
+        display: list-item!important;
+        text-transform: none!important;        
+        padding: 12px 15px!important;
+        margin: 0 !important;
+        border-radius: 0!important;
+        font-weight: 400!important;        
+    }
+
+    li:hover{
+        background: #f1f1f1!important;        
+    }
+}
+
+#sub-header{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;    
+
+    .header-title{
+        p{
+            color: #FFF;
+            font-size: 70px;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-align: right;
+            line-height: 0.8;
+            margin: 0;           
+             font-family: 'Roboto', sans-serif; 
+            // font-family: 'Open Sans', sans-serif;
+        }
+
+        font-size: 24px;
+        color: rgba(255,255,255,0.8);
+        // color: #FFF;
+        width: 46%;
+        font-weight: 600;        
+        font-family: 'Open Sans', sans-serif;
+        // font-family: 'Roboto', sans-serif;    
+        letter-spacing: -1px;
+    }
+}
+
+#info-main{
+    width: 100%;
+    height: 30%;
+}
+
+#sub-info-main{
+    background: #FFF;
+    margin: 0 auto;
+    width: 70%;
+    height: 100%;
+    margin-top: -50px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px -1px 50px 0px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+
+    .box-grid{
+        text-align: center;        
+        background: aliceblue;
+        margin: 25px;
+    }
+}
+
+.w3-animate-top{position:relative;animation:animatetop 0.8s}@keyframes animatetop{from{top:-600px;opacity:0} to{top:0;opacity:1}}
