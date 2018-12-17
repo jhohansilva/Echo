@@ -328,7 +328,7 @@ ul.sub-menu-list li:hover {
 .box-grid {
   text-align: center;
   margin: 15px;
-  box-shadow: 0 23px 51px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
   background: #FFF;
   padding: 15px;
   border-radius: 2px;
@@ -408,16 +408,19 @@ ul.sub-menu-list li:hover {
   vertical-align: middle;
 }
 #producto-estandar #title {
-  font-size: 48px;
+  font-size: 60px;
   font-family: "Colfax Bold";
   position: relative;
-  width: 35%;
+  width: 25%;
   text-transform: uppercase;
   text-align: right;
   margin-right: 30px;
+  color: #084db0;
+  line-height: 1.1;
+  letter-spacing: 2.5px;
 }
 #producto-estandar #modulos-estandar {
-  width: 60%;
+  width: 70%;
 }
 #producto-estandar #modulos-estandar .grid {
   display: grid;
@@ -429,9 +432,51 @@ ul.sub-menu-list li:hover {
   margin: 10px;
   border-radius: 3px;
   box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 300ms;
 }
 #producto-estandar #modulos-estandar .modulo .title-modulo {
   font-family: "Colfax Medium";
+  font-size: 18px;
+}
+#producto-estandar #modulos-estandar .modulo .content-modulo {
+  padding: 10px 5px 2px 5px;
+}
+#producto-estandar #modulos-estandar .modulo .item {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  margin-bottom: 8px;
+  font-family: "Open sans", sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  font-size: 16px;
+}
+#producto-estandar #modulos-estandar .modulo:hover {
+  transform: scale(1.01);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px -1px 50px 0px;
+}
+
+.check {
+  width: 20px;
+  height: 20px;
+  background: #38c101;
+  border-radius: 100%;
+  position: relative;
+}
+.check::before {
+  content: "";
+  background-color: transparent;
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  width: 3px;
+  border-bottom: 2.5px solid #fff;
+  height: 8px;
+  border-right: 2.5px solid #fff;
+  transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 
 .w3-animate-top {
