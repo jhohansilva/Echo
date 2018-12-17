@@ -1,49 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
-.material-icons {
-    font-family: 'Material Icons'!important;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
-
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
-
-    /* Support for IE. */
-    font-feature-settings: 'liga';
-}
-
-/* Rules for sizing the icon. */
-.material-icons.md-12 { font-size: 12px; }
-.material-icons.md-14 { font-size: 14px; }
-.material-icons.md-16 { font-size: 16px; }
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-22 { font-size: 20px; }
-.material-icons.md-22 { font-size: 22px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
-
-/* Rules for using icons as black on a light background. */
-.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
-.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
-
-/* Rules for using icons as white on a dark background. */
-.material-icons.md-light { color: rgba(255, 255, 255, 1); }
-.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
-
+@import 'fonts';
 
 html,body{
     margin: 0 auto;
@@ -54,7 +11,11 @@ html,body{
     width: 100%;
     height: 100%;
     // font-family: 'Open Sans', sans-serif;
-    font-family: 'Roboto', sans-serif;
+    // font-family: 'Roboto', sans-serif;
+    font-family:'Colfax Regular';
+    -webkit-font-smoothing: antialiased; 
+    color: #2F465F;
+
 }
 
 body,
@@ -72,17 +33,21 @@ html {
   }
 
 header{
-    background: linear-gradient(#005eea, #003e98);
+    background: linear-gradient(#005eea, #094cad);
     width: 100%;
-    height: 70%;
+    height: 72%;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-bottom: 1px solid #efefef;
     
     #nav-wall{
-        background-image: url(../images/prosoft_edificio_v5.png);
+        background-image: url(../images/prosoft_edificio_v2.png);
         width: 100%;
         height: 100%;
         background-repeat: no-repeat;
         background-size: 59%;
-        background-position: 100% -19%;
+        background-position:92% -19%;
         /* background-size: cover; */
         background-attachment: fixed;
     }
@@ -103,7 +68,7 @@ a,i.material-icons{
 nav{
     width: 100%;
     margin: 0 auto;
-    background: #005be2;
+    background: transparent;
     position:fixed;
     top: 0;
     z-index: 999;
@@ -115,7 +80,7 @@ nav{
     }
 
     #logo{
-        color: #fff;
+        color: #222;
         font-size: 1.5rem;
         font-weight: bolder;
         display:inline-block;
@@ -124,12 +89,12 @@ nav{
 
     #menu{        
         display:inline-block;
-        vertical-align: middle;                
-        float: right;
+        vertical-align: middle;                        
+        margin-left: 50px;
     }
 }
 
-ul#menu-list{
+ul.menu-list{
     margin: 0;
     padding: 0;
     list-style: none;
@@ -137,21 +102,18 @@ ul#menu-list{
 
     li{
         display: inline-block;
-        // color: #FFF;
-        color: rgba(255,255,255,0.8);
-        font-weight: 500;
-        margin-right: 5px;
+        color: #2F465F;        
+        font-weight: 500;        
         text-transform: uppercase;
         font-size: 14px;
         cursor: pointer;
         padding: 8px 15px;
         border-radius: 2px;
-        transition: all 0.3s ease;        
+        transition: all 0.3s ease;                
     }
 
     li:hover{
-        background: rgba(255,255,255,0.1);        
-        color: #FFF;
+        background:#38526f17;    
     }
 
     .row-right::before{
@@ -194,27 +156,23 @@ ul.sub-menu-list{
     align-items: center;
     width: 70%;
     margin: 0 auto;    
+    color: #2F465F;
 
     .header-title{
         p{
-            color: #FFF;
             font-size: 70px;
-            font-weight: 900;
-            text-transform: uppercase;
+            font-weight: 700;
+            // text-transform: uppercase;
             text-align: right;
             line-height: 0.8;
-            margin: 0;           
-             font-family: 'Roboto', sans-serif; 
-            // font-family: 'Open Sans', sans-serif;
+            margin: 0;            
+            font-family:'Colfax Medium';
+            font-weight:normal;       
+            color: #0554c8;                
         }
 
-        font-size: 24px;
-        color: rgba(255,255,255,0.8);
-        // color: #FFF;
-        width: 46%;
-        font-weight: 600;        
-        font-family: 'Open Sans', sans-serif;
-        // font-family: 'Roboto', sans-serif;    
+        font-size: 24px;        
+        width: 44%;        
         letter-spacing: -1px;
     }
 }
@@ -224,21 +182,137 @@ ul.sub-menu-list{
     height: 30%;
 }
 
-#sub-info-main{
-    background: #FFF;
+#sub-info-main{    
     margin: 0 auto;
-    width: 70%;
+    width: 80%;
     height: 100%;
     margin-top: -50px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px -1px 50px 0px;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
+     
+}
 
-    .box-grid{
-        text-align: center;        
+.box-grid{
+    text-align: center;        
+    margin: 15px;    
+    // box-shadow: rgba(0, 0, 0, 0.15) 0px -1px 50px 0px;
+    box-shadow: 0 23px 51px rgba(0,0,0,.08);
+    background: #FFF;       
+    padding: 15px;
+    border-radius: 2px;
+    transition: all 300ms;      
+    position: relative;    
+
+    .image-info{
         background: aliceblue;
-        margin: 25px;
+        width: 120px;
+        height: 120px;
+        border-radius: 150%;
+        margin: 0 auto;
+        line-height: 183px;
+
+        img{
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    .title-info{        
+        font-family: "Colfax Bold";
+        font-weight: normal;
+        letter-spacing: .5px;
+        font-size: 1.3rem;
+        padding: 10px 0;
+        text-transform: uppercase;
+        color: #084db0;
+    }
+
+    .descrip-info{
+        text-align: center;
+        font-family: 'Open sans', sans-serif;
+        letter-spacing: .3px;        
     }
 }
+
+.box-grid:hover{    
+    // top: -15px;  
+    transform: scale(1.03);    
+}
+
+.section-products{
+    margin-top: 50px;
+    padding: 50px 0;    
+    background: #F5F5F5;
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    font-size:22px;
+    font-family: 'Open sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: -.2px;       
+
+    p{
+        width: 70%;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+.section-products::after{
+    content: "";
+    position: absolute;
+    background: url(../images/wall-section-points.png) top right / auto 1000px no-repeat transparent;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0.75;
+}
+
+#producto-estandar{
+    width: 70%;
+    height: auto;
+    margin: 0 auto;    
+    padding: 50px 0;
+
+    #title,#modulos-estandar{
+        display:inline-block;
+        vertical-align: middle;
+    }
+
+    #title{
+        font-size:48px;
+        font-family:'Colfax Bold';
+        position: relative;   
+        width:35%;     
+        text-transform: uppercase;
+        text-align: right;
+        margin-right: 30px;  
+    }
+
+    #modulos-estandar{
+        width:60%;
+
+        .grid{
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }        
+
+        .modulo{
+            background: #FFF;
+            padding: 15px;            
+            margin: 10px;
+            border-radius: 3px;
+            box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.08);
+
+            .title-modulo{
+                font-family:'Colfax Medium';
+            }
+        }
+    }
+}
+
 
 .w3-animate-top{position:relative;animation:animatetop 0.8s}@keyframes animatetop{from{top:-600px;opacity:0} to{top:0;opacity:1}}
