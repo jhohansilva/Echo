@@ -12,6 +12,13 @@ $(function () {
     });
 });
 
+$(function () {
+    $(document).on('click', '[data-scroll]', function (event) {
+        var elemento = $(this).data().scroll;
+        console.log(elemento)
+    });
+});
+
 function cerrarToolTip(controlador, contenedor) {
     $('html').click(function (e) {
         var container = $(contenedor);

@@ -22,7 +22,7 @@
                         <a>Productos</a>
                         <i class="material-icons md-16">expand_more</i>
                         <ul class="sub-menu-list" data-nav='sub-nav-productos-box'>
-                            <li>Paquete estándar</li>
+                            <li data-scroll="estandar">Paquete estándar</li>
                             <li>Sector salud</li>
                             <li>Sector publico</li>
                         </ul>
@@ -99,7 +99,7 @@
             confiable.
         </p>
     </div>
-    <div id="producto-estandar">
+    <div id="producto-estandar" data-scroll-producto="estandar">
         <div id="title">Paquete estándar</div>
         <div id="modulos-estandar">
             <div class="grid">
@@ -180,11 +180,55 @@
     </div>
     <div class="section-products" style="margin: 0 auto;">
         <p>
-            Además del paquete estándar, en <b>Prosoft</b> contamos con versiones especializadas, que se adaptan a los diferentes sectores del mercado.
+            Además del paquete estándar, en <b>Prosoft</b> contamos con versiones especializadas, que se adaptan a los
+            diferentes sectores del mercado.
         </p>
     </div>
-    <div id="productos-especializados">
-
+    <div id="productos-especializados" data-parallax="scroll" data-image-src="./images/salud_wall.jpg">
+        <div class="mid-modulo">
+            <div class="titulo-modulo">Sector salud</div>
+            <div class="secciones">
+                <div class="seccion-left">
+                    <div class="content-modulo">
+                        <div class="item">
+                            <div class="check"></div>
+                            <div class="item-list">La facturación esta en línea con inventarios (realiza la
+                                reposición), contabilidad y cartera (clientes y médicos).</div>
+                        </div>
+                        <div class="item">
+                            <div class="check"></div>
+                            <div class="item-list">Cumple con los requerimientos del Ministerio de Salud para el
+                                registro individual de atención en salud "RIPS", tanto en la captura como la entrega de
+                                información de medios magnéticos, información estadistica de morbilidad, por médico,
+                                cliente y servicio en otros.</div>
+                        </div>
+                        <div class="item">
+                            <div class="check"></div>
+                            <div class="item-list">Por cada servicio prestado se elabora un comprobante de venta,
+                                los que se agrupan en una factura que los resume, esta factura puede ser de
+                                contado, ambulatorio o pensionado (hospitalizados).</div>
+                        </div>
+                        <div class="item">
+                            <div class="check"></div>
+                            <div class="item-list">Mediante el menú de cartera podemos listar los saldos de la cartera
+                                de clientes y médicos, expedir la carta de extemporaneidad de Glosas y actualizar las
+                                novedades de la cartera.</div>
+                        </div>
+                        <button style="float:right;font-size: 14px;">Leer más</button>
+                    </div>
+                </div>
+                <div class="seccion-right">
+                    <div class="sub-modulo">Historias clinicas</div>
+                    <div class="sub-modulo">AIEPI</div>
+                    <div class="sub-modulo">Laboratorio e imagenología</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sector-publico">
+        <div class="mid">
+            <div class="title">Sector público</div>
+        </div>
     </div>
     <main style="height: 1200px;"></main>
 </body>
@@ -194,4 +238,5 @@
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui.js"></script>
 <script src="https://unpkg.com/eva-icons"></script>
+<script type="text/javascript" src="js/parallax.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
