@@ -208,6 +208,10 @@ body {
   color: #2f465f;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 body,
 div,
 main,
@@ -426,23 +430,39 @@ ul.sub-menu-list li:hover {
   transform: translate3d(0, -5px, 0);
 }
 
-.section-products {
+.section-products, .section-products2 {
   margin-top: 50px;
-  padding: 50px 0;
-  background: #f5f5f5;
+  padding: 70px 0;
+  background: #222;
+  color: #FFF;
   width: 100%;
   height: auto;
   position: relative;
   text-align: center;
-  font-size: 22px;
-  font-family: "Open sans", sans-serif;
+  font-size: 30px;
   font-weight: 500;
   letter-spacing: -0.2px;
+  font-family: "Colfax Light";
 }
-.section-products p {
+.section-products p, .section-products2 p {
   width: 70%;
   text-align: center;
   margin: 0 auto;
+}
+
+.section-products::before {
+  content: "";
+  background: #FFF;
+  width: 102%;
+  height: 32%;
+  position: absolute;
+  left: 0;
+  bottom: -27%;
+  -webkit-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  -webkit-transform-origin: 3% 0;
+  transform-origin: 3% 0;
+  z-index: 999;
 }
 
 .section-products::after {
@@ -458,15 +478,40 @@ ul.sub-menu-list li:hover {
 }
 
 #producto-estandar {
-  width: 70%;
+  width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 100px 0;
+  position: relative;
+  padding-bottom: 100px;
+  padding-top: 80px;
+}
+#producto-estandar::before {
+  content: "";
+  background: #222;
+  width: 102%;
+  height: 32%;
+  position: absolute;
+  left: -10px;
+  bottom: -9%;
+  -webkit-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  -webkit-transform-origin: 3% 0;
+  transform-origin: 3% 0;
+  z-index: 0;
+}
+#producto-estandar .mid {
+  margin: 0 auto;
+  width: 70%;
+  padding: 100px 50px;
+  box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.06);
+  position: relative;
+  background: #FFF;
 }
 #producto-estandar #title,
 #producto-estandar #modulos-estandar {
   display: inline-block;
   vertical-align: middle;
+  position: relative;
 }
 #producto-estandar #title {
   font-size: 60px;
@@ -515,6 +560,7 @@ ul.sub-menu-list li:hover {
   vertical-align: middle;
   width: 100%;
   padding: 10px 0;
+  color: #222;
 }
 #producto-estandar #modulos-estandar .modulo:hover {
   box-shadow: rgba(0, 0, 0, 0.15) 0px -1px 50px 0px;
@@ -576,81 +622,86 @@ ul.sub-menu-list li:hover {
 }
 #productos-especializados {
   max-width: 100%;
-  height: auto;
+  height: 60%;
   position: relative;
   margin: 0 auto;
-  background-size: 100% 100%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
-#productos-especializados::before {
+#productos-especializados .modulo-salud {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background: url(../images/salud_wall.jpg);
+  background-size: 140% 100%;
+  background-repeat: no-repeat;
+  background-position: 84%;
+  position: relative;
+}
+#productos-especializados .modulo-salud::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   opacity: 0.8;
-  background: linear-gradient(to bottom right, #07234a 0%, #1771f1 100%);
+  background: linear-gradient(to bottom right, #00398e 0%, #0782c1 100%);
 }
-#productos-especializados .mid-modulo {
-  width: 70%;
-  height: auto;
-  margin: 0 auto;
-  padding: 100px 0;
-  position: relative;
+#productos-especializados .modulo-salud .mid {
+  height: 80%;
 }
-#productos-especializados .mid-modulo .titulo-modulo {
+#productos-especializados .modulo-salud .foot {
   color: #FFF;
-  font-size: 90px;
-  font-family: "Colfax Bold";
-  text-transform: uppercase;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 60px;
-}
-#productos-especializados .mid-modulo .secciones {
-  width: 100%;
-  margin: 0 auto;
-}
-#productos-especializados .mid-modulo .seccion-left, #productos-especializados .mid-modulo .seccion-right {
-  display: inline-block;
-  vertical-align: middle;
-  width: 46%;
-  margin: 0 auto;
-}
-#productos-especializados .mid-modulo .seccion-left {
-  margin-right: 15px;
-  padding: 25px;
-  background: #FFF;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-#productos-especializados .mid-modulo .seccion-right .sub-modulo {
-  background: #4ECDC4;
-  width: 100%;
-  height: auto;
-  margin: 15px 0;
-  color: #FFF;
-  font-size: 22px;
-  padding: 30px 20px;
+  height: 20%;
   font-family: "Colfax Bold";
   font-weight: normal;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.5px;
+  font-size: 3rem;
+  position: relative;
   text-transform: uppercase;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: all 300ms;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
 }
-#productos-especializados .mid-modulo .seccion-right .sub-modulo:hover {
-  padding: 30px 30px;
+#productos-especializados .modulo-publico {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(to top left, #e5cdb0, #b5ccdc);
+  position: relative;
+}
+#productos-especializados .modulo-publico .mid {
+  height: 80%;
+}
+#productos-especializados .modulo-publico .foot {
+  color: #222;
+  height: 20%;
+  font-family: "Colfax Bold";
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  font-size: 3rem;
+  position: relative;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
 }
 
-#sector-publico {
+#otros-sectores {
   max-width: 100%;
   height: 80%;
-  background: #F4F6FC;
+  background: url(../images/packs-hero-bg.svg);
+  background-size: 100%;
+  background-color: #F4F6FC;
+  background-repeat: no-repeat;
+  background-position: 141% 170%;
   position: relative;
   overflow: hidden;
 }
-#sector-publico::before {
+#otros-sectores::before {
   content: "";
   background: #ebecf1;
   width: 100%;
@@ -662,7 +713,7 @@ ul.sub-menu-list li:hover {
   -webkit-transform-origin: 3% 0;
   transform-origin: 3% 0;
 }
-#sector-publico::after {
+#otros-sectores::after {
   content: "";
   background: #FFF;
   width: 100%;
@@ -674,16 +725,21 @@ ul.sub-menu-list li:hover {
   -webkit-transform-origin: 3% 0;
   transform-origin: 3% 0;
 }
-#sector-publico .mid {
+#otros-sectores .mid {
   width: 70%;
   margin: 0 auto;
-  height: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
 }
-#sector-publico .mid .title {
-  font-size: 60px;
-  color: #083D77;
-  font-family: "Colfax Regular";
-  text-transform: uppercase;
+#otros-sectores .mid .tabla-sectores {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 33.333% 33.333% 33.333%;
+}
+#otros-sectores .mid .tabla-sectores .sector {
+  padding: 15px;
+  margin: 50px;
 }
 
 button {
