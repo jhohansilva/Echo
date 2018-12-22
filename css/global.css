@@ -237,7 +237,7 @@ header {
   border-bottom: 1px solid #efefef;
 }
 header #nav-wall {
-  background-image: url(../images/prosoft_edificio_v2.png);
+  background-image: url(../images/prosoft_edificio_v3.png);
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
@@ -360,7 +360,6 @@ ul.sub-menu-list li:hover {
   width: 44%;
   letter-spacing: -1px;
   font-family: "Open sans", sans-serif;
-  letter-spacing: 0.5px;
 }
 #sub-header .header-title p {
   font-size: 70px;
@@ -450,21 +449,6 @@ ul.sub-menu-list li:hover {
   margin: 0 auto;
 }
 
-.section-products::before {
-  content: "";
-  background: #FFF;
-  width: 102%;
-  height: 32%;
-  position: absolute;
-  left: 0;
-  bottom: -27%;
-  -webkit-transform: rotate(-2deg);
-  transform: rotate(-2deg);
-  -webkit-transform-origin: 3% 0;
-  transform-origin: 3% 0;
-  z-index: 999;
-}
-
 .section-products::after {
   content: "";
   position: absolute;
@@ -489,12 +473,12 @@ ul.sub-menu-list li:hover {
   content: "";
   background: #222;
   width: 102%;
-  height: 32%;
+  height: 42%;
   position: absolute;
-  left: -10px;
-  bottom: -9%;
-  -webkit-transform: rotate(-2deg);
-  transform: rotate(-2deg);
+  left: -16px;
+  bottom: -20%;
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
   -webkit-transform-origin: 3% 0;
   transform-origin: 3% 0;
   z-index: 0;
@@ -503,7 +487,7 @@ ul.sub-menu-list li:hover {
   margin: 0 auto;
   width: 70%;
   padding: 100px 50px;
-  box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.1);
   position: relative;
   background: #FFF;
 }
@@ -670,8 +654,21 @@ ul.sub-menu-list li:hover {
   height: 100%;
   margin: 0 auto;
   text-align: center;
-  background: linear-gradient(to top left, #e5cdb0, #b5ccdc);
+  background: url(../images/publico_wall.jpg);
+  background-size: 149% 100%;
+  background-repeat: no-repeat;
+  background-position: 18%;
   position: relative;
+}
+#productos-especializados .modulo-publico::before {
+  content: "";
+  position: absolute;
+  width: 101%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  background: linear-gradient(to top left, #e5cdb0, #b5ccdc);
 }
 #productos-especializados .modulo-publico .mid {
   height: 80%;
@@ -692,7 +689,7 @@ ul.sub-menu-list li:hover {
 
 #otros-sectores {
   max-width: 100%;
-  height: 80%;
+  height: auto;
   background: url(../images/packs-hero-bg.svg);
   background-size: 100%;
   background-color: #F4F6FC;
@@ -728,9 +725,11 @@ ul.sub-menu-list li:hover {
 #otros-sectores .mid {
   width: 70%;
   margin: 0 auto;
-  height: 80%;
+  height: 100%;
   display: flex;
   align-items: center;
+  margin-bottom: 12%;
+  margin-top: 50px;
 }
 #otros-sectores .mid .tabla-sectores {
   width: 100%;
@@ -738,8 +737,73 @@ ul.sub-menu-list li:hover {
   grid-template-columns: 33.333% 33.333% 33.333%;
 }
 #otros-sectores .mid .tabla-sectores .sector {
-  padding: 15px;
+  background: #FFF;
+  padding: 15px 15px 0 15px;
   margin: 50px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 300ms;
+  text-align: center;
+}
+#otros-sectores .mid .tabla-sectores .sector button {
+  margin-bottom: 15px !important;
+  border: none !important;
+}
+#otros-sectores .mid .tabla-sectores .sector .title {
+  padding: 0px 0px 15px 0;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Open sans", sans-serif !important;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+#otros-sectores .mid .tabla-sectores .sector .img {
+  height: 120px;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 3px 3px 0px 0px;
+  box-shadow: -3px 0px 12px 0px rgba(0, 0, 0, 0.1), 3px 0px 12px 0px rgba(0, 0, 0, 0.1);
+}
+#otros-sectores .mid .tabla-sectores .sector .servicios-publicos {
+  background: url(https://www.ambitojuridico.com/sites/default/files/facturas-servicios-luz-02jose-patino.jpg);
+  background-size: 100% auto;
+  background-position: center;
+}
+#otros-sectores .mid .tabla-sectores .sector .bares-restaurantes {
+  background: url(https://www.envista.es/wp-content/uploads/2017/01/fotografia-instalaciones-bares-restaurantes-asturias-001.jpg);
+  background-size: 100% auto;
+  background-position: center;
+}
+#otros-sectores .mid .tabla-sectores .sector .molinos {
+  background: url(https://st2.depositphotos.com/3203643/6160/i/950/depositphotos_61605219-stock-photo-plant-rice-mill.jpg);
+  background-size: 100% auto;
+  background-position: center;
+}
+#otros-sectores .mid .tabla-sectores .sector .hoteleria {
+  background: url(http://www.gediscovery.edu.pe/blog/wp-content/uploads/2017/02/cinco-razones-turismo-hoteleria-3.jpg);
+  background-size: 100% auto;
+  background-position: center;
+}
+#otros-sectores .mid .tabla-sectores .sector .estaciones-servicio {
+  background: url(http://markin.com.co/m/wp-content/uploads/2018/06/Venta-de-Estacion-de-Servicio-en-Cali-Estaciones-de-Servicio-en-Colombia-5.jpg);
+  background-size: 100% auto;
+  background-position: bottom;
+}
+#otros-sectores .mid .tabla-sectores .sector .industrial {
+  background: url(https://s.yimg.com/ny/api/res/1.2/kGTeNGAL03L6cLaiD4sK9A--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9NjIwO2g9NDEz/http://media.zenfs.com/en-US/homerun/zacks.com/992ea53b2628c14eec64474bc1ef965e);
+  background-size: 100% auto;
+  background-position: center;
+}
+#otros-sectores .mid .tabla-sectores .sector:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px -1px 50px 0px;
+}
+#otros-sectores .mid .tabla-sectores .sector:hover button {
+  background: #084db0;
+  color: #fff;
+  transition: all 0.3s ease;
 }
 
 button {
