@@ -16,10 +16,12 @@ body {
   // font-family: 'Roboto', sans-serif;
   font-family: "Colfax Regular";
   -webkit-font-smoothing: antialiased;
-  color: #2f465f;  
+  color: #2f465f;
 }
 
-body{overflow-x:hidden;}
+body {
+  overflow-x: hidden;
+}
 
 body,
 div,
@@ -257,15 +259,16 @@ ul.sub-menu-list {
 .box-grid:hover {
   // top: -15px;
   // transform: scale(1.03);
-  transform: translate3d(0,-5px,0);
+  transform: translate3d(0, -5px, 0);
   // box-shadow: rgba(0, 0, 0, 0.15) 0px -1px 50px 0px;
 }
 
-.section-products,.section-products2 {
+.section-products,
+.section-products2 {
   margin-top: 50px;
   padding: 70px 0;
   background: #222;
-  color: #FFF;
+  color: #fff;
   width: 100%;
   height: auto;
   position: relative;
@@ -274,7 +277,7 @@ ul.sub-menu-list {
   // font-family: "Open sans", sans-serif;
   font-weight: 500;
   letter-spacing: -0.2px;
-  font-family: 'Colfax Light';
+  font-family: "Colfax Light";
 
   p {
     width: 70%;
@@ -297,7 +300,6 @@ ul.sub-menu-list {
 //   transform-origin: 3% 0;
 //   z-index: 999;
 // }
-
 
 .section-products::after {
   content: "";
@@ -335,7 +337,7 @@ ul.sub-menu-list {
   padding-bottom: 100px;
   padding-top: 80px;
 
-  &::before{
+  &::before {
     content: "";
     background: #222;
     width: 102%;
@@ -346,17 +348,17 @@ ul.sub-menu-list {
     -webkit-transform: rotate(-5deg);
     transform: rotate(-5deg);
     -webkit-transform-origin: 3% 0;
-    transform-origin: 3% 0; 
+    transform-origin: 3% 0;
     z-index: 0;
   }
 
-  .mid{
+  .mid {
     margin: 0 auto;
     width: 70%;
     padding: 100px 50px;
-    box-shadow: 0 17px 17px 0 rgba(0,0,0,.1);
-    position:relative;
-    background: #FFF;
+    box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+    background: #fff;
   }
 
   #title,
@@ -419,10 +421,9 @@ ul.sub-menu-list {
         vertical-align: middle;
         width: 100%;
         padding: 10px 0;
-        color:#222;
+        color: #222;
       }
 
-    
       &:hover {
         // transform: scale(1.01);
         box-shadow: rgba(0, 0, 0, 0.15) 0px -1px 50px 0px;
@@ -431,7 +432,7 @@ ul.sub-menu-list {
       &:hover button {
         background: #084db0;
         color: #fff;
-        transition: all 0.3s ease;        
+        transition: all 0.3s ease;
       }
     }
   }
@@ -450,7 +451,6 @@ ul.sub-menu-list {
   letter-spacing: -0.2px;
   font-size: 16px;
 }
-
 
 .check {
   width: 20px;
@@ -492,116 +492,119 @@ ul.sub-menu-list {
   }
 }
 
+#productos-especializados {
+  // background: linear-gradient(to bottom right, #084db0 0%, #084db0 100%);
+  // background: url(../images/salud_wall.jpg);
+  max-width: 100%;
+  height: 60%;
+  position: relative;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
 
-#productos-especializados{    
-    // background: linear-gradient(to bottom right, #084db0 0%, #084db0 100%);
-    // background: url(../images/salud_wall.jpg);
-    max-width: 100%;
-    height: 60%;
+  .modulo-salud {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background: url(../images/salud_wall.jpg);
+    background-size: 140% 101%;
+    background-repeat: no-repeat;
+    background-position: 84%;
     position: relative;
-    margin: 0 auto;    
-    display: grid;
-    grid-template-columns: 50% 50%;    
-    
-    .modulo-salud{
-      width: 100%;
-      height: 100%;      
-      margin: 0 auto;
-      text-align: center;
-      background: url(../images/salud_wall.jpg);
-      background-size: 140% 100%;      
-      background-repeat: no-repeat;
-      background-position: 84%;
-      position: relative;
-      
-      &::before{
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        opacity: 0.8;
-        background:linear-gradient(to bottom right, #00398e 0%, #0782c1 100%);
-      }
 
-      .mid{
-        height: 80%;
-      }
-
-      .foot{
-        color: #FFF;
-        height: 20%;
-        font-family: "Colfax Bold";
-        font-weight: normal;
-        letter-spacing: 0.5px;
-        font-size: 3rem;
-        position: relative;
-        text-transform: uppercase;
-        display: flex;
-        align-items: center;
-        padding: 0 60px;      
-      }
-    }
-
-    .modulo-publico{
+    &::before {
+      content: "";
+      position: absolute;
       width: 100%;
       height: 100%;
-      margin: 0 auto;
-      text-align: center;
-      background: url(../images/publico_wall.jpg);
-      background-size: 149% 100%;
-      background-repeat: no-repeat;
-      background-position: 18%;
-      position: relative;
-
-      &::before{
-        content: "";
-        position: absolute;
-        width: 101%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        opacity: 0.8;
-        background: linear-gradient(to top left, rgb(229, 205, 176),rgb(181, 204, 220));
-      }
-
-      .mid{
-        height: 80%;
-      }
-
-      .foot{
-        color: #222;
-        height: 20%;
-        font-family: "Colfax Bold";
-        font-weight: normal;
-        letter-spacing: 0.5px;
-        font-size: 3rem;
-        position: relative;
-        text-transform: uppercase;
-        display: flex;
-        align-items: center;
-        padding: 0 60px;      
-      }
+      top: 0;
+      left: 0;
+      opacity: 0.8;
+      background: linear-gradient(to bottom right, #00398e 0%, #0782c1 100%);
     }
 
+    .mid {
+      height: 80%;
+    }
+
+    .foot {
+      color: #fff;
+      height: 20%;
+      font-family: "Colfax Bold";
+      font-weight: normal;
+      letter-spacing: 0.5px;
+      font-size: 3rem;
+      position: relative;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      padding: 0 60px;
+    }
+  }
+
+  .modulo-publico {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background: url(../images/publico_wall.jpg);
+    background-size: 149% 100%;
+    background-repeat: no-repeat;
+    background-position: 18%;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 101%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0.8;
+      background: linear-gradient(
+        to top left,
+        rgb(229, 205, 176),
+        rgb(181, 204, 220)
+      );
+    }
+
+    .mid {
+      height: 80%;
+    }
+
+    .foot {
+      color: #222;
+      height: 20%;
+      font-family: "Colfax Bold";
+      font-weight: normal;
+      letter-spacing: 0.5px;
+      font-size: 3rem;
+      position: relative;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      padding: 0 60px;
+    }
+  }
 }
 
-#otros-sectores{
+#otros-sectores {
   max-width: 100%;
   height: auto;
-  background: url(../images/packs-hero-bg.svg);
+  background: url(../images/packs-hero-bg.svg),
+    linear-gradient(#2e67bd, #0047af);
   background-size: 100%;
-  background-color: #F4F6FC;
+  // background-color: #F4F6FC;
   background-repeat: no-repeat;
-  background-position: 141% 170%;
+  background-position: 141% 87%;
   position: relative;
   overflow: hidden;
-  
-  &::before{
+
+  &::before {
     content: "";
-    background: #ebecf1;
-    width: 100%;
+    background: #123d7d;
+    width: 108%;
     height: 32%;
     position: absolute;
     bottom: -20%;
@@ -611,20 +614,21 @@ ul.sub-menu-list {
     transform-origin: 3% 0;
   }
 
-  &::after{
+  &::after {
     content: "";
-    background: #FFF;
-    width: 100%;
+    background: #fff;
+    width: 103%;
     height: 32%;
     position: absolute;
     bottom: -21%;
+    left: -5px;
     -webkit-transform: rotate(-2deg);
     transform: rotate(-2deg);
     -webkit-transform-origin: 3% 0;
     transform-origin: 3% 0;
   }
 
-  .mid{
+  .mid {
     width: 70%;
     margin: 0 auto;
     height: 100%;
@@ -633,90 +637,101 @@ ul.sub-menu-list {
     margin-bottom: 12%;
     margin-top: 50px;
 
-
-    .tabla-sectores{
+    .tabla-sectores {
       width: 100%;
       display: grid;
-      grid-template-columns: 33.333% 33.333% 33.333%;   
-      
-      .sector{
-        background: #FFF;
-        padding: 15px 15px 0 15px; 
+      grid-template-columns: 33.333% 33.333% 33.333%;
+
+      .sector {
+        background: #fff;
+        padding: 15px 15px 0 15px;
         margin: 50px;
         // box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
-        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         cursor: pointer;
         border-radius: 3px;
         transition: all 300ms;
-        text-align:center;
+        text-align: center;
 
-        button{
-          margin-bottom: 15px!important;
-          border: none!important;
+        button {
+          margin-bottom: 15px !important;
+          border: none !important;
         }
 
-        .title{
+        .title {
           padding: 0px 0px 15px 0;
           text-align: center;
           font-size: 18px;
-          font-family: "Open sans", sans-serif!important;
+          font-family: "Open sans", sans-serif !important;
           letter-spacing: 0.5px;
           text-transform: uppercase;
           font-weight: 600;
+          position: relative;
+
+          &::before {
+            content: "";
+            width: 30%;
+            height: 2px;
+            background: #ffc107;
+            position: absolute;
+            margin: 0 auto;
+            top: 33px;
+            left: 34%;
+          }
         }
 
-        .img{
+        .img {
           height: 120px;
           width: 80%;
           margin: 0 auto;
-          border-radius: 3px 3px 0px 0px;          
-          box-shadow: -3px 0px 12px 0px rgba(0, 0, 0, 0.1), 3px 0px 12px 0px rgba(0, 0, 0, 0.1);
+          border-radius: 3px 3px 0px 0px;
+          box-shadow: -3px 0px 12px 0px rgba(0, 0, 0, 0.1),
+            3px 0px 12px 0px rgba(0, 0, 0, 0.1);
         }
 
-        .servicios-publicos{
+        .servicios-publicos {
           background: url(https://www.ambitojuridico.com/sites/default/files/facturas-servicios-luz-02jose-patino.jpg);
           background-size: 100% auto;
           background-position: center;
         }
 
-        .bares-restaurantes{
+        .bares-restaurantes {
           background: url(https://www.envista.es/wp-content/uploads/2017/01/fotografia-instalaciones-bares-restaurantes-asturias-001.jpg);
           background-size: 100% auto;
           background-position: center;
         }
-        
-        .molinos{
+
+        .molinos {
           background: url(https://st2.depositphotos.com/3203643/6160/i/950/depositphotos_61605219-stock-photo-plant-rice-mill.jpg);
           background-size: 100% auto;
           background-position: center;
         }
 
-        .hoteleria{
+        .hoteleria {
           background: url(http://www.gediscovery.edu.pe/blog/wp-content/uploads/2017/02/cinco-razones-turismo-hoteleria-3.jpg);
           background-size: 100% auto;
           background-position: center;
         }
-        
-        .estaciones-servicio{
+
+        .estaciones-servicio {
           background: url(http://markin.com.co/m/wp-content/uploads/2018/06/Venta-de-Estacion-de-Servicio-en-Cali-Estaciones-de-Servicio-en-Colombia-5.jpg);
           background-size: 100% auto;
           background-position: bottom;
         }
 
-        .industrial{
+        .industrial {
           background: url(https://s.yimg.com/ny/api/res/1.2/kGTeNGAL03L6cLaiD4sK9A--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9NjIwO2g9NDEz/http://media.zenfs.com/en-US/homerun/zacks.com/992ea53b2628c14eec64474bc1ef965e);
           background-size: 100% auto;
           background-position: center;
-
         }
 
-        &:hover{
+        &:hover {
           // transform: translate3d(0,-5px,0);
           transform: scale(1.03);
           box-shadow: rgba(0, 0, 0, 0.15) 0px -1px 50px 0px;
         }
 
-        &:hover button{
+        &:hover button {
           background: #084db0;
           color: #fff;
           transition: all 0.3s ease;
@@ -724,6 +739,66 @@ ul.sub-menu-list {
       }
     }
   }
+}
+
+#clientes {
+  width: 100%;
+  height: 40%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -2%;
+  position: relative;
+  font-family: "Colfax Regular";
+  padding: 30px 0;
+
+  .title {
+    font-size: 40px;
+  }
+
+  .mid {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+  }
+
+  .slider {
+    .image {
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+}
+
+#trabajemos {
+  width: 70%;
+  height: auto;
+  padding: 60px;
+  background: #ffc107;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  // margin: 0 auto;
+  font-size: 40px;
+  font-family: "Colfax Medium";
+  color: #232323;
+  line-height: 35px;
+  position: relative;
+
+  // &::before {
+  //   content: " ";
+  //   background: rgba(0, 0, 0, 0.1);
+  //   height: 100px;
+  //   width: 200px;
+  //   position: absolute;
+  //   border-top-left-radius: 90px;
+  //   border-top-right-radius: 90px;
+  //   bottom: 0;
+  // }
+}
+
+#footer {
+  width: 100%;
+  background: #14191f;
+  height: 50%;
+  margin-top: -5%;
 }
 
 button {

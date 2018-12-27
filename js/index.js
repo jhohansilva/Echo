@@ -1,6 +1,12 @@
 $(document).ready(function () {
     cerrarToolTip('[data-nav~="sub-nav-productos"]', '[data-nav~="sub-nav-productos-box"]');
     cerrarToolTip('[data-nav~="sub-nav-soporte"]', '[data-nav~="sub-nav-soporte-box"]');
+    $('.slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+      });
 });
 
 $(function () {
@@ -36,5 +42,5 @@ $(function () {
     $(document).scroll(function () {
         var $nav = $("nav");
         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-      });
-  });
+    });
+});

@@ -429,11 +429,12 @@ ul.sub-menu-list li:hover {
   transform: translate3d(0, -5px, 0);
 }
 
-.section-products, .section-products2 {
+.section-products,
+.section-products2 {
   margin-top: 50px;
   padding: 70px 0;
   background: #222;
-  color: #FFF;
+  color: #fff;
   width: 100%;
   height: auto;
   position: relative;
@@ -443,7 +444,8 @@ ul.sub-menu-list li:hover {
   letter-spacing: -0.2px;
   font-family: "Colfax Light";
 }
-.section-products p, .section-products2 p {
+.section-products p,
+.section-products2 p {
   width: 70%;
   text-align: center;
   margin: 0 auto;
@@ -489,7 +491,7 @@ ul.sub-menu-list li:hover {
   padding: 100px 50px;
   box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.1);
   position: relative;
-  background: #FFF;
+  background: #fff;
 }
 #producto-estandar #title,
 #producto-estandar #modulos-estandar {
@@ -618,7 +620,7 @@ ul.sub-menu-list li:hover {
   margin: 0 auto;
   text-align: center;
   background: url(../images/salud_wall.jpg);
-  background-size: 140% 100%;
+  background-size: 140% 101%;
   background-repeat: no-repeat;
   background-position: 84%;
   position: relative;
@@ -637,7 +639,7 @@ ul.sub-menu-list li:hover {
   height: 80%;
 }
 #productos-especializados .modulo-salud .foot {
-  color: #FFF;
+  color: #fff;
   height: 20%;
   font-family: "Colfax Bold";
   font-weight: normal;
@@ -690,18 +692,17 @@ ul.sub-menu-list li:hover {
 #otros-sectores {
   max-width: 100%;
   height: auto;
-  background: url(../images/packs-hero-bg.svg);
+  background: url(../images/packs-hero-bg.svg), linear-gradient(#2e67bd, #0047af);
   background-size: 100%;
-  background-color: #F4F6FC;
   background-repeat: no-repeat;
-  background-position: 141% 170%;
+  background-position: 141% 87%;
   position: relative;
   overflow: hidden;
 }
 #otros-sectores::before {
   content: "";
-  background: #ebecf1;
-  width: 100%;
+  background: #123d7d;
+  width: 108%;
   height: 32%;
   position: absolute;
   bottom: -20%;
@@ -712,11 +713,12 @@ ul.sub-menu-list li:hover {
 }
 #otros-sectores::after {
   content: "";
-  background: #FFF;
-  width: 100%;
+  background: #fff;
+  width: 103%;
   height: 32%;
   position: absolute;
   bottom: -21%;
+  left: -5px;
   -webkit-transform: rotate(-2deg);
   transform: rotate(-2deg);
   -webkit-transform-origin: 3% 0;
@@ -737,7 +739,7 @@ ul.sub-menu-list li:hover {
   grid-template-columns: 33.333% 33.333% 33.333%;
 }
 #otros-sectores .mid .tabla-sectores .sector {
-  background: #FFF;
+  background: #fff;
   padding: 15px 15px 0 15px;
   margin: 50px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -758,6 +760,17 @@ ul.sub-menu-list li:hover {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   font-weight: 600;
+  position: relative;
+}
+#otros-sectores .mid .tabla-sectores .sector .title::before {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #ffc107;
+  position: absolute;
+  margin: 0 auto;
+  top: 33px;
+  left: 34%;
 }
 #otros-sectores .mid .tabla-sectores .sector .img {
   height: 120px;
@@ -804,6 +817,49 @@ ul.sub-menu-list li:hover {
   background: #084db0;
   color: #fff;
   transition: all 0.3s ease;
+}
+
+#clientes {
+  width: 100%;
+  height: 40%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -2%;
+  position: relative;
+  font-family: "Colfax Regular";
+  padding: 30px 0;
+}
+#clientes .title {
+  font-size: 40px;
+}
+#clientes .mid {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+#clientes .slider .image {
+  text-align: center;
+  margin: 0 auto;
+}
+
+#trabajemos {
+  width: 70%;
+  height: auto;
+  padding: 60px;
+  background: #ffc107;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  font-size: 40px;
+  font-family: "Colfax Medium";
+  color: #232323;
+  line-height: 35px;
+  position: relative;
+}
+
+#footer {
+  width: 100%;
+  background: #14191f;
+  height: 50%;
+  margin-top: -5%;
 }
 
 button {
