@@ -181,7 +181,7 @@ ul.sub-menu-list {
       font-size: 70px;
       font-weight: 700;
       // text-transform: uppercase;
-      text-align: right;
+      text-align: center;
       line-height: 0.8;
       margin: 0;
       font-family: "Colfax Bold";
@@ -265,19 +265,18 @@ ul.sub-menu-list {
 
 .section-products,
 .section-products2 {
-  margin-top: 50px;
-  padding: 70px 0;
+  margin-top: 80px;
+  padding: 40px 0;
   background: #222;
   color: #fff;
   width: 100%;
   height: auto;
   position: relative;
   text-align: center;
-  font-size: 30px;
-  // font-family: "Open sans", sans-serif;
-  font-weight: 500;
-  letter-spacing: -0.2px;
-  font-family: "Colfax Light";
+  font-size: 22px;
+  font-family: "Open sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.2px;  
 
   p {
     width: 70%;
@@ -356,7 +355,7 @@ ul.sub-menu-list {
     margin: 0 auto;
     width: 70%;
     padding: 100px 50px;
-    box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.2);
     position: relative;
     background: #fff;
   }
@@ -375,7 +374,8 @@ ul.sub-menu-list {
     width: 25%;
     text-transform: uppercase;
     text-align: right;
-    margin-right: 30px;
+    margin-left: 20px;
+    margin-right: 10px;
     color: #084db0;
     line-height: 1.1;
     letter-spacing: 2.5px;
