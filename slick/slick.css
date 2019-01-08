@@ -90,6 +90,7 @@
 {
     display: block;
     margin: 0 auto!important;
+    max-width: 80%;
 }
 .slick-slide.slick-loading img
 {

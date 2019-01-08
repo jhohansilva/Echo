@@ -1,13 +1,9 @@
 $(document).ready(function () {
     validarScroll();
+    loadBrands();
     cerrarToolTip('[data-nav~="sub-nav-productos"]', '[data-nav~="sub-nav-productos-box"]');
     cerrarToolTip('[data-nav~="sub-nav-soporte"]', '[data-nav~="sub-nav-soporte-box"]');
-    $('.slider').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 4000,
-    });
+
 });
 
 $(function () {
@@ -24,7 +20,7 @@ $(function () {
         var elemento = $(this).data().scroll;
         console.log($('[data-scroll-producto~="' + elemento + '"]').offset().top - 20)
         $('html, body').animate({
-            scrollTop:  $('[data-scroll-producto~="' + elemento + '"]').offset().top - 60
+            scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 60
         }, 1000);
     });
 });
@@ -49,4 +45,27 @@ $(function () {
 function validarScroll() {
     var $nav = $("nav");
     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+}
+
+function loadBrands() {
+    $.ajax({
+        url: './load_brands.php',
+        type: 'get',
+        contentType: 'application/json',
+        success: function (data) {
+            var obj = JSON.parse(data);
+            $.each(obj, function (index, value) {
+                $('.slider').append(
+                    '<div class="image"><img src="images/logos/' + value + '"></div>'
+                );
+            });
+
+            $('.slider').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 4000,
+            });
+        }
+    });
 }
