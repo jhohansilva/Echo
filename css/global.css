@@ -216,7 +216,7 @@ body {
   max-width: 100%;
   width: 100%;
   height: 100%;
-  font-family: "Colfax Regular";
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #2f465f;
 }
@@ -317,8 +317,8 @@ ul.menu-list {
 }
 ul.menu-list li {
   display: inline-block;
-  color: #2f465f;
-  font-weight: 500;
+  color: #999;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 14px;
   cursor: pointer;
@@ -327,7 +327,8 @@ ul.menu-list li {
   transition: all 0.3s ease;
 }
 ul.menu-list li:hover {
-  background: #38526f17;
+  background: rgba(0, 0, 0, 0.03);
+  color: #222;
 }
 ul.menu-list .row-right::before {
   content: " ";
@@ -339,25 +340,29 @@ ul.menu-list .row-right::before {
 ul.sub-menu-list {
   list-style: none;
   position: absolute;
-  padding: 1px 0;
-  margin-top: 10px;
-  margin-left: -15px;
-  border-radius: 2px;
+  margin-top: 15px;
+  margin-left: -90px;
+  padding: 0;
+  width: 15%;
+  border-radius: 4px;
   background: #fff;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
   display: none;
+  border: 1px solid #e7e7e7;
 }
 ul.sub-menu-list li {
-  color: #333 !important;
+  color: #888 !important;
   display: list-item !important;
   text-transform: none !important;
-  padding: 12px 15px !important;
+  padding: 18px !important;
   margin: 0 !important;
   border-radius: 0 !important;
-  font-weight: 400 !important;
+  font-weight: 600 !important;
+  font-size: 14px;
 }
 ul.sub-menu-list li:hover {
-  background: #f1f1f1 !important;
+  color: #0047af !important;
+  background: #FFF !important;
 }
 
 #sub-header {
@@ -428,14 +433,15 @@ ul.sub-menu-list li:hover {
   font-weight: normal;
   letter-spacing: 0.5px;
   font-size: 1.3rem;
-  padding: 10px 0;
-  text-transform: uppercase;
+  padding: 10px 15px;
+  text-align: left;
   color: #084db0;
 }
 .box-grid .descrip-info {
-  text-align: center;
+  text-align: justify;
   font-family: "Open sans", sans-serif;
   letter-spacing: 0.3px;
+  padding: 0 15px;
 }
 
 .box-grid:hover {
@@ -446,7 +452,7 @@ ul.sub-menu-list li:hover {
 .section-products2 {
   margin-top: 80px;
   padding: 40px 0;
-  background: #222;
+  background: #14191f;
   color: #fff;
   width: 100%;
   height: auto;
@@ -477,16 +483,17 @@ ul.sub-menu-list li:hover {
 }
 
 #producto-estandar {
+  background: #F4F6FC;
   width: 100%;
   height: auto;
   margin: 0 auto;
   position: relative;
-  padding-bottom: 100px;
+  padding-bottom: 90px;
   padding-top: 80px;
 }
 #producto-estandar::before {
   content: "";
-  background: #222;
+  background: #14191f;
   width: 102%;
   height: 42%;
   position: absolute;
@@ -543,7 +550,7 @@ ul.sub-menu-list li:hover {
 #producto-estandar #modulos-estandar .modulo .imagen-modulo {
   width: 80px;
   height: 80px;
-  background: #efefef;
+  background: aliceblue;
   border-radius: 100%;
   display: inline-block;
   vertical-align: middle;
@@ -622,91 +629,117 @@ ul.sub-menu-list li:hover {
 }
 #productos-especializados {
   max-width: 100%;
-  height: 60%;
+  height: 150%;
   position: relative;
+  margin: 0 auto;
+}
+#productos-especializados .modulo-salud {
+  width: 100%;
+  height: 50%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 50% 50%;
 }
-#productos-especializados .modulo-salud {
+#productos-especializados .modulo-salud .right {
   width: 100%;
   height: 100%;
-  margin: 0 auto;
-  text-align: center;
   background: url(../images/salud_wall.jpg);
-  background-size: 140% 101%;
+  background-size: 121% 100%;
   background-repeat: no-repeat;
   background-position: 84%;
   position: relative;
+  background-attachment: fixed;
 }
-#productos-especializados .modulo-salud::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0.8;
-  background: linear-gradient(to bottom right, #00398e 0%, #0782c1 100%);
-}
-#productos-especializados .modulo-salud .mid {
-  height: 80%;
-}
-#productos-especializados .modulo-salud .foot {
-  color: #fff;
-  height: 20%;
-  font-family: "Colfax Bold";
-  font-weight: normal;
-  letter-spacing: 0.5px;
-  font-size: 3rem;
-  position: relative;
-  text-transform: uppercase;
+#productos-especializados .modulo-salud .left {
+  background: #F4F6FC;
   display: flex;
   align-items: center;
-  padding: 0 60px;
+  font-family: "Open sans", sans-serif;
+  letter-spacing: 0.3px;
+  font-size: 16px;
 }
 #productos-especializados .modulo-publico {
   width: 100%;
-  height: 100%;
+  height: 50%;
   margin: 0 auto;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+#productos-especializados .modulo-publico .left {
   background: url(../images/publico_wall.jpg);
-  background-size: 149% 100%;
+  background-size: 106% 100%;
   background-repeat: no-repeat;
-  background-position: 18%;
+  background-position: 269%;
   position: relative;
+  transform: scaleX(-1);
+  background-attachment: fixed;
 }
-#productos-especializados .modulo-publico::before {
-  content: "";
-  position: absolute;
-  width: 101%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0.8;
-  background: linear-gradient(to top left, #e5cdb0, #b5ccdc);
-}
-#productos-especializados .modulo-publico .mid {
-  height: 80%;
-}
-#productos-especializados .modulo-publico .foot {
-  color: #222;
-  height: 20%;
-  font-family: "Colfax Bold";
-  font-weight: normal;
-  letter-spacing: 0.5px;
-  font-size: 3rem;
-  position: relative;
-  text-transform: uppercase;
+#productos-especializados .modulo-publico .right {
+  background: #F4F6FC;
   display: flex;
   align-items: center;
-  padding: 0 60px;
+  font-family: "Open sans", sans-serif;
+  letter-spacing: 0.3px;
+  font-size: 16px;
+}
+#productos-especializados .mid {
+  height: auto;
+  width: 70%;
+  margin: 0 auto;
+  padding: 15px;
+}
+#productos-especializados .mid .title {
+  font-size: 48px;
+  font-family: "Colfax Bold";
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #222;
+}
+#productos-especializados .mid .opciones_box {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 20px 20px;
+}
+#productos-especializados .mid .opciones_box .opcion {
+  background: #FFF;
+  border-radius: 3px;
+  padding: 15px 15px 15px 15px;
+  box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
+  font-family: "Open sans", sans-serif !important;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: left;
+  color: #333;
+  cursor: pointer;
+  transition: all 300ms;
+  text-transform: uppercase;
+}
+#productos-especializados .mid .opciones_box .opcion:hover {
+  background: #084db0;
+  color: #FFF;
+}
+#productos-especializados .mid .opciones_box .opcion .icon {
+  width: 40px;
+  height: 40px;
+  background: #FFF;
+  padding: 15px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+#productos-especializados .mid .opciones_box .opcion .icon img {
+  width: 40px;
+  height: 40px;
+}
+#productos-especializados .mid .opciones_box .opcion .icon, #productos-especializados .mid .opciones_box .opcion .text {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 #otros-sectores {
   max-width: 100%;
   height: auto;
-  background: url(../images/packs-hero-bg.svg), linear-gradient(#2e67bd, #0047af);
+  background: linear-gradient(#2e67bd, #0047af);
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: 141% 87%;
@@ -754,7 +787,7 @@ ul.sub-menu-list li:hover {
 }
 #otros-sectores .mid .tabla-sectores .sector {
   background: #fff;
-  padding: 15px 15px 0 15px;
+  padding: 15px;
   margin: 50px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -769,29 +802,28 @@ ul.sub-menu-list li:hover {
 #otros-sectores .mid .tabla-sectores .sector .title {
   padding: 0px 0px 15px 0;
   text-align: center;
-  font-size: 18px;
   font-family: "Open sans", sans-serif !important;
-  letter-spacing: 0.5px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #222;
   text-transform: uppercase;
-  font-weight: 600;
   position: relative;
 }
 #otros-sectores .mid .tabla-sectores .sector .title::before {
   content: "";
   width: 30%;
-  height: 2px;
-  background: #ffc107;
+  height: 1px;
+  background: #084db0;
   position: absolute;
   margin: 0 auto;
-  top: 33px;
+  top: 29px;
   left: 34%;
 }
 #otros-sectores .mid .tabla-sectores .sector .img {
   height: 120px;
   width: 80%;
   margin: 0 auto;
-  border-radius: 3px 3px 0px 0px;
-  box-shadow: -3px 0px 12px 0px rgba(0, 0, 0, 0.1), 3px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
 }
 #otros-sectores .mid .tabla-sectores .sector .servicios-publicos {
   background: url(https://www.ambitojuridico.com/sites/default/files/facturas-servicios-luz-02jose-patino.jpg);
@@ -824,7 +856,7 @@ ul.sub-menu-list li:hover {
   background-position: center;
 }
 #otros-sectores .mid .tabla-sectores .sector:hover {
-  transform: scale(1.03);
+  transform: translate3d(0, -5px, 0);
   box-shadow: rgba(0, 0, 0, 0.15) 0px -1px 50px 0px;
 }
 #otros-sectores .mid .tabla-sectores .sector:hover button {
@@ -840,11 +872,12 @@ ul.sub-menu-list li:hover {
   text-align: center;
   margin-top: -2%;
   position: relative;
-  font-family: "Colfax Regular";
-  padding: 30px 0;
+  font-family: "Roboto";
+  padding: 100px 0;
 }
 #clientes .title {
   font-size: 40px;
+  font-weight: normal;
 }
 #clientes .mid {
   width: 80%;
@@ -860,20 +893,60 @@ ul.sub-menu-list li:hover {
   width: 70%;
   height: auto;
   padding: 60px;
-  background: #ffc107;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  background: #084db0;
+  box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
   font-size: 40px;
   font-family: "Colfax Medium";
-  color: #232323;
+  color: #FFF;
   line-height: 35px;
   position: relative;
+  margin: 0 auto;
 }
 
 #footer {
   width: 100%;
   background: #14191f;
-  height: 50%;
+  height: 35%;
   margin-top: -5%;
+  padding-top: 4%;
+  display: flex;
+  align-items: center;
+}
+#footer .sub-footer {
+  width: 70%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 30% 20% 20% 30%;
+  margin: 0 auto;
+  grid-gap: 0px 20px;
+}
+#footer .sub-footer .section .title {
+  font-size: 14px;
+  color: #FFF;
+  font-family: "Open sans", sans-serif !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 15px 0;
+}
+#footer .sub-footer .section .mid {
+  color: #FFF;
+  font-family: "Open sans", sans-serif !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+#footer .sub-footer .section .mid i.material-icons {
+  margin-right: 8px;
+}
+
+#end {
+  background: #0b0e10;
+  color: #FFF;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  font-family: "Open sans", sans-serif !important;
+  font-weight: normal;
 }
 
 button {
@@ -885,6 +958,7 @@ button {
   cursor: pointer;
   font-weight: 600;
   font-family: "Roboto", sans-serif;
+  transition: all 300ms;
 }
 button:hover {
   background: #084db0;

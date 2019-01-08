@@ -1,12 +1,13 @@
 $(document).ready(function () {
+    validarScroll();
     cerrarToolTip('[data-nav~="sub-nav-productos"]', '[data-nav~="sub-nav-productos-box"]');
     cerrarToolTip('[data-nav~="sub-nav-soporte"]', '[data-nav~="sub-nav-soporte-box"]');
     $('.slider').slick({
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
-      });
+    });
 });
 
 $(function () {
@@ -21,7 +22,10 @@ $(function () {
 $(function () {
     $(document).on('click', '[data-scroll]', function (event) {
         var elemento = $(this).data().scroll;
-        console.log(elemento)
+        console.log($('[data-scroll-producto~="' + elemento + '"]').offset().top - 20)
+        $('html, body').animate({
+            scrollTop:  $('[data-scroll-producto~="' + elemento + '"]').offset().top - 60
+        }, 1000);
     });
 });
 
@@ -39,8 +43,10 @@ function cerrarToolTip(controlador, contenedor) {
 }
 
 $(function () {
-    $(document).scroll(function () {
-        var $nav = $("nav");
-        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-    });
+    $(document).scroll(validarScroll);
 });
+
+function validarScroll() {
+    var $nav = $("nav");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+}

@@ -26,13 +26,14 @@
                         <i class="material-icons md-16">expand_more</i>
                         <ul class="sub-menu-list" data-nav='sub-nav-productos-box'>
                             <li data-scroll="estandar">Paquete estándar</li>
-                            <li>Sector salud</li>
-                            <li>Sector publico</li>
+                            <li data-scroll="salud">Sector salud</li>
+                            <li data-scroll="publico">Sector público</li>
+                            <li data-scroll="especializados">Módulos especializados</li>
                         </ul>
-                    </li>                    
-                    <!-- <li>
-                        <a href="#">Soporte</a>
-                    </li> -->
+                    </li>
+                    <li>
+                        <a href="#">Descargas</a>
+                    </li>
                 </ul>
             </div>
 
@@ -168,7 +169,7 @@
 
 
     </div>
-    <div class="section-products2" style="margin: 0 auto;padding: 0 0 100px 0;">
+    <div class="section-products2" style="margin: -10px auto;padding: 0 0 90px 0;">
         <p>
             Además del paquete estándar, en Prosoft contamos con versiones especializadas, que se adaptan a los
             diferentes sectores del mercado.
@@ -176,22 +177,91 @@
     </div>
     <!-- <div id="productos-especializados" data-parallax="scroll" data-image-src="./images/salud_wall.jpg"> -->
     <div id="productos-especializados">
-        <div class="modulo-salud">
-            <div class="mid">
-
+        <div class="modulo-salud" data-scroll-producto="salud">
+            <div class="left">
+                <div class="mid">
+                    <div class="title">Sector salud</div>
+                    Ofrecemos un conjunto integrado de herramientas necesarias para gestionar toda la información de
+                    centros médicos, bajo todas la normatividad legal vigente.
+                    <div class="opciones_box">
+                        <div class="opcion">
+                            <div class="icon">
+                                <img src="images/caduceus.svg" />
+                            </div>
+                            <div class="text">
+                                Salud
+                            </div>
+                        </div>
+                        <div class="opcion">
+                            <div class="icon">
+                                <img src="images/medical-history.svg" />
+                            </div>
+                            <div class="text">
+                                Historias clinicas
+                            </div>
+                        </div>
+                        <div class="opcion">
+                            <div class="icon">
+                                <img src="images/first-aid-kit.svg" />
+                            </div>
+                            <div class="text">
+                                AIEPI
+                            </div>
+                        </div>
+                        <div class="opcion">
+                            <div class="icon">
+                                <img src="images/cardiogram.svg" />
+                            </div>
+                            <div class="text" style="font-size: 0.8rem">
+                                Laboratorío e imagenología
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="foot">
-                Sector salud
-            </div>
+            <div class="right"></div>
         </div>
-        <div class="modulo-publico">
-            <div class="mid">
-                <div class="sub-modulo"></div>
-                <div class="sub-modulo"></div>
-                <div class="sub-modulo"></div>
-            </div>
-            <div class="foot">
-                Sector público
+        <div class="modulo-publico" data-scroll-producto="publico">
+            <div class="left"></div>
+            <div class="right">
+                <div class="mid">
+                    <div class="title">Sector público</div>
+                    Con nuestro software podrás llevar el control de tus proyectos
+                    <div class="opciones_box">
+                        <div class="opcion">
+                            <div class="icon">
+                                <img src="images/budget.svg" />
+                            </div>
+                            <div class="text">
+                                Presupuesto
+                            </div>
+                        </div>
+                        <div class="opcion">
+                            <div class="icon">
+                                <img src="images/online-shop.svg" />
+                            </div>
+                            <div class="text">
+                                Industria y comercio
+                            </div>
+                        </div>
+                        <div class="opcion">
+                            <div class="icon">
+                                <img src="images/blueprint.svg" />
+                            </div>
+                            <div class="text">
+                                Predial
+                            </div>
+                        </div>
+                        <div class="opcion">
+                            <div class="icon">
+                                <img src="images/open.svg" />
+                            </div>
+                            <div class="text">
+                                Correspondencia
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- <div class="mid-modulo">
@@ -236,11 +306,10 @@
     </div>
     <div class="section-products" style="margin: 0 auto;">
         <p>
-            Prosoft es un software integrado desarrollado en COBOL que lo hace rápido, seguro y
-            confiable.
+            Personalizamos todos nuestros módulos según las necesidades y requerimientos de tu negocio.
         </p>
     </div>
-    <div id="otros-sectores">
+    <div id="otros-sectores" data-scroll-producto="especializados">
         <div class="mid">
             <div class="tabla-sectores">
                 <div class="sector">
@@ -307,13 +376,60 @@
     </div>
     <div id="trabajemos">
         Estás listo? <b>Vamos a trabajar!</b><br>
-        <a style="font-size: 20px;color: rgba(0, 0, 0, 0.6);">o resuelve todas tus dudas.</a>
+        <a style="font-size: 20px;color: rgba(255, 255, 255, 0.8);">o resuelve todas tus dudas.</a>
         <button style="float: right;margin-top: -21px;font-size: 16px;border: none;padding: 12px 40px;">Contáctanos</button>
     </div>
     <div id="footer">
+        <div class="sub-footer">
+            <div class="section">
 
+            </div>
+            <div class="section">
+                <div class="title">Enlaces</div>
+                <div class="mid">
+                    <a>Nosotros</a><br>
+                    <a>Descargas</a><br>
+                    <a>Servicio al cliente</a><br>
+                    <a>Tickets</a><br>
+                </div>
+            </div>
+            <div class="section">
+                <div class="title">Productos</div>
+                <div class="mid">
+                    <a>Páquete estándar</a><br>
+                    <a>Sector salud</a><br>
+                    <a>Sector público</a><br>
+                    <a>Especializados</a><br>
+                </div>
+            </div>
+            <div class="section">
+                <div class="title">Contacto</div>
+                <div class="mid">
+                    <!-- Teléfonos:<br> -->
+                    <i class="material-icons md-16">phone</i>
+                    (+8) 664 83 34 - (+8) 664 86 66<br><br>
 
-    </div>    
+                    <!-- Celular:<br> -->
+                    <i class="material-icons md-16">phone</i>
+                    (+57) 300 210 7378 - (+57) 315 630 7945<br><br>
+
+                    <!-- E-mail:<br> -->
+                    <i class="material-icons md-16">email</i>
+                    administracion@prosoft.com.co<br><br>
+
+                    <!-- Ubicación:<br> -->
+                    <i class="material-icons md-16">location_on</i>
+                    Kilómetro 1 Vía Restrepo, Via Prosoft No. 372<br><br>
+
+                    <i class="material-icons md-16">public</i>
+                    Villavicencio Meta - Colombia
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="end">
+        © Todos los derechos reservados - <b>Prosoft</b> 2019
+    </div>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
