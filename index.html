@@ -20,7 +20,7 @@
             <div id="menu">
                 <ul class="menu-list">
                     <li data-scroll="inicio">Inicio</li>
-                    <li>Nosotros</li>
+                    <li class="btnNosotros">Nosotros</li>
                     <li data-nav='sub-nav-productos'>
                         <a>Productos</a>
                         <i class="material-icons md-16">expand_more</i>
@@ -30,6 +30,9 @@
                             <li data-scroll="publico">Sector público</li>
                             <li data-scroll="especializados">Módulos especializados</li>
                         </ul>
+                    </li>
+                    <li>
+                        <a data-scroll="clientes">Clientes</a>
                     </li>
                     <li>
                         <a href="#">Descargas</a>
@@ -49,328 +52,9 @@
             </ul>
         </div>
     </nav>
-    <header data-scroll-producto="inicio">
-        <div id="nav-wall">
-            <div id="sub-header">
-                <div class="header-title w3-animate-top">
-                    <p>Productores de software</p><br>
-                    Programas de computación orientados a la contaduria y a los demás sistemas
-                    administrativos y
-                    gerenciales.
-                </div>
-            </div>
-        </div>
-    </header>
-    <div id="info-main">
-        <div id="sub-info-main">
-            <div class="box-grid">
-                <div class="image-info">
-                    <img src="./images/networking.svg" alt="Prosoft seguro">
-                </div>
-                <div class="title-info">Seguro</div>
-                <div class="descrip-info">Encriptamos y protegemos tu información, para que sólo sea accesible desde
-                    nuestro programa.</div>
-            </div>
-            <div class="box-grid">
-                <div class="image-info">
-                    <img src="./images/startup.svg" alt="Prosoft personalizado">
-                </div>
-                <div class="title-info">Eficiente</div>
-                <div class="descrip-info">Navega de manera rápida por nuestra interfaz intuitiva y de fácil
-                    operabilidad.</div>
-            </div>
-            <div class="box-grid">
-                <div class="image-info">
-                    <img src="./images/group.svg" alt="Prosoft multiusuario">
-                </div>
-                <div class="title-info">Multiusuario</div>
-                <div class="descrip-info">Accede y modifica la misma información desde diferentes terminales de manera
-                    simúltanea.</div>
-            </div>
-            <div class="box-grid">
-                <div class="image-info">
-                    <img src="./images/browser.svg" alt="Prosoft personalizado">
-                </div>
-                <div class="title-info">Personalizado</div>
-                <div class="descrip-info">Todas las características se ajustan según tu necesidad y la de tu negocio.</div>
-            </div>
-        </div>
-    </div>
-    <div class="section-products">
-        <p>
-            <b>Prosoft</b> es un software integrado desarrollado en <b>COBOL</b> que lo hace rápido, seguro y
-            confiable.
-        </p>
-    </div>
-    <div id="producto-estandar" data-scroll-producto="estandar">
-        <div class="mid">
 
-            <div id="title">Paquete estándar</div>
-            <div id="modulos-estandar">
-                <div class="grid">
-                    <div class="modulo">
-                        <div class="imagen-modulo">
-                            <img src="./images/dollar-symbol.svg" alt="Prosoft - Módulo contabilidad">
-                        </div>
-                        <div class="title-modulo">
-                            Módulo de contabilidad<br>
-                            <button style="margin-top: 10px;">características</button>
-                        </div>
-                    </div>
-                    <div class="modulo">
-                        <div class="imagen-modulo">
-                            <img src="./images/bar-chart.svg" alt="Prosoft - Módulo inventarios">
-                        </div>
-                        <div class="title-modulo">
-                            Módulo de inventarios<br>
-                            <button style="margin-top: 10px;">características</button></div>
-                    </div>
-                    <div class="modulo">
-                        <div class="imagen-modulo">
-                            <img src="./images/invoice.svg" alt="Prosoft - Módulo facturación ">
-                        </div>
-                        <div class="title-modulo">
-                            Módulo de facturación<br>
-                            <button style="margin-top: 10px;">características</button>
-                        </div>
-                    </div>
-                    <div class="modulo">
-                        <div class="imagen-modulo">
-                            <img src="./images/user.svg" alt="Prosoft - Módulo nómina">
-                        </div>
-                        <div class="title-modulo">
-                            Módulo de nómina<br>
-                            <button style="margin-top: 10px;">características</button>
-                        </div>
-                    </div>
-                    <div class="modulo">
-                        <div class="imagen-modulo">
-                            <img src="./images/money.svg" alt="Prosoft - Módulo tesorería">
-                        </div>
-                        <div class="title-modulo">
-                            Módulo de tesorería<br>
-                            <button style="margin-top: 10px;">características</button>
-                        </div>
-                    </div>
-                    <div class="modulo">
-                        <div class="imagen-modulo">
-                            <img src="./images/piggy-bank.svg" alt="Prosoft - Módulo cartera ">
-                        </div>
-                        <div class="title-modulo">
-                            Módulo de cartera<br>
-                            <button style="margin-top: 10px;">características</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <main style="height: auto"></main>
 
-
-        </div>
-
-
-    </div>
-    <div class="section-products2" style="margin: -10px auto;padding: 0 0 90px 0;">
-        <p>
-            Además del paquete estándar, en Prosoft contamos con versiones especializadas, que se adaptan a los
-            diferentes sectores del mercado.
-        </p>
-    </div>
-    <!-- <div id="productos-especializados" data-parallax="scroll" data-image-src="./images/salud_wall.jpg"> -->
-    <div id="productos-especializados">
-        <div class="modulo-salud" data-scroll-producto="salud">
-            <div class="left">
-                <div class="mid">
-                    <div class="title">Sector salud</div>
-                    Ofrecemos un conjunto integrado de herramientas necesarias para gestionar toda la información de
-                    centros médicos, bajo todas la normatividad legal vigente.
-                    <div class="opciones_box">
-                        <div class="opcion">
-                            <div class="icon">
-                                <img src="images/caduceus.svg" />
-                            </div>
-                            <div class="text">
-                                Salud
-                            </div>
-                        </div>
-                        <div class="opcion">
-                            <div class="icon">
-                                <img src="images/medical-history.svg" />
-                            </div>
-                            <div class="text">
-                                Historias clinicas
-                            </div>
-                        </div>
-                        <div class="opcion">
-                            <div class="icon">
-                                <img src="images/first-aid-kit.svg" />
-                            </div>
-                            <div class="text">
-                                AIEPI
-                            </div>
-                        </div>
-                        <div class="opcion">
-                            <div class="icon">
-                                <img src="images/cardiogram.svg" />
-                            </div>
-                            <div class="text" style="font-size: 0.8rem">
-                                Laboratorío e imagenología
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="right"></div>
-        </div>
-        <div class="modulo-publico" data-scroll-producto="publico">
-            <div class="left"></div>
-            <div class="right">
-                <div class="mid">
-                    <div class="title">Sector público</div>
-                    Con nuestro software podrás llevar el control de tus proyectos
-                    <div class="opciones_box">
-                        <div class="opcion">
-                            <div class="icon">
-                                <img src="images/budget.svg" />
-                            </div>
-                            <div class="text">
-                                Presupuesto
-                            </div>
-                        </div>
-                        <div class="opcion">
-                            <div class="icon">
-                                <img src="images/online-shop.svg" />
-                            </div>
-                            <div class="text">
-                                Industria y comercio
-                            </div>
-                        </div>
-                        <div class="opcion">
-                            <div class="icon">
-                                <img src="images/blueprint.svg" />
-                            </div>
-                            <div class="text">
-                                Predial
-                            </div>
-                        </div>
-                        <div class="opcion">
-                            <div class="icon">
-                                <img src="images/open.svg" />
-                            </div>
-                            <div class="text">
-                                Correspondencia
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="mid-modulo">
-            <div class="titulo-modulo">Sector salud</div>
-            <div class="secciones">
-                <div class="seccion-left">
-                    <div class="content-modulo">
-                        <div class="item">
-                            <div class="check"></div>
-                            <div class="item-list">La facturación esta en línea con inventarios (realiza la
-                                reposición), contabilidad y cartera (clientes y médicos).</div>
-                        </div>
-                        <div class="item">
-                            <div class="check"></div>
-                            <div class="item-list">Cumple con los requerimientos del Ministerio de Salud para el
-                                registro individual de atención en salud "RIPS", tanto en la captura como la entrega de
-                                información de medios magnéticos, información estadistica de morbilidad, por médico,
-                                cliente y servicio en otros.</div>
-                        </div>
-                        <div class="item">
-                            <div class="check"></div>
-                            <div class="item-list">Por cada servicio prestado se elabora un comprobante de venta,
-                                los que se agrupan en una factura que los resume, esta factura puede ser de
-                                contado, ambulatorio o pensionado (hospitalizados).</div>
-                        </div>
-                        <div class="item">
-                            <div class="check"></div>
-                            <div class="item-list">Mediante el menú de cartera podemos listar los saldos de la cartera
-                                de clientes y médicos, expedir la carta de extemporaneidad de Glosas y actualizar las
-                                novedades de la cartera.</div>
-                        </div>
-                        <button style="float:right;font-size: 14px;">Leer más</button>
-                    </div>
-                </div>
-                <div class="seccion-right">
-                    <div class="sub-modulo">Historias clinicas</div>
-                    <div class="sub-modulo">AIEPI</div>
-                    <div class="sub-modulo">Laboratorio e imagenología</div>
-                </div>
-            </div>
-        </div> -->
-    </div>
-    <div class="section-products" style="margin: 0 auto;">
-        <p>
-            Personalizamos todos nuestros módulos según las necesidades y requerimientos de tu negocio.
-        </p>
-    </div>
-    <div id="otros-sectores" data-scroll-producto="especializados">
-        <div class="mid">
-            <div class="tabla-sectores">
-                <div class="sector">
-                    <div class="title">
-                        Servicios públicos
-                    </div>
-                    <button>Leer más</button>
-                    <div class="img servicios-publicos"></div>
-                </div>
-                <div class="sector">
-                    <div class="title">
-                        Bares y restaurantes
-                    </div>
-                    <button>Leer más</button>
-                    <div class="img bares-restaurantes"></div>
-                </div>
-                <div class="sector">
-                    <div class="title">
-                        Molinos
-                    </div>
-                    <button>Leer más</button>
-                    <div class="img molinos"></div>
-                </div>
-                <div class="sector">
-                    <div class="title">
-                        Hoteleria
-                    </div>
-                    <button>Leer más</button>
-                    <div class="img hoteleria"></div>
-                </div>
-                <div class="sector">
-                    <div class="title">
-                        Estaciones de servicio
-                    </div>
-                    <button>Leer más</button>
-                    <div class="img estaciones-servicio"></div>
-                </div>
-                <div class="sector">
-                    <div class="title">
-                        Industrial
-                    </div>
-                    <button>Leer más</button>
-                    <div class="img industrial"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="clientes">
-        <div class="title">
-            Más de <b>800+</b> empresas públicas y privadas nos respaldan...
-        </div>
-        <div class="mid">
-            <div class="slider autoplay">                
-            </div>
-        </div>
-    </div>
-    <div id="trabajemos">
-        Estás listo? <b>Vamos a trabajar!</b><br>
-        <a style="font-size: 20px;color: rgba(255, 255, 255, 0.8);">o resuelve todas tus dudas.</a>
-        <button style="float: right;margin-top: -21px;font-size: 16px;border: none;padding: 12px 40px;">Contáctanos</button>
-    </div>
     <div id="footer">
         <div class="sub-footer">
             <div class="section">
@@ -422,6 +106,24 @@
     <div id="end">
         © Todos los derechos reservados - <b>Prosoft</b> 2019
     </div>
+    <a href="#" id="scroll" style="display: none;">
+        <i class="material-icons md-16">keyboard_arrow_up</i>
+        <!-- <span></span> -->
+    </a>
+
+    <div id="loaderMain">
+        <div class="cube-wrapper">
+            <div class="cube-folding">
+                <span class="leaf1"></span>
+                <span class="leaf2"></span>
+                <span class="leaf3"></span>
+                <span class="leaf4"></span>
+            </div>
+            <span class="loading" data-name="Loading">Ingresando</span>
+        </div>
+    </div>
+
+
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>

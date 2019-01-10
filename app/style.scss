@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
 @import "fonts";
 @import "responsive";
+@import "loader";
 
 html,
 body {
@@ -41,7 +42,7 @@ html {
 header {
   background: linear-gradient(#005eea, #094cad);
   width: 100%;
-  height: 72%;
+  height: 710px;
   background-size: 50% 100%;
   background-repeat: no-repeat;
   background-position: right;
@@ -121,8 +122,8 @@ ul.menu-list {
   li {
     display: inline-block;
     color: #999;
-    // font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     text-transform: uppercase;
     font-size: 14px;
     cursor: pointer;
@@ -132,8 +133,8 @@ ul.menu-list {
   }
 
   li:hover {
-    background: rgba(0,0,0,0.03);
-    color: #222 ;
+    background: rgba(23, 105, 255, 0.06) !important;
+    color: #1b309f !important;
   }
 
   .row-right::before {
@@ -158,13 +159,14 @@ ul.sub-menu-list {
   border: 1px solid rgb(231, 231, 231);
 
   li {
+    font-family: 'Roboto', sans-serif;
     color: #888 !important;
     display: list-item !important;
     text-transform: none !important;
     padding: 18px !important;
     margin: 0 !important;
     border-radius: 0 !important;
-    font-weight: 600 !important;
+    font-weight: 400 !important;
     font-size: 14px;
   }
 
@@ -503,27 +505,16 @@ ul.sub-menu-list {
 
 #productos-especializados {  
   max-width: 100%;
-  height: 150%;
+  height: auto;
   position: relative;
   margin: 0 auto;  
   
+  .modulo-salud,.modulo-publico{ height: 800px;}
   .modulo-salud {
-    width: 100%;
-    height: 50%;
+    width: 100%;    
     margin: 0 auto;    
     display: grid;
     grid-template-columns: 50% 50%;
-
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   width: 100%;
-    //   height: 100%;
-    //   top: 0;
-    //   left: 0;
-    //   opacity: 0.8;
-    //   background: linear-gradient(to bottom right, #00398e 0%, #0782c1 100%);
-    // }
 
     .right {
       width: 100%;
@@ -545,42 +536,13 @@ ul.sub-menu-list {
       font-size: 16px;
     }
 
-    // .foot {
-    //   color: #fff;
-    //   height: 20%;
-    //   font-family: "Colfax Bold";
-    //   font-weight: normal;
-    //   letter-spacing: 0.5px;
-    //   font-size: 3rem;
-    //   position: relative;
-    //   text-transform: uppercase;
-    //   display: flex;
-    //   align-items: center;
-    //   padding: 0 60px;
-    // }
   }
 
   .modulo-publico {
     width: 100%;
-    height: 50%;
     margin: 0 auto;      
     display: grid;
     grid-template-columns: 50% 50%;
-
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   width: 101%;
-    //   height: 100%;
-    //   top: 0;
-    //   left: 0;
-    //   opacity: 0.8;
-    //   background: linear-gradient(
-    //     to top left,
-    //     rgb(229, 205, 176),
-    //     rgb(181, 204, 220)
-    //   );
-    // }
 
     .left {      
       background: url(../images/publico_wall.jpg);
@@ -601,19 +563,6 @@ ul.sub-menu-list {
       font-size: 16px;
     }
 
-    // .foot {
-    //   color: #222;
-    //   height: 20%;
-    //   font-family: "Colfax Bold";
-    //   font-weight: normal;
-    //   letter-spacing: 0.5px;
-    //   font-size: 3rem;
-    //   position: relative;
-    //   text-transform: uppercase;
-    //   display: flex;
-    //   align-items: center;
-    //   padding: 0 60px;
-    // }
   }
 
   .mid{
@@ -835,7 +784,7 @@ ul.sub-menu-list {
 
 #clientes {
   width: 100%;
-  height: 40%;
+  height: 400px;
   margin: 0 auto;
   text-align: center;
   margin-top: -2%;
@@ -858,6 +807,10 @@ ul.sub-menu-list {
     .image {
       text-align: center;
       margin: 0 auto;
+      height: 200px;
+      width: 200px!important;
+      align-items: center;
+      display: flex!important;
     }
   }
 }
@@ -957,4 +910,68 @@ button {
     color: #fff;
     transition: all 0.3s ease;
   }
+}
+
+.loader {
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid #3498db;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#scroll {
+  position: fixed;
+  right: 30px;
+  bottom: 80px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: #084db0;
+  display: none;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  text-align: center;
+  line-height: 44px;
+  transition: all 0.3s ease;
+  box-shadow: rgba(0, 77, 255, 0.5) 0px 4px 24px;
+}
+#scroll i {
+  color: #FFF;
+  text-align: center;
+  font-size: 36px;
+}
+#scroll:hover {
+  background-color:#14191f;  
+  box-shadow: rgba(0,0,0,0.5) 0px 4px 24px;
+}
+
+.headerNosotros{
+  background: url(https://www.scip.es/images/nosotros-hero.jpg);
+  background-size: 100% auto;
+  background-position: 0% -62%;
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  line-height: 306px;
+  color: #FFF;
+  font-size: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif !important;
 }
