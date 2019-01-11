@@ -28,6 +28,8 @@ $(document).ready(function () {
             } else {
                 $("html, body").animate({ scrollTop: 0 }, "slow");
                 window.location.hash = 'nosotros';
+                $('.menu-list li').addClass('navNosotros');
+                $('#footer').addClass('footer-we');
             }
         }).fadeIn('slow');
     });
@@ -35,7 +37,7 @@ $(document).ready(function () {
 
 });
 
-window.onload = function () {  $('#loaderMain').fadeOut()}
+window.onload = function () { $('#loaderMain').fadeOut() }
 
 function validarScrollBtnUp() {
     if ($(this).scrollTop() > 100) {
@@ -57,6 +59,7 @@ $(function () {
     $(document).on('click', '[data-scroll]', function (event) {
         var origen = this;
         var jash = location.hash;
+        var elemento = $(origen).data().scroll;
         if (jash == "#nosotros") {
             $("main").load("content/inicio.html", function (response, status, xhr) {
                 if (status == "error") {
@@ -65,18 +68,30 @@ $(function () {
                 } else {
                     $("html, body").animate({ scrollTop: 0 }, "slow");
                     window.location.hash = '';
-                    console.log($(origen));
-                    var elemento = $(origen).data().scroll;
-                    $('html, body').animate({
-                        scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 60
-                    }, 1000);
+                    if (elemento == 'clientes') {
+                        $('html, body').animate({
+                            scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 220
+                        }, 1000);
+                    } else {
+                        $('html, body').animate({
+                            scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 60
+                        }, 1000);
+                    }
+                    $('.menu-list li').removeClass('navNosotros');
+                    $('#footer').removeClass('footer-we');
+                    loadBrands();
                 }
             }).fadeIn('slow');
         } else {
-            var elemento = $(origen).data().scroll;
-            $('html, body').animate({
-                scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 60
-            }, 1000);
+            if (elemento == 'clientes') {
+                $('html, body').animate({
+                    scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 220
+                }, 1000);
+            } else {
+                $('html, body').animate({
+                    scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 60
+                }, 1000);
+            }
         }
     });
 });
@@ -110,7 +125,6 @@ function loadBrands() {
         type: 'get',
         contentType: 'application/json',
         success: function (data) {
-            console.log(data);
             var obj = JSON.parse(data);
             $('.slider').html('');
             $.each(obj, function (index, value) {
@@ -121,7 +135,7 @@ function loadBrands() {
 
             $('.slider').slick({
                 slidesToShow: 4,
-                slidesToScroll: 1,
+                slidesToScroll: 4,
                 autoplay: false,
                 autoplaySpeed: 4000,
             });

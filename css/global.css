@@ -498,6 +498,13 @@ nav #menu {
   transition: background-color 200ms linear;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+.scrolled .menu-list li {
+  color: #999 !important;
+}
+.scrolled .menu-list li:hover {
+  background: rgba(23, 105, 255, 0.06) !important;
+  color: #1b309f !important;
+}
 .scrolled [data-nav=sub-nav-soporte] {
   background: #084db0 !important;
 }
@@ -521,8 +528,8 @@ ul.menu-list li {
   transition: all 0.3s ease;
 }
 ul.menu-list li:hover {
-  background: rgba(23, 105, 255, 0.06) !important;
-  color: #1b309f !important;
+  background: rgba(23, 105, 255, 0.06);
+  color: #1b309f;
 }
 ul.menu-list .row-right::before {
   content: " ";
@@ -1163,7 +1170,6 @@ button {
 button:hover {
   background: #084db0;
   color: #fff;
-  transition: all 0.3s ease;
 }
 
 .loader {
@@ -1223,19 +1229,96 @@ button:hover {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 24px;
 }
 
-.headerNosotros {
-  background: url(https://www.scip.es/images/nosotros-hero.jpg);
-  background-size: 100% auto;
-  background-position: 0% -62%;
-  width: 100%;
-  height: 400px;
+#ticketsBtn {
+  position: fixed;
+  right: 30px;
+  top: 80px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
   text-align: center;
-  line-height: 306px;
-  color: #FFF;
-  font-size: 60px;
-  font-weight: 700;
+  line-height: 44px;
+  transition: all 0.3s ease;
+}
+
+.headerNosotros {
+  background: url(../images/empresa.jpg);
+  background-size: 100% auto;
+  background-position: 0% -84%;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  line-height: 330px;
+  color: #000;
+  font-size: 72px;
   text-transform: uppercase;
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Colfax Bold";
+}
+
+.navNosotros {
+  color: #FFF !important;
+}
+
+.content-we {
+  background: #F4F6FC;
+  width: 100%;
+  height: auto;
+  padding: 50px 0;
+}
+.content-we .main-box {
+  background: #FFF;
+  width: 70%;
+  height: auto;
+  padding: 50px;
+  margin: 0 auto;
+  box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.2);
+}
+.content-we .main-box hr {
+  border: 0.5px solid rgba(0, 0, 0, 0.05);
+}
+.content-we .main-box .titulo-main, .content-we .main-box .text-main {
+  display: inline-block;
+  vertical-align: middle;
+}
+.content-we .main-box .section-izquierda, .content-we .main-box .section-derecha {
+  display: inline-block;
+  vertical-align: middle;
+}
+.content-we .main-box .titulo-main {
+  width: 30%;
+  text-transform: uppercase;
+  font-size: 48px;
+  color: #0047af;
+  font-family: "Colfax Bold";
+}
+.content-we .main-box .text-main {
+  width: 69%;
+  font-size: 18px;
+  color: #222;
+  text-align: justify;
+}
+.content-we .main-box .section-izquierda {
+  width: 27%;
+  padding-right: 40px;
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+.content-we .main-box .section-derecha {
+  width: 66%;
+  padding-left: 40px;
+}
+.content-we .main-box .title-section {
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #222;
+  font-family: "Colfax Bold";
+}
+
+.footer-we {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
 /*# sourceMappingURL=global.css.map */

@@ -96,6 +96,13 @@
     width: 100%;
     max-height: 80%;
     height: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slick-slide img:hover{
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
 }
 .slick-slide.slick-loading img
 {
