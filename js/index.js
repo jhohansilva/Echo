@@ -142,3 +142,29 @@ function loadBrands() {
         }
     });
 }
+
+$(function () {
+    $(document).on('click', '.closeBtnPopup', function (event) {
+        console.log('Cerrar popup');
+        $('body').removeClass('greyscreen-open');
+        $('#overlayPopup').fadeOut('fast', function () {
+            $('#popup .content').html('');
+        });
+
+    });
+});
+
+$(function () {
+    $(document).on('click', '[data-popup]', function (event) {
+        var elemento = $(this).data().popup;
+        console.log(elemento)
+        $('#popup .content').load("../content/" + elemento + ".html", function (response, status, xhr) {
+            if (status == "error") {
+                alert('Ha ocurrido un error: ' + response);                
+            }else{
+                $('body').addClass('greyscreen-open');
+                $('#overlayPopup').css('display', 'flex').hide().fadeIn('fast');
+            }
+        });
+    });
+});

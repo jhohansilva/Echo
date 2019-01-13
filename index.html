@@ -111,8 +111,38 @@
         <!-- <span></span> -->
     </a>
     <a id="ticketsBtn">
-        <img style="width: 46%;height: 100%;" src="images/customer-support.svg"/>
+        <img style="width: 46%;height: 100%;" src="images/customer-support.svg" />
+        <div class="tooltip">Sistema de tickets</div>
     </a>
+
+    <div id="overlayPopup" class="greyscreen">
+        <div id="popup">
+            <div class="closeBtnPopup">
+                <i class="material-icons md-20">cancel</i>
+            </div>
+            <div class="content">
+
+            </div>
+        </div>
+    </div>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <filter id="blur">
+                <feGaussianBlur stdDeviation="3" />
+            </filter>
+
+            <filter id="drop-shadow">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
+                <feOffset dx="5" dy="5" result="offsetblur" />
+                <feFlood flood-color="#000000" />
+                <feComposite in2="offsetblur" operator="in" />
+                <feMerge>
+                    <feMergeNode />
+                    <feMergeNode in="SourceGraphic" />
+                </feMerge>
+            </filter>
+        </defs>
+    </svg>
 
     <div id="loaderMain">
         <div class="cube-wrapper">
@@ -136,6 +166,7 @@
     <!-- <script src="https://unpkg.com/eva-icons"></script> -->
     <script type="text/javascript" src="js/parallax.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script src="//code.tidio.co/rt9csrhyvgmcqpaglnvmtsgdzwhgs1ip.js"></script>
 </body>
 
 </html>

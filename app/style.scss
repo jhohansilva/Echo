@@ -458,10 +458,6 @@ ul.sub-menu-list {
   }
 }
 
-.content-modulo {
-  // padding: 10px 5px 2px 5px;
-}
-
 .item {
   display: grid;
   grid-template-columns: 10% 90%;
@@ -470,6 +466,8 @@ ul.sub-menu-list {
   font-weight: 500;
   letter-spacing: -0.2px;
   font-size: 16px;
+  padding-bottom: 15px;
+  text-align: justify;
 }
 
 .check {
@@ -830,24 +828,12 @@ ul.sub-menu-list {
   padding: 60px;
   background: #084db0;
   box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
-  // margin: 0 auto;
   font-size: 40px;
   font-family: "Colfax Medium";
   color: #FFF;
   line-height: 35px;
   position: relative;
   margin: 0 auto;
-
-  // &::before {
-  //   content: " ";
-  //   background: rgba(0, 0, 0, 0.1);
-  //   height: 100px;
-  //   width: 200px;
-  //   position: absolute;
-  //   border-top-left-radius: 90px;
-  //   border-top-right-radius: 90px;
-  //   bottom: 0;
-  // }
 }
 
 #footer {
@@ -944,11 +930,11 @@ button {
 
 #scroll {
   position: fixed;
-  right: 30px;
-  bottom: 140px;
+  right: 33px;
+  bottom: 180px;
   cursor: pointer;
   width: 50px;
-  height: 50px;
+  height: 49px;
   display: none;
   -webkit-border-radius: 60px;
   -moz-border-radius: 60px;
@@ -956,8 +942,8 @@ button {
   text-align: center;
   line-height: 44px;
   transition: all 0.3s ease;
-  background-color: #084db0;
-  box-shadow: rgba(0, 77, 255, 0.5) 0px 4px 24px;
+  background: linear-gradient(#1631c7, #162471);
+  box-shadow: #1b309f7a 0px 4px 24px;
 }
 #scroll i {
   color: #FFF;
@@ -965,25 +951,66 @@ button {
   font-size: 36px;
 }
 #scroll:hover {
-  background-color:#14191f;  
+  background: linear-gradient(#080808, #333333);
   box-shadow: rgba(0,0,0,0.5) 0px 4px 24px;
 }
 
 #ticketsBtn{
   position: fixed;
-  right: 30px;
-  bottom: 80px;
+  right: 33px;
+  bottom: 120px;
   cursor: pointer;
   width: 50px;
-  height: 50px;  
+  height: 49px;  
   -webkit-border-radius: 60px;
   -moz-border-radius: 60px;
   border-radius: 60px;
   text-align: center;
   line-height: 44px;
   transition: all 0.3s ease;
-  background: linear-gradient(#3F51B6,#162471);
-  box-shadow: rgba(103, 58, 183, 0.44) 0px 4px 24px;
+  background: linear-gradient(#1631c7, #162471);
+  box-shadow: #1b309f7a 0px 4px 24px;
+
+  &:hover{
+    background: linear-gradient(#080808, #333333);
+    box-shadow: rgba(0,0,0,0.5) 0px 4px 24px;
+  }
+
+  &:hover .tooltip{
+    visibility: visible;
+    opacity: 1; 
+  }
+
+  div.tooltip{
+    position: relative;
+    left: -158px;
+    top: -57px;
+    width: 150px;
+    background: rgba(0,0,0,0.8);
+    color: #FFF;
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 3px;    
+    padding: 0;
+    line-height: 33px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
+
+    &::before{
+      content: "";
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 10px;
+      right: -9px;            
+      width: 0;
+      height: 0;
+      border-left: 9px solid rgba(0,0,0,0.8);
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+    }
+  }
 }
 
 .headerNosotros{
@@ -1071,4 +1098,125 @@ button {
 .footer-we{
   margin-top: 0!important;
   padding-top: 0!important;
+}
+
+
+#overlayPopup{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: radial-gradient(at center center, rgba(0, 0, 0, 0.1) 0%, rgba(20, 20, 20, 0.5) 100%);
+  z-index: 999999999999;  
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  display: none;
+
+  #popup{
+    width: 40%;
+    height: 100%;
+    max-height: 80%;
+    background: #FFF;
+    margin: 0 auto;
+    box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.2);
+    padding-bottom: 4px;
+
+    .content{
+      max-height: 100%;
+      height: 100%;
+    }
+
+    .closeBtnPopup{
+      width: auto;
+      height: auto;
+      float: right;
+      color: rgba(255,255,255,0.4);
+      margin-right: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover{
+        color: #FFF;
+      }
+    }
+
+    .headerPopup{
+      max-width: 100%;
+      height: auto;
+      padding: 60px 20px 20px 20px;
+      background: linear-gradient(to right, #3f88f3, #1b2b9f);
+      color: #FFF;
+      text-transform: uppercase;      
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      font-size: 22px;
+    }
+
+    .bodyPopup{
+      max-width: 100%;
+      height: 100%;
+      padding: 0 20px 0px 20px;
+      color: #222;
+      font-size: 18px;            
+
+      .content-modulo{
+        overflow-y: scroll;
+        max-height: 100%;
+        height: 75%;
+        padding-right: 25px;
+      }
+    }
+  }
+}
+
+.greyscreen-open {
+  > :not(.greyscreen) {
+  	-webkit-filter: blur(3px);
+    filter: url(#blur); // FF
+  }    
+  
+  // overflow: hidden;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  transition: all 0.3s ease;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+  transition: all 0.3s ease;
+}
+::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+  transition: all 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a6a6a6;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #004080;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+  transition: all 0.3s ease;
+}
+::-webkit-scrollbar-track:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-track:active {
+  background: #ffffff;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
