@@ -169,13 +169,6 @@
     font-size: 50px !important;
   }
 
-  header {
-    height: 76vh !important;
-  }
-  header #nav-wall {
-    background-position: 92% -134% !important;
-  }
-
   .box-grid .descrip-info {
     font-size: 14px !important;
   }
@@ -190,17 +183,8 @@
     width: 60px !important;
   }
 
-  #producto-estandar {
-    padding-bottom: 80px !important;
-    padding-top: 50px !important;
-  }
-
   #producto-estandar #title {
     font-size: 42px !important;
-  }
-
-  #producto-estandar .mid {
-    padding: 80px 50px !important;
   }
 
   #producto-estandar #modulos-estandar .modulo .title-modulo {
@@ -601,12 +585,15 @@ nav {
 nav #sub-nav {
   margin: 0 auto;
   width: 70%;
-  padding: 15px 0px;
+  padding: 2vh 0px;
 }
 nav #logo {
-  color: #222;
-  font-size: 1.5rem;
-  font-weight: bolder;
+  background: url(../images/logo_prosoft.png);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 40px;
   display: inline-block;
   vertical-align: middle;
 }
@@ -689,7 +676,7 @@ ul.sub-menu-list li {
 }
 ul.sub-menu-list li:hover {
   color: #0047af !important;
-  background: #FFF !important;
+  background: #fff !important;
 }
 
 #sub-header {
@@ -720,7 +707,7 @@ ul.sub-menu-list li:hover {
 
 #info-main {
   width: 100%;
-  height: 30%;
+  height: 30vh;
 }
 
 #sub-info-main {
@@ -785,10 +772,12 @@ ul.sub-menu-list li:hover {
   height: auto;
   position: relative;
   text-align: center;
-  font-size: 22px;
+  font-size: 1.5vw;
   font-family: "Open sans", sans-serif;
   font-weight: 400;
   letter-spacing: -0.2px;
+  display: flex;
+  align-items: center;
 }
 .section-products p,
 .section-products2 p {
@@ -810,22 +799,22 @@ ul.sub-menu-list li:hover {
 }
 
 #producto-estandar {
-  background: #F4F6FC;
+  background: #f4f6fc;
   width: 100%;
-  height: auto;
+  height: 70vh;
   margin: 0 auto;
   position: relative;
-  padding-bottom: 90px;
-  padding-top: 80px;
+  display: flex;
+  align-items: center;
 }
 #producto-estandar::before {
   content: "";
   background: #14191f;
   width: 102%;
-  height: 42%;
+  height: 50%;
   position: absolute;
   left: -16px;
-  bottom: -20%;
+  bottom: -25%;
   -webkit-transform: rotate(-5deg);
   transform: rotate(-5deg);
   -webkit-transform-origin: 3% 0;
@@ -835,7 +824,7 @@ ul.sub-menu-list li:hover {
 #producto-estandar .mid {
   margin: 0 auto;
   width: 70%;
-  padding: 100px 50px;
+  padding: 5vh 50px;
   box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.2);
   position: relative;
   background: #fff;
@@ -962,7 +951,8 @@ ul.sub-menu-list li:hover {
   position: relative;
   margin: 0 auto;
 }
-#productos-especializados .modulo-salud, #productos-especializados .modulo-publico {
+#productos-especializados .modulo-salud,
+#productos-especializados .modulo-publico {
   height: 800px;
 }
 #productos-especializados .modulo-salud {
@@ -982,7 +972,7 @@ ul.sub-menu-list li:hover {
   background-attachment: fixed;
 }
 #productos-especializados .modulo-salud .left {
-  background: #F4F6FC;
+  background: #f4f6fc;
   display: flex;
   align-items: center;
   font-family: "Open sans", sans-serif;
@@ -1005,7 +995,7 @@ ul.sub-menu-list li:hover {
   background-attachment: fixed;
 }
 #productos-especializados .modulo-publico .right {
-  background: #F4F6FC;
+  background: #f4f6fc;
   display: flex;
   align-items: center;
   font-family: "Open sans", sans-serif;
@@ -1032,7 +1022,7 @@ ul.sub-menu-list li:hover {
   grid-gap: 20px 20px;
 }
 #productos-especializados .mid .opciones_box .opcion {
-  background: #FFF;
+  background: #fff;
   border-radius: 3px;
   padding: 15px 15px 15px 15px;
   box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
@@ -1047,12 +1037,12 @@ ul.sub-menu-list li:hover {
 }
 #productos-especializados .mid .opciones_box .opcion:hover {
   background: #084db0;
-  color: #FFF;
+  color: #fff;
 }
 #productos-especializados .mid .opciones_box .opcion .icon {
   width: 40px;
   height: 40px;
-  background: #FFF;
+  background: #fff;
   padding: 15px;
   border-radius: 100%;
   margin-right: 10px;
@@ -1061,7 +1051,8 @@ ul.sub-menu-list li:hover {
   width: 40px;
   height: 40px;
 }
-#productos-especializados .mid .opciones_box .opcion .icon, #productos-especializados .mid .opciones_box .opcion .text {
+#productos-especializados .mid .opciones_box .opcion .icon,
+#productos-especializados .mid .opciones_box .opcion .text {
   display: inline-block;
   vertical-align: middle;
 }
@@ -1204,7 +1195,7 @@ ul.sub-menu-list li:hover {
   position: relative;
   font-family: "Roboto";
   padding: 100px 0;
-  background: #FFF;
+  background: #fff;
 }
 #clientes .title {
   font-size: 40px;
@@ -1232,7 +1223,7 @@ ul.sub-menu-list li:hover {
   box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
   font-size: 40px;
   font-family: "Colfax Medium";
-  color: #FFF;
+  color: #fff;
   line-height: 35px;
   position: relative;
   margin: 0 auto;
@@ -1257,14 +1248,14 @@ ul.sub-menu-list li:hover {
 }
 #footer .sub-footer .section .title {
   font-size: 14px;
-  color: #FFF;
+  color: #fff;
   font-family: "Open sans", sans-serif !important;
   font-weight: 700;
   text-transform: uppercase;
   padding: 15px 0;
 }
 #footer .sub-footer .section .mid {
-  color: #FFF;
+  color: #fff;
   font-family: "Open sans", sans-serif !important;
   font-weight: normal;
   font-size: 14px;
@@ -1275,7 +1266,7 @@ ul.sub-menu-list li:hover {
 
 #end {
   background: #0b0e10;
-  color: #FFF;
+  color: #fff;
   width: 100%;
   text-align: center;
   padding: 20px 0;
@@ -1347,7 +1338,7 @@ button:hover {
 }
 
 #scroll i {
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-size: 36px;
 }
@@ -1387,7 +1378,7 @@ button:hover {
   top: -57px;
   width: 150px;
   background: rgba(0, 0, 0, 0.8);
-  color: #FFF;
+  color: #fff;
   font-weight: 400;
   font-size: 14px;
   border-radius: 3px;
@@ -1426,17 +1417,17 @@ button:hover {
 }
 
 .navNosotros {
-  color: #FFF !important;
+  color: #fff !important;
 }
 
 .content-we {
-  background: #F4F6FC;
+  background: #f4f6fc;
   width: 100%;
   height: auto;
   padding: 50px 0;
 }
 .content-we .main-box {
-  background: #FFF;
+  background: #fff;
   width: 70%;
   height: auto;
   padding: 50px;
@@ -1446,11 +1437,13 @@ button:hover {
 .content-we .main-box hr {
   border: 0.5px solid rgba(0, 0, 0, 0.05);
 }
-.content-we .main-box .titulo-main, .content-we .main-box .text-main {
+.content-we .main-box .titulo-main,
+.content-we .main-box .text-main {
   display: inline-block;
   vertical-align: middle;
 }
-.content-we .main-box .section-izquierda, .content-we .main-box .section-derecha {
+.content-we .main-box .section-izquierda,
+.content-we .main-box .section-derecha {
   display: inline-block;
   vertical-align: middle;
 }
@@ -1505,7 +1498,7 @@ button:hover {
   width: 40%;
   height: 100%;
   max-height: 80%;
-  background: #FFF;
+  background: #fff;
   margin: 0 auto;
   box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.2);
   padding-bottom: 4px;
@@ -1525,14 +1518,14 @@ button:hover {
   transition: all 0.3s ease;
 }
 #overlayPopup #popup .closeBtnPopup:hover {
-  color: #FFF;
+  color: #fff;
 }
 #overlayPopup #popup .headerPopup {
   max-width: 100%;
   height: auto;
   padding: 60px 20px 20px 20px;
   background: linear-gradient(to right, #3f88f3, #1b2b9f);
-  color: #FFF;
+  color: #fff;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: -0.2px;
@@ -1552,6 +1545,9 @@ button:hover {
   padding-right: 25px;
 }
 
+.greyscreen-open {
+  overflow: hidden;
+}
 .greyscreen-open > :not(.greyscreen) {
   -webkit-filter: blur(3px);
   filter: url(#blur);
@@ -1631,6 +1627,21 @@ button:hover {
   z-index: 999999999999;
   display: none;
   top: 0;
+}
+
+.contactanosBtn:hover {
+  background: #fff !important;
+  color: #084db0 !important;
+}
+
+.first-screen {
+  width: 100%;
+  height: 100vh;
+}
+
+.second-screen {
+  width: 100%;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=global.css.map */

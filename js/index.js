@@ -29,6 +29,7 @@ $(document).ready(function () {
                 $("html, body").animate({ scrollTop: 0 }, "slow");
                 window.location.hash = 'nosotros';
                 $('.menu-list li').addClass('navNosotros');
+                $('#logo').addClass('logoNosotros');
                 $('#footer').addClass('footer-we');
             }
         }).fadeIn('slow');
@@ -78,6 +79,7 @@ $(function () {
                         }, 1000);
                     }
                     $('.menu-list li').removeClass('navNosotros');
+                    $('#logo').removeClass('logoNosotros');
                     $('#footer').removeClass('footer-we');
                     loadBrands();
                 }
