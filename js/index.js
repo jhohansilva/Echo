@@ -148,23 +148,34 @@ $(function () {
         console.log('Cerrar popup');
         $('body').removeClass('greyscreen-open');
         $('#overlayPopup').fadeOut('fast', function () {
+            $('#popup').removeClass('popupTickets');
             $('#popup .content').html('');
         });
 
     });
-});
 
-$(function () {
     $(document).on('click', '[data-popup]', function (event) {
         var elemento = $(this).data().popup;
         console.log(elemento)
-        $('#popup .content').load("../content/" + elemento + ".html", function (response, status, xhr) {
+        $('#popup .content').load("./content/" + elemento + ".html", function (response, status, xhr) {
             if (status == "error") {
-                alert('Ha ocurrido un error: ' + response);                
-            }else{
+                alert('Ha ocurrido un error: ' + response);
+            } else {
+                if (elemento == 'tickets') $('#popup').addClass('popupTickets');
                 $('body').addClass('greyscreen-open');
                 $('#overlayPopup').css('display', 'flex').hide().fadeIn('fast');
             }
         });
     });
+
+    $(document).on('click', '#boton-menu', function (event) { toggleNav(); });
+    $(document).on('click', '#bg-black', function (event) { toggleNav(); });
 });
+
+function toggleNav() {
+
+    $('#menu').removeClass('horizontal-align').toggle("slide", 300,function(){        
+
+    });
+    $('#bg-black').toggle("fade");
+}

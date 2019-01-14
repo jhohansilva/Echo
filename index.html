@@ -16,8 +16,12 @@
 <body>
     <nav>
         <div id="sub-nav">
+            <div id="boton-menu">
+                <i class="material-icons">menu</i>
+            </div>
             <div id="logo">LOGO</div>
-            <div id="menu">
+            <div id="bg-black"></div>
+            <div id="menu" class="horizontal-align">
                 <ul class="menu-list">
                     <li data-scroll="inicio">Inicio</li>
                     <li class="btnNosotros">Nosotros</li>
@@ -110,7 +114,7 @@
         <i class="material-icons md-16">keyboard_arrow_up</i>
         <!-- <span></span> -->
     </a>
-    <a id="ticketsBtn">
+    <a id="ticketsBtn" data-popup='tickets'>
         <img style="width: 46%;height: 100%;" src="images/customer-support.svg" />
         <div class="tooltip">Sistema de tickets</div>
     </a>
@@ -125,7 +129,7 @@
             </div>
         </div>
     </div>
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg style="display:none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
             <filter id="blur">
                 <feGaussianBlur stdDeviation="3" />
