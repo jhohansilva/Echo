@@ -197,3 +197,193 @@
         }
     }
 }
+
+@media (max-width: 426px){
+    .first-screen,
+    .second-screen,
+    .third-screen,
+    .four-screen,
+    .five-screen,
+    .six-screen{
+        height: auto!important;
+    }
+
+    #sub-info-main{
+        grid-template-columns: 50% 50%!important;        
+    }
+
+    header{
+        background-size: 100% 50%!important; 
+        background-position: bottom!important;
+
+        #nav-wall {
+            background-size: 97% !important;
+            background-position: 0vh 36vh !important;
+
+            #sub-header{
+            display: block!important;
+            padding-top: 13vh!important;
+            text-align: center!important;
+
+                .header-title{
+                    font-size: 100%!important;
+                    width: 100%!important;
+                }
+            }
+        }
+    }
+
+    #info-main{
+        height: auto!important;
+        margin-bottom: 10px!important;
+    }
+    .box-grid .title-info{
+        font-size: 120%!important;
+    }
+
+    .section-products, .section-products2{
+        margin-top: 0px!important;
+        font-size: 100%!important;
+    }
+
+    .section-products::after{
+        opacity: 0.2!important;
+    }
+
+    #producto-estandar{
+        height: auto!important;
+        padding-top: 2vh!important;
+
+        &::before{
+            content: "";
+            background: #14191f;
+            width: 100%!important;
+            height: 50%;
+            position: absolute;
+            left: 0px!important; 
+            bottom: -25%!important;
+            -webkit-transform:none!important; 
+            transform: none!important;
+            -webkit-transform-origin: none!important;
+            transform-origin: none!important;
+            z-index: 0;
+        }
+
+        #title{
+            width: 100%!important;
+            padding: 0 !important;
+            text-align: center!important;
+            margin: 0 !important;
+        }
+
+        #modulos-estandar{
+            width: 100%!important;
+    
+            .grid{
+                grid-template-columns: 50% 50%!important;
+            }
+        }
+
+    } 
+
+    #productos-especializados .modulo-salud, #productos-especializados .modulo-publico{
+        height: auto!important;
+    }
+
+    #productos-especializados .modulo-salud, #productos-especializados .modulo-publico{
+        grid-template-columns:100% !important;
+    }
+
+    #productos-especializados .mid{
+        font-size: 3vw!important;
+        text-align: justify!important;
+        padding: 25px 0!important;
+
+        .title{
+            font-size: 8.5vw!important;
+        }
+
+        .opciones_box .opcion .text {
+            font-size: 3.8vw !important;
+        }
+
+    }
+    
+    #productos-especializados .mid .opciones_box .opcion .icon img{
+        position: relative!important;
+        left: -2px!important;
+        top: -4px!important;
+    }
+
+    button{
+        font-size: 12px!important;
+    }
+
+    #productos-especializados .modulo-salud .right , #productos-especializados .modulo-publico .left{
+        height: 20vh!important;
+        background-size: 100% 100%!important;
+        background-position: center !important;
+        background-attachment: inherit!important;
+    }
+
+    #popup{
+        width: 90%!important;
+
+        .headerPopup{
+            font-size: 140%!important;
+        }
+    }
+
+    #overlayPopup #popup .bodyPopup h3{
+        font-size: 100%!important;
+    }
+
+    .item{
+        font-size: 12px!important;
+    }
+
+    #otros-sectores{
+        height: auto!important;
+        padding-bottom: 140px!important;
+
+        .mid .tabla-sectores{
+            grid-template-columns: 100%!important;
+            margin: 0 auto!important;
+        }
+    }
+
+    #otros-sectores .mid .tabla-sectores .sector{
+        margin: 20px !important;
+    }
+
+    #otros-sectores .mid .tabla-sectores .sector .title{
+        font-size: 4vw!important;
+    }
+
+    #otros-sectores::before,#otros-sectores::after{
+        left: 0 !important;
+        width: 100%!important;
+        -webkit-transform: none!important;
+        transform: none!important;
+        -webkit-transform-origin: inherit!important;
+        transform-origin: inherit!important;
+    }
+
+    #clientes{
+        padding: 0!important;
+        margin-top: 0 !important;
+
+        .title{
+            font-size: 36px!important;            
+            padding: 0 20px!important;
+        }
+    }
+
+    #clientes .slider .image{
+        width: 100%!important;
+    }
+
+    #trabajemos{
+        padding: 70px 0!important;
+    }
+}

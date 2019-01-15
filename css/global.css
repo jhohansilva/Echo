@@ -315,6 +315,182 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.02);
   }
 }
+@media (max-width: 426px) {
+  .first-screen,
+.second-screen,
+.third-screen,
+.four-screen,
+.five-screen,
+.six-screen {
+    height: auto !important;
+  }
+
+  #sub-info-main {
+    grid-template-columns: 50% 50% !important;
+  }
+
+  header {
+    background-size: 100% 50% !important;
+    background-position: bottom !important;
+  }
+  header #nav-wall {
+    background-size: 97% !important;
+    background-position: 0vh 36vh !important;
+  }
+  header #nav-wall #sub-header {
+    display: block !important;
+    padding-top: 13vh !important;
+    text-align: center !important;
+  }
+  header #nav-wall #sub-header .header-title {
+    font-size: 100% !important;
+    width: 100% !important;
+  }
+
+  #info-main {
+    height: auto !important;
+    margin-bottom: 10px !important;
+  }
+
+  .box-grid .title-info {
+    font-size: 120% !important;
+  }
+
+  .section-products, .section-products2 {
+    margin-top: 0px !important;
+    font-size: 100% !important;
+  }
+
+  .section-products::after {
+    opacity: 0.2 !important;
+  }
+
+  #producto-estandar {
+    height: auto !important;
+    padding-top: 2vh !important;
+  }
+  #producto-estandar::before {
+    content: "";
+    background: #14191f;
+    width: 100% !important;
+    height: 50%;
+    position: absolute;
+    left: 0px !important;
+    bottom: -25% !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    -webkit-transform-origin: none !important;
+    transform-origin: none !important;
+    z-index: 0;
+  }
+  #producto-estandar #title {
+    width: 100% !important;
+    padding: 0 !important;
+    text-align: center !important;
+    margin: 0 !important;
+  }
+  #producto-estandar #modulos-estandar {
+    width: 100% !important;
+  }
+  #producto-estandar #modulos-estandar .grid {
+    grid-template-columns: 50% 50% !important;
+  }
+
+  #productos-especializados .modulo-salud, #productos-especializados .modulo-publico {
+    height: auto !important;
+  }
+
+  #productos-especializados .modulo-salud, #productos-especializados .modulo-publico {
+    grid-template-columns: 100% !important;
+  }
+
+  #productos-especializados .mid {
+    font-size: 3vw !important;
+    text-align: justify !important;
+    padding: 25px 0 !important;
+  }
+  #productos-especializados .mid .title {
+    font-size: 8.5vw !important;
+  }
+  #productos-especializados .mid .opciones_box .opcion .text {
+    font-size: 3.8vw !important;
+  }
+
+  #productos-especializados .mid .opciones_box .opcion .icon img {
+    position: relative !important;
+    left: -2px !important;
+    top: -4px !important;
+  }
+
+  button {
+    font-size: 12px !important;
+  }
+
+  #productos-especializados .modulo-salud .right, #productos-especializados .modulo-publico .left {
+    height: 20vh !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+    background-attachment: inherit !important;
+  }
+
+  #popup {
+    width: 90% !important;
+  }
+  #popup .headerPopup {
+    font-size: 140% !important;
+  }
+
+  #overlayPopup #popup .bodyPopup h3 {
+    font-size: 100% !important;
+  }
+
+  .item {
+    font-size: 12px !important;
+  }
+
+  #otros-sectores {
+    height: auto !important;
+    padding-bottom: 140px !important;
+  }
+  #otros-sectores .mid .tabla-sectores {
+    grid-template-columns: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  #otros-sectores .mid .tabla-sectores .sector {
+    margin: 20px !important;
+  }
+
+  #otros-sectores .mid .tabla-sectores .sector .title {
+    font-size: 4vw !important;
+  }
+
+  #otros-sectores::before, #otros-sectores::after {
+    left: 0 !important;
+    width: 100% !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    -webkit-transform-origin: inherit !important;
+    transform-origin: inherit !important;
+  }
+
+  #clientes {
+    padding: 0 !important;
+    margin-top: 0 !important;
+  }
+  #clientes .title {
+    font-size: 36px !important;
+    padding: 0 20px !important;
+  }
+
+  #clientes .slider .image {
+    width: 100% !important;
+  }
+
+  #trabajemos {
+    padding: 70px 0 !important;
+  }
+}
 .cube-folding {
   width: 50px;
   height: 50px;
@@ -688,13 +864,13 @@ ul.sub-menu-list li:hover {
   color: #2f465f;
 }
 #sub-header .header-title {
-  font-size: 18px;
+  font-size: 1.2vw;
   width: 44%;
   letter-spacing: -1px;
   font-family: "Open sans", sans-serif;
 }
 #sub-header .header-title p {
-  font-size: 70px;
+  font-size: 3.8vw;
   font-weight: 700;
   text-align: center;
   line-height: 0.8;
@@ -721,10 +897,10 @@ ul.sub-menu-list li:hover {
 
 .box-grid {
   text-align: center;
-  margin: 15px;
+  margin: 0.5vh;
   box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
   background: #fff;
-  padding: 15px;
+  padding: 0.5vh;
   border-radius: 2px;
   transition: all 300ms;
   position: relative;
@@ -732,11 +908,11 @@ ul.sub-menu-list li:hover {
 }
 .box-grid .image-info {
   background: aliceblue;
-  width: 120px;
-  height: 120px;
+  width: 14vh;
+  height: 14vh;
   border-radius: 150%;
   margin: 0 auto;
-  line-height: 183px;
+  line-height: 20vh;
 }
 .box-grid .image-info img {
   width: 70px;
@@ -750,12 +926,14 @@ ul.sub-menu-list li:hover {
   padding: 10px 15px;
   text-align: left;
   color: #084db0;
+  font-size: 1.2vw;
 }
 .box-grid .descrip-info {
   text-align: justify;
   font-family: "Open sans", sans-serif;
   letter-spacing: 0.3px;
   padding: 0 15px;
+  font-size: 1vw;
 }
 
 .box-grid:hover {
@@ -801,11 +979,12 @@ ul.sub-menu-list li:hover {
 #producto-estandar {
   background: #f4f6fc;
   width: 100%;
-  height: 70vh;
+  height: 72vh;
   margin: 0 auto;
   position: relative;
   display: flex;
   align-items: center;
+  padding-top: 8vh;
 }
 #producto-estandar::before {
   content: "";
@@ -836,7 +1015,7 @@ ul.sub-menu-list li:hover {
   position: relative;
 }
 #producto-estandar #title {
-  font-size: 60px;
+  font-size: 3vw;
   font-family: "Colfax Bold";
   position: relative;
   width: 25%;
@@ -856,8 +1035,8 @@ ul.sub-menu-list li:hover {
   grid-template-columns: 33.3% 33.3% 33.3%;
 }
 #producto-estandar #modulos-estandar .modulo {
-  padding: 15px;
-  margin: 10px;
+  padding: 2vh;
+  margin: 0.5vh;
   border-radius: 3px;
   cursor: pointer;
   transition: all 300ms;
@@ -884,6 +1063,7 @@ ul.sub-menu-list li:hover {
   width: 100%;
   padding: 10px 0;
   color: #222;
+  font-size: 1.2vw;
 }
 #producto-estandar #modulos-estandar .modulo:hover {
   box-shadow: rgba(0, 0, 0, 0.15) 0px -1px 50px 0px;
@@ -901,14 +1081,14 @@ ul.sub-menu-list li:hover {
   font-family: "Open sans", sans-serif;
   font-weight: 500;
   letter-spacing: -0.2px;
-  font-size: 16px;
-  padding-bottom: 15px;
+  font-size: 1vw;
+  padding-bottom: 1vw;
   text-align: justify;
 }
 
 .check {
-  width: 20px;
-  height: 20px;
+  width: 2vh;
+  height: 2vh;
   background: #38c101;
   border-radius: 100%;
   position: relative;
@@ -918,11 +1098,11 @@ ul.sub-menu-list li:hover {
   content: "";
   background-color: transparent;
   position: absolute;
-  left: 7px;
-  top: 3px;
-  width: 3px;
+  left: 0.7vh;
+  top: 0.3vh;
+  width: 0.4vh;
   border-bottom: 2.5px solid #fff;
-  height: 8px;
+  height: 0.8vh;
   border-right: 2.5px solid #fff;
   transform: rotate(45deg);
   -o-transform: rotate(45deg);
@@ -951,15 +1131,12 @@ ul.sub-menu-list li:hover {
   position: relative;
   margin: 0 auto;
 }
-#productos-especializados .modulo-salud,
-#productos-especializados .modulo-publico {
-  height: 800px;
-}
 #productos-especializados .modulo-salud {
   width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 50% 50%;
+  height: 85vh;
 }
 #productos-especializados .modulo-salud .right {
   width: 100%;
@@ -984,6 +1161,7 @@ ul.sub-menu-list li:hover {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 50% 50%;
+  height: 82vh;
 }
 #productos-especializados .modulo-publico .left {
   background: url(../images/publico_wall.jpg);
@@ -1007,16 +1185,17 @@ ul.sub-menu-list li:hover {
   width: 70%;
   margin: 0 auto;
   padding: 15px;
+  font-size: 1vw;
 }
 #productos-especializados .mid .title {
-  font-size: 48px;
+  font-size: 3.5vw;
   font-family: "Colfax Bold";
   text-transform: uppercase;
   font-weight: normal;
   color: #222;
 }
 #productos-especializados .mid .opciones_box {
-  margin-top: 50px;
+  margin-top: 5vh;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-gap: 20px 20px;
@@ -1024,7 +1203,7 @@ ul.sub-menu-list li:hover {
 #productos-especializados .mid .opciones_box .opcion {
   background: #fff;
   border-radius: 3px;
-  padding: 15px 15px 15px 15px;
+  padding: 2vh;
   box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
   font-family: "Open sans", sans-serif !important;
   font-weight: 700;
@@ -1040,26 +1219,29 @@ ul.sub-menu-list li:hover {
   color: #fff;
 }
 #productos-especializados .mid .opciones_box .opcion .icon {
-  width: 40px;
-  height: 40px;
+  width: 4vh;
+  height: 4vh;
   background: #fff;
   padding: 15px;
   border-radius: 100%;
   margin-right: 10px;
 }
 #productos-especializados .mid .opciones_box .opcion .icon img {
-  width: 40px;
-  height: 40px;
+  width: 4vh;
+  height: 4vh;
 }
 #productos-especializados .mid .opciones_box .opcion .icon,
 #productos-especializados .mid .opciones_box .opcion .text {
   display: inline-block;
   vertical-align: middle;
 }
+#productos-especializados .mid .opciones_box .opcion .text {
+  font-size: 1vw;
+}
 
 #otros-sectores {
   max-width: 100%;
-  height: auto;
+  height: 100vh;
   background: linear-gradient(#2e67bd, #0047af);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -1073,7 +1255,7 @@ ul.sub-menu-list li:hover {
   width: 108%;
   height: 32%;
   position: absolute;
-  bottom: -20%;
+  bottom: -25%;
   -webkit-transform: rotate(-3deg);
   transform: rotate(-3deg);
   -webkit-transform-origin: 3% 0;
@@ -1085,7 +1267,7 @@ ul.sub-menu-list li:hover {
   width: 103%;
   height: 32%;
   position: absolute;
-  bottom: -21%;
+  bottom: -27%;
   left: -5px;
   -webkit-transform: rotate(-2deg);
   transform: rotate(-2deg);
@@ -1098,18 +1280,17 @@ ul.sub-menu-list li:hover {
   height: 100%;
   display: flex;
   align-items: center;
-  margin-bottom: 12%;
-  margin-top: 50px;
 }
 #otros-sectores .mid .tabla-sectores {
   width: 100%;
   display: grid;
   grid-template-columns: 33.333% 33.333% 33.333%;
+  margin-top: -5vh;
 }
 #otros-sectores .mid .tabla-sectores .sector {
   background: #fff;
-  padding: 15px;
-  margin: 50px;
+  padding: 2vh;
+  margin: 4vh;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   border-radius: 3px;
@@ -1123,12 +1304,13 @@ ul.sub-menu-list li:hover {
 #otros-sectores .mid .tabla-sectores .sector .title {
   padding: 0px 0px 15px 0;
   text-align: center;
-  font-family: "Open sans", sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1vw;
   color: #222;
   text-transform: uppercase;
   position: relative;
+  letter-spacing: 0.2px;
 }
 #otros-sectores .mid .tabla-sectores .sector .title::before {
   content: "";
@@ -1188,13 +1370,13 @@ ul.sub-menu-list li:hover {
 
 #clientes {
   width: 100%;
-  height: 400px;
+  height: 56vh;
   margin: 0 auto;
   text-align: center;
   margin-top: -2%;
   position: relative;
   font-family: "Roboto";
-  padding: 100px 0;
+  padding-top: 4vh;
   background: #fff;
 }
 #clientes .title {
@@ -1217,24 +1399,28 @@ ul.sub-menu-list li:hover {
 
 #trabajemos {
   width: 70%;
-  height: auto;
-  padding: 60px;
+  height: 20vh;
+  padding: 0 5vh;
   background: #084db0;
   box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
-  font-size: 40px;
+  font-size: 2.8vw;
   font-family: "Colfax Medium";
   color: #fff;
   line-height: 35px;
   position: relative;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 70% 30%;
 }
 
 #footer {
   width: 100%;
   background: #14191f;
-  height: 35%;
-  margin-top: -5%;
-  padding-top: 4%;
+  height: 40vh;
+  margin-top: -10vh;
+  padding-top: 10vh;
   display: flex;
   align-items: center;
 }
@@ -1247,7 +1433,7 @@ ul.sub-menu-list li:hover {
   grid-gap: 0px 20px;
 }
 #footer .sub-footer .section .title {
-  font-size: 14px;
+  font-size: 0.8vw;
   color: #fff;
   font-family: "Open sans", sans-serif !important;
   font-weight: 700;
@@ -1258,9 +1444,10 @@ ul.sub-menu-list li:hover {
   color: #fff;
   font-family: "Open sans", sans-serif !important;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 0.8vw;
 }
 #footer .sub-footer .section .mid i.material-icons {
+  font-size: 0.8vw !important;
   margin-right: 8px;
 }
 
@@ -1269,8 +1456,8 @@ ul.sub-menu-list li:hover {
   color: #fff;
   width: 100%;
   text-align: center;
-  padding: 20px 0;
-  font-size: 14px;
+  padding: 2vh 0;
+  font-size: 0.8vw;
   font-family: "Open sans", sans-serif !important;
   font-weight: normal;
 }
@@ -1285,6 +1472,7 @@ button {
   font-weight: 600;
   font-family: "Roboto", sans-serif;
   transition: all 300ms;
+  font-size: 0.8vw;
 }
 button:hover {
   background: #084db0;
@@ -1497,7 +1685,7 @@ button:hover {
 #overlayPopup #popup {
   width: 40%;
   height: 100%;
-  max-height: 80%;
+  max-height: 80vh;
   background: #fff;
   margin: 0 auto;
   box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.2);
@@ -1522,27 +1710,31 @@ button:hover {
 }
 #overlayPopup #popup .headerPopup {
   max-width: 100%;
-  height: auto;
-  padding: 60px 20px 20px 20px;
+  padding: 7vh 2vh 2vh 2vh;
   background: linear-gradient(to right, #3f88f3, #1b2b9f);
   color: #fff;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: -0.2px;
-  font-size: 22px;
+  font-size: 1.5vw;
 }
 #overlayPopup #popup .bodyPopup {
   max-width: 100%;
-  height: 100%;
+  height: 58vh;
   padding: 0 20px 0px 20px;
   color: #222;
   font-size: 18px;
 }
+#overlayPopup #popup .bodyPopup h3 {
+  margin: 2vh 0;
+  font-size: 1.1vw;
+}
 #overlayPopup #popup .bodyPopup .content-modulo {
   overflow-y: scroll;
   max-height: 100%;
-  height: 75%;
+  height: 100%;
   padding-right: 25px;
+  font-size: 1vw;
 }
 
 .greyscreen-open {
@@ -1634,14 +1826,17 @@ button:hover {
   color: #084db0 !important;
 }
 
-.first-screen {
+.first-screen,
+.second-screen,
+.third-screen,
+.four-screen,
+.five-screen {
   width: 100%;
   height: 100vh;
 }
 
-.second-screen {
-  width: 100%;
-  height: 100vh;
+.six-screen {
+  height: 80vh;
 }
 
 /*# sourceMappingURL=global.css.map */

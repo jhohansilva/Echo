@@ -90,8 +90,9 @@ $(function () {
                     scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 220
                 }, 1000);
             } else {
+                console.log($('[data-scroll-producto~="' + elemento + '"]').offset().top);
                 $('html, body').animate({
-                    scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 60
+                    scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top
                 }, 1000);
             }
         }

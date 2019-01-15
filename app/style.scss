@@ -201,7 +201,7 @@ ul.sub-menu-list {
 
   .header-title {
     p {
-      font-size: 70px;
+      font-size: 3.8vw;
       font-weight: 700;
       // text-transform: uppercase;
       text-align: center;
@@ -213,7 +213,7 @@ ul.sub-menu-list {
       text-transform: uppercase;
     }
 
-    font-size: 18px;
+    font-size: 1.2vw;
     width: 44%;
     letter-spacing: -1px;
     font-family: "Open sans", sans-serif;
@@ -237,12 +237,12 @@ ul.sub-menu-list {
 
 .box-grid {
   text-align: center;
-  margin: 15px;
+  margin: .5vh;
   // box-shadow: rgba(0, 0, 0, 0.15) 0px -1px 50px 0px;
   // box-shadow: 0 23px 51px rgba(0,0,0,.08);
   box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
   background: #fff;
-  padding: 15px;
+  padding: .5vh;
   border-radius: 2px;
   transition: all 300ms;
   position: relative;
@@ -250,11 +250,11 @@ ul.sub-menu-list {
 
   .image-info {
     background: aliceblue;
-    width: 120px;
-    height: 120px;
+    width: 14vh;
+    height: 14vh;
     border-radius: 150%;
     margin: 0 auto;
-    line-height: 183px;
+    line-height: 20vh;
 
     img {
       width: 70px;
@@ -271,6 +271,7 @@ ul.sub-menu-list {
     text-align: left;
     // text-transform: uppercase;
     color: #084db0;
+    font-size: 1.2vw;
   }
 
   .descrip-info {
@@ -278,6 +279,7 @@ ul.sub-menu-list {
     font-family: "Open sans", sans-serif;
     letter-spacing: 0.3px;
     padding: 0 15px;
+    font-size: 1vw;
   }
 }
 
@@ -358,13 +360,13 @@ ul.sub-menu-list {
 #producto-estandar {
   background: #f4f6fc;
   width: 100%;
-  height: 70vh;
+  height: 72vh;
   margin: 0 auto;
   position: relative;
   display: flex;
   align-items: center;
   // padding-bottom: 90px;
-  // padding-top: 80px;
+  padding-top: 8vh;
 
   &::before {
     content: "";
@@ -399,7 +401,7 @@ ul.sub-menu-list {
   }
 
   #title {
-    font-size: 60px;
+    font-size: 3vw;
     font-family: "Colfax Bold";
     position: relative;
     width: 25%;
@@ -410,6 +412,7 @@ ul.sub-menu-list {
     color: #084db0;
     line-height: 1.1;
     letter-spacing: 2.5px;
+    
   }
 
   #modulos-estandar {
@@ -422,8 +425,8 @@ ul.sub-menu-list {
 
     .modulo {
       //   background: #fff;
-      padding: 15px;
-      margin: 10px;
+      padding: 2vh;
+      margin: .5vh;
       border-radius: 3px;
       //   box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.08);
       cursor: pointer;
@@ -453,6 +456,7 @@ ul.sub-menu-list {
         width: 100%;
         padding: 10px 0;
         color: #222;
+        font-size: 1.2vw;
       }
 
       &:hover {
@@ -476,14 +480,14 @@ ul.sub-menu-list {
   font-family: "Open sans", sans-serif;
   font-weight: 500;
   letter-spacing: -0.2px;
-  font-size: 16px;
-  padding-bottom: 15px;
+  font-size: 1vw;
+  padding-bottom: 1vw;
   text-align: justify;
 }
 
 .check {
-  width: 20px;
-  height: 20px;
+  width: 2vh;
+  height: 2vh;
   background: #38c101;
   border-radius: 100%;
   position: relative;
@@ -493,11 +497,11 @@ ul.sub-menu-list {
     content: "";
     background-color: transparent;
     position: absolute;
-    left: 7px;
-    top: 3px;
-    width: 3px;
+    left: .7vh;
+    top: .3vh;
+    width: .4vh;
     border-bottom: 2.5px solid #fff;
-    height: 8px;
+    height: .8vh;
     border-right: 2.5px solid #fff;
     transform: rotate(45deg);
     -o-transform: rotate(45deg);
@@ -526,16 +530,13 @@ ul.sub-menu-list {
   height: auto;
   position: relative;
   margin: 0 auto;
-
-  .modulo-salud,
-  .modulo-publico {
-    height: 800px;
-  }
+  
   .modulo-salud {
     width: 100%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 50% 50%;
+    height: 85vh;
 
     .right {
       width: 100%;
@@ -563,6 +564,7 @@ ul.sub-menu-list {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 50% 50%;
+    height: 82vh;
 
     .left {
       background: url(../images/publico_wall.jpg);
@@ -589,19 +591,18 @@ ul.sub-menu-list {
     width: 70%;
     margin: 0 auto;
     padding: 15px;
+    font-size: 1vw;
 
     .title {
-      font-size: 48px;
-      // font-family: "Open sans", sans-serif !important;
+      font-size: 3.5vw;
       font-family: "Colfax Bold";
-      // letter-spacing: -0.8px;
       text-transform: uppercase;
       font-weight: normal;
       color: #222;
     }
 
     .opciones_box {
-      margin-top: 50px;
+      margin-top: 5vh;
       display: grid;
       grid-template-columns: 50% 50%;
       grid-gap: 20px 20px;
@@ -609,7 +610,7 @@ ul.sub-menu-list {
       .opcion {
         background: #fff;
         border-radius: 3px;
-        padding: 15px 15px 15px 15px;
+        padding: 2vh;
         box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1),
           0 0 15px rgba(0, 0, 0, 0.06);
         font-family: "Open sans", sans-serif !important;
@@ -628,16 +629,16 @@ ul.sub-menu-list {
         }
 
         .icon {
-          width: 40px;
-          height: 40px;
+          width: 4vh;
+          height: 4vh;
           background: #fff;
           padding: 15px;
           border-radius: 100%;
           margin-right: 10px;
 
           img {
-            width: 40px;
-            height: 40px;
+            width: 4vh;
+            height: 4vh;
           }
         }
 
@@ -646,6 +647,10 @@ ul.sub-menu-list {
           display: inline-block;
           vertical-align: middle;
         }
+
+        .text{
+          font-size: 1vw;
+        }
       }
     }
   }
@@ -653,7 +658,7 @@ ul.sub-menu-list {
 
 #otros-sectores {
   max-width: 100%;
-  height: auto;
+  height: 100vh;
   background: linear-gradient(#2e67bd, #0047af);
   background-size: 100%;
   // background-color: #F4F6FC;
@@ -668,7 +673,7 @@ ul.sub-menu-list {
     width: 108%;
     height: 32%;
     position: absolute;
-    bottom: -20%;
+    bottom: -25%;
     -webkit-transform: rotate(-3deg);
     transform: rotate(-3deg);
     -webkit-transform-origin: 3% 0;
@@ -681,7 +686,7 @@ ul.sub-menu-list {
     width: 103%;
     height: 32%;
     position: absolute;
-    bottom: -21%;
+    bottom: -27%;
     left: -5px;
     -webkit-transform: rotate(-2deg);
     transform: rotate(-2deg);
@@ -694,19 +699,19 @@ ul.sub-menu-list {
     margin: 0 auto;
     height: 100%;
     display: flex;
-    align-items: center;
-    margin-bottom: 12%;
-    margin-top: 50px;
+    align-items: center;    
+    // margin-top: 50px;
 
     .tabla-sectores {
       width: 100%;
       display: grid;
       grid-template-columns: 33.333% 33.333% 33.333%;
+      margin-top: -5vh;
 
       .sector {
         background: #fff;
-        padding: 15px;
-        margin: 50px;
+        padding: 2vh;
+        margin: 4vh;
         // box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         cursor: pointer;
@@ -722,13 +727,13 @@ ul.sub-menu-list {
         .title {
           padding: 0px 0px 15px 0;
           text-align: center;
-          font-family: "Open sans", sans-serif !important;
+          font-family: "Roboto", sans-serif !important;
           font-weight: 700;
-          font-size: 1rem;
+          font-size: 1vw;
           color: #222;
           text-transform: uppercase;
-
           position: relative;
+          letter-spacing: .2px;
 
           &::before {
             content: "";
@@ -805,13 +810,13 @@ ul.sub-menu-list {
 
 #clientes {
   width: 100%;
-  height: 400px;
+  height: 56vh;
   margin: 0 auto;
   text-align: center;
   margin-top: -2%;
   position: relative;
   font-family: "Roboto";
-  padding: 100px 0;
+  padding-top: 4vh;
   background: #fff;
 
   .title {
@@ -830,7 +835,7 @@ ul.sub-menu-list {
       text-align: center;
       margin: 0 auto;
       height: 200px;
-      width: 200px !important;
+      width: 200px!important;
       align-items: center;
       display: flex !important;
     }
@@ -839,24 +844,28 @@ ul.sub-menu-list {
 
 #trabajemos {
   width: 70%;
-  height: auto;
-  padding: 60px;
+  height: 20vh;
+  padding: 0 5vh;
   background: #084db0;
   box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
-  font-size: 40px;
+  font-size: 2.8vw;
   font-family: "Colfax Medium";
   color: #fff;
   line-height: 35px;
   position: relative;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 70% 30% ;
 }
 
 #footer {
   width: 100%;
   background: #14191f;
-  height: 35%;
-  margin-top: -5%;
-  padding-top: 4%;
+  height: 40vh;
+  margin-top: -10vh;
+  padding-top: 10vh;
   display: flex;
   align-items: center;
 
@@ -870,7 +879,7 @@ ul.sub-menu-list {
 
     .section {
       .title {
-        font-size: 14px;
+        font-size: .8vw;
         color: #fff;
         font-family: "Open sans", sans-serif !important;
         font-weight: 700;
@@ -882,9 +891,10 @@ ul.sub-menu-list {
         color: #fff;
         font-family: "Open sans", sans-serif !important;
         font-weight: normal;
-        font-size: 14px;
+        font-size:.8vw;
 
         i.material-icons {
+          font-size: .8vw!important;
           margin-right: 8px;
         }
       }
@@ -897,8 +907,8 @@ ul.sub-menu-list {
   color: #fff;
   width: 100%;
   text-align: center;
-  padding: 20px 0;
-  font-size: 14px;
+  padding: 2vh 0;
+  font-size: .8vw;
   font-family: "Open sans", sans-serif !important;
   font-weight: normal;
 }
@@ -913,6 +923,7 @@ button {
   font-weight: 600;
   font-family: "Roboto", sans-serif;
   transition: all 300ms;
+  font-size: .8vw;
 
   &:hover {
     background: #084db0;
@@ -1147,7 +1158,7 @@ button {
   #popup {
     width: 40%;
     height: 100%;
-    max-height: 80%;
+    max-height: 80vh;
     background: #fff;
     margin: 0 auto;
     box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.2);
@@ -1174,29 +1185,34 @@ button {
     }
 
     .headerPopup {
-      max-width: 100%;
-      height: auto;
-      padding: 60px 20px 20px 20px;
+      max-width: 100%;      
+      padding: 7vh 2vh 2vh 2vh;
       background: linear-gradient(to right, #3f88f3, #1b2b9f);
       color: #fff;
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: -0.2px;
-      font-size: 22px;
+      font-size: 1.5vw;
     }
 
     .bodyPopup {
       max-width: 100%;
-      height: 100%;
+      height: 58vh;
       padding: 0 20px 0px 20px;
       color: #222;
       font-size: 18px;
 
+      h3{
+        margin: 2vh 0;
+        font-size: 1.1vw;
+      }
+
       .content-modulo {
         overflow-y: scroll;
         max-height: 100%;
-        height: 75%;
+        height: 100%;
         padding-right: 25px;
+        font-size: 1vw;
       }
     }
   }
@@ -1286,15 +1302,15 @@ button {
   color: #084db0 !important;
 }
 
-.first-screen {
+.first-screen,
+.second-screen,
+.third-screen,
+.four-screen,
+.five-screen {
   width: 100%;
   height: 100vh;
 }
 
-.second-screen {
-  width: 100%;
-  height: 100vh;
-  // display: flex;
-  // align-items: center;
-  // padding-top: 8vh;
+.six-screen{
+  height: 80vh;
 }
