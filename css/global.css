@@ -153,8 +153,19 @@
 }
 
 @media (max-width: 1441px) {
+  header {
+    background-size: 44.8% 100% !important;
+  }
+
+  header #nav-wall {
+    background-position: 93.5vh 9vh !important;
+  }
+  header #nav-wall #sub-header {
+    width: 70% !important;
+  }
+
   #sub-nav {
-    width: 90% !important;
+    width: 80% !important;
   }
 
   #sub-info-main {
@@ -166,7 +177,7 @@
   }
 
   #sub-header .header-title p {
-    font-size: 50px !important;
+    font-size: 4vw !important;
   }
 
   .box-grid .descrip-info {
@@ -188,10 +199,11 @@
   }
 
   #producto-estandar #modulos-estandar .modulo .title-modulo {
-    font-size: 18px !important;
+    font-size: 144% !important;
   }
 
-  #productos-especializados .modulo-salud, #productos-especializados .modulo-publico {
+  #productos-especializados .modulo-salud,
+#productos-especializados .modulo-publico {
     height: 84vh !important;
   }
 
@@ -211,17 +223,29 @@
   #otros-sectores .mid {
     width: 80% !important;
   }
-  #otros-sectores .mid .tabla-sectores .sector {
-    margin: 50px 20px !important;
-  }
 }
 @media (max-width: 1025px) {
+  header {
+    background-size: 50% 100% !important;
+  }
+
+  nav {
+    background: #fff !important;
+  }
+
+  #sub-nav {
+    width: 90% !important;
+  }
+
   header #nav-wall {
-    background-size: 65% !important;
-    background-position: 101% 114% !important;
+    background-position: 49.5vh 13vh !important;
   }
   header #nav-wall #sub-header {
     width: 90% !important;
+  }
+
+  #productos-especializados .mid .opciones_box .opcion .text {
+    font-size: 120% !important;
   }
 
   #sub-info-main {
@@ -249,7 +273,8 @@
     padding: 8px 15px !important;
   }
 
-  #productos-especializados .modulo-salud, #productos-especializados .modulo-publico {
+  #productos-especializados .modulo-salud,
+#productos-especializados .modulo-publico {
     height: 80vh !important;
   }
 
@@ -257,8 +282,15 @@
     grid-template-columns: 60% 40% !important;
   }
   #productos-especializados .modulo-salud .right {
-    background-size: 131% 90% !important;
-    background-position: 62% !important;
+    background-size: auto 100% !important;
+    background-position: 79% !important;
+    background-attachment: inherit !important;
+  }
+
+  #productos-especializados .modulo-publico .left {
+    background-size: auto 100% !important;
+    background-position: 79% !important;
+    background-attachment: inherit !important;
   }
 
   #productos-especializados .mid .opciones_box {
@@ -270,7 +302,6 @@
   }
 
   #clientes {
-    padding: 60px 0 !important;
     margin-top: -8% !important;
   }
   #clientes .mid {
@@ -289,7 +320,7 @@
 @media (max-width: 769px) {
   #boton-menu {
     display: inline-block !important;
-    margin-right: 15px;
+    margin: 15px;
   }
 
   #menu {
@@ -301,21 +332,23 @@
     z-index: 999999999999;
     display: none;
     margin: 0 !important;
-    background: #FFF;
+    background: #fff;
   }
   #menu ul.menu-list li {
     display: block !important;
     margin-right: 0px;
-    padding: 15px 30px;
+    padding: 0 !important;
     text-align: left;
     text-transform: capitalize;
     font-size: 16px;
-    color: #222;
+    color: #333;
     font-weight: 500;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+  }
+  #menu ul.menu-list li a {
+    padding: 20px 25px !important;
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 769px) {
   .first-screen,
 .second-screen,
 .third-screen,
@@ -327,6 +360,10 @@
 
   #sub-info-main {
     grid-template-columns: 50% 50% !important;
+  }
+
+  nav #sub-nav {
+    padding: 0.5vh 0 !important;
   }
 
   header {
@@ -356,7 +393,8 @@
     font-size: 120% !important;
   }
 
-  .section-products, .section-products2 {
+  .section-products,
+.section-products2 {
     margin-top: 0px !important;
     font-size: 100% !important;
   }
@@ -396,11 +434,13 @@
     grid-template-columns: 50% 50% !important;
   }
 
-  #productos-especializados .modulo-salud, #productos-especializados .modulo-publico {
+  #productos-especializados .modulo-salud,
+#productos-especializados .modulo-publico {
     height: auto !important;
   }
 
-  #productos-especializados .modulo-salud, #productos-especializados .modulo-publico {
+  #productos-especializados .modulo-salud,
+#productos-especializados .modulo-publico {
     grid-template-columns: 100% !important;
   }
 
@@ -426,11 +466,20 @@
     font-size: 12px !important;
   }
 
-  #productos-especializados .modulo-salud .right, #productos-especializados .modulo-publico .left {
+  #productos-especializados .modulo-salud .right,
+#productos-especializados .modulo-publico .left {
     height: 20vh !important;
     background-size: 100% 100% !important;
     background-position: center !important;
     background-attachment: inherit !important;
+  }
+
+  #productos-especializados .modulo-salud .right {
+    order: 1 !important;
+  }
+
+  #productos-especializados .modulo-salud .left {
+    order: 3 !important;
   }
 
   #popup {
@@ -465,7 +514,8 @@
     font-size: 4vw !important;
   }
 
-  #otros-sectores::before, #otros-sectores::after {
+  #otros-sectores::before,
+#otros-sectores::after {
     left: 0 !important;
     width: 100% !important;
     -webkit-transform: none !important;
@@ -489,6 +539,104 @@
 
   #trabajemos {
     padding: 70px 0 !important;
+  }
+
+  #clientes .slider .image {
+    width: 100% !important;
+  }
+
+  #logo {
+    background-size: 80px auto !important;
+    width: 68% !important;
+  }
+
+  #trabajemos {
+    grid-template-columns: 100% !important;
+    height: auto !important;
+    padding: 20px 0 !important;
+    width: 90% !important;
+    text-align: center !important;
+    font-size: 5.6vw !important;
+  }
+  #trabajemos .contactBtn {
+    text-align: center !important;
+    padding: 0 0 20px 0;
+  }
+  #trabajemos .contactBtn button {
+    float: none !important;
+  }
+  #trabajemos .contacText {
+    line-height: 20px !important;
+    padding: 20px 0;
+  }
+  #trabajemos .contacText a {
+    font-size: 4vw !important;
+  }
+
+  #footer {
+    height: auto !important;
+    padding: 10vh 0 3vh 0 !important;
+  }
+  #footer .sub-footer {
+    grid-template-columns: 100% !important;
+    grid-gap: 0px 0px !important;
+  }
+
+  #end {
+    font-size: 80% !important;
+  }
+
+  #footer .sub-footer .section .title,
+#footer .sub-footer .section .mid {
+    font-size: 80% !important;
+    text-align: center;
+  }
+
+  #footer .sub-footer .section .mid i.material-icons {
+    font-size: 100% !important;
+  }
+
+  #footer .sub-footer .section:nth-child(4) .mid {
+    line-height: 10px !important;
+  }
+
+  #clientes .mid {
+    width: 70% !important;
+  }
+
+  #ticketsBtn {
+    right: 15px !important;
+    bottom: 100px !important;
+    z-index: 100000000000000020;
+  }
+
+  #scroll {
+    right: 15px !important;
+    bottom: 156px !important;
+  }
+
+  #sub-info-main .box-grid {
+    margin: 1% !important;
+  }
+
+  .box-grid .descrip-info {
+    padding: 0 10px !important;
+  }
+
+  .box-grid .title-info {
+    padding: 10px 10px !important;
+  }
+
+  .sub-menu-list {
+    position: relative !important;
+    margin: 0px auto !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  #sub-header .header-title p {
+    font-size: 9vw !important;
   }
 }
 .cube-folding {
@@ -726,12 +874,12 @@ header {
   border-bottom: 1px solid #efefef;
 }
 header #nav-wall {
-  background-image: url(../images/prosoft_edificio_v3.png);
+  background-image: url(../images/prosoft_edificio_v3-min.png);
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-size: 59%;
-  background-position: 92% -19%;
+  background-size: 100vh;
+  background-position: 78vh 7vh;
   /* background-size: cover; */
   background-attachment: fixed;
 }
@@ -809,7 +957,7 @@ ul.menu-list li {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 75%;
   cursor: pointer;
   padding: 8px 15px;
   border-radius: 2px;
@@ -864,7 +1012,7 @@ ul.sub-menu-list li:hover {
   color: #2f465f;
 }
 #sub-header .header-title {
-  font-size: 1.2vw;
+  font-size: 110%;
   width: 44%;
   letter-spacing: -1px;
   font-family: "Open sans", sans-serif;
@@ -897,10 +1045,10 @@ ul.sub-menu-list li:hover {
 
 .box-grid {
   text-align: center;
-  margin: 0.5vh;
+  margin: 1vh;
   box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
   background: #fff;
-  padding: 0.5vh;
+  padding: 1vh;
   border-radius: 2px;
   transition: all 300ms;
   position: relative;
@@ -989,21 +1137,21 @@ ul.sub-menu-list li:hover {
 #producto-estandar::before {
   content: "";
   background: #14191f;
-  width: 102%;
-  height: 50%;
+  width: 100%;
+  height: 40%;
   position: absolute;
-  left: -16px;
-  bottom: -25%;
-  -webkit-transform: rotate(-5deg);
-  transform: rotate(-5deg);
-  -webkit-transform-origin: 3% 0;
-  transform-origin: 3% 0;
+  bottom: -12%;
+  -webkit-transform: skewY(-5deg);
+  -moz-transform: skewY(-5deg);
+  -ms-transform: skewY(-5deg);
+  -o-transform: skewY(-5deg);
+  transform: skewY(-5deg);
   z-index: 0;
 }
 #producto-estandar .mid {
   margin: 0 auto;
   width: 70%;
-  padding: 5vh 50px;
+  padding: 2vh 50px;
   box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.2);
   position: relative;
   background: #fff;
@@ -1020,7 +1168,7 @@ ul.sub-menu-list li:hover {
   position: relative;
   width: 25%;
   text-transform: uppercase;
-  text-align: right;
+  text-align: center;
   margin-left: 20px;
   margin-right: 10px;
   color: #084db0;
@@ -1035,8 +1183,8 @@ ul.sub-menu-list li:hover {
   grid-template-columns: 33.3% 33.3% 33.3%;
 }
 #producto-estandar #modulos-estandar .modulo {
-  padding: 2vh;
-  margin: 0.5vh;
+  padding: 1vh;
+  margin: 1vh;
   border-radius: 3px;
   cursor: pointer;
   transition: all 300ms;
@@ -1061,7 +1209,7 @@ ul.sub-menu-list li:hover {
   display: inline-block;
   vertical-align: middle;
   width: 100%;
-  padding: 10px 0;
+  padding: 0.5vh 0;
   color: #222;
   font-size: 1.2vw;
 }
@@ -1185,7 +1333,7 @@ ul.sub-menu-list li:hover {
   width: 70%;
   margin: 0 auto;
   padding: 15px;
-  font-size: 1vw;
+  font-size: 100%;
 }
 #productos-especializados .mid .title {
   font-size: 3.5vw;
@@ -1236,7 +1384,7 @@ ul.sub-menu-list li:hover {
   vertical-align: middle;
 }
 #productos-especializados .mid .opciones_box .opcion .text {
-  font-size: 1vw;
+  font-size: 100%;
 }
 
 #otros-sectores {
@@ -1289,7 +1437,7 @@ ul.sub-menu-list li:hover {
 }
 #otros-sectores .mid .tabla-sectores .sector {
   background: #fff;
-  padding: 2vh;
+  padding: 1vh;
   margin: 4vh;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -1428,12 +1576,12 @@ ul.sub-menu-list li:hover {
   width: 70%;
   height: auto;
   display: grid;
-  grid-template-columns: 30% 20% 20% 30%;
+  grid-template-columns: 30% 15% 15% 40%;
   margin: 0 auto;
   grid-gap: 0px 20px;
 }
 #footer .sub-footer .section .title {
-  font-size: 0.8vw;
+  font-size: 1vw;
   color: #fff;
   font-family: "Open sans", sans-serif !important;
   font-weight: 700;
@@ -1444,10 +1592,10 @@ ul.sub-menu-list li:hover {
   color: #fff;
   font-family: "Open sans", sans-serif !important;
   font-weight: normal;
-  font-size: 0.8vw;
+  font-size: 1vw;
 }
 #footer .sub-footer .section .mid i.material-icons {
-  font-size: 0.8vw !important;
+  font-size: 1vw;
   margin-right: 8px;
 }
 
@@ -1816,9 +1964,10 @@ button:hover {
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
   position: fixed;
-  z-index: 999999999999;
+  z-index: 999999999999999;
   display: none;
   top: 0;
+  left: 0;
 }
 
 .contactanosBtn:hover {

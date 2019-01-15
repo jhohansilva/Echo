@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $("main").load("content/inicio.html", function (response, status, xhr) {
         if (status == "error") {
             var msg = "<h4>Ha ocurrido un error: </h4>";
@@ -10,6 +11,9 @@ $(document).ready(function () {
     validarScroll();
     validarScrollBtnUp();
     loadBrands();
+    if (screen.width < 768) {
+        touch();
+    }
     cerrarToolTip('[data-nav~="sub-nav-productos"]', '[data-nav~="sub-nav-productos-box"]');
     cerrarToolTip('[data-nav~="sub-nav-soporte"]', '[data-nav~="sub-nav-soporte-box"]');
     $(window).scroll(function () {
@@ -84,16 +88,29 @@ $(function () {
                     loadBrands();
                 }
             }).fadeIn('slow');
-        } else {
+        } else {            
             if (elemento == 'clientes') {
-                $('html, body').animate({
-                    scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 220
-                }, 1000);
+                if (screen.width < 769) {
+                    $('html, body').animate({
+                        scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 100
+                    }, 1000);
+                    toggleNav();
+                } else {
+                    $('html, body').animate({
+                        scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 220
+                    }, 1000);
+                }
             } else {
-                console.log($('[data-scroll-producto~="' + elemento + '"]').offset().top);
-                $('html, body').animate({
-                    scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top
-                }, 1000);
+                if (screen.width < 1025) {
+                    $('html, body').animate({
+                        scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 70
+                    }, 1000);
+                    if (screen.width < 769) toggleNav();
+                } else {
+                    $('html, body').animate({
+                        scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top
+                    }, 1000);
+                }
             }
         }
     });
@@ -128,6 +145,7 @@ function loadBrands() {
         type: 'get',
         contentType: 'application/json',
         success: function (data) {
+            // alert(data);
             var obj = JSON.parse(data);
             $('.slider').html('');
             $.each(obj, function (index, value) {
@@ -136,19 +154,28 @@ function loadBrands() {
                 );
             });
 
-            $('.slider').slick({
-                slidesToShow: 4,
-                slidesToScroll: 4,
-                autoplay: false,
-                autoplaySpeed: 4000,
-            });
+            if (screen.width < 769) {
+                $('.slider').slick({
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    autoplay: false,
+                    autoplaySpeed: 4000,
+                });
+                $('#clientes .slider .image').attr('style', 'width: 90%!important;');
+            } else {
+                $('.slider').slick({
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    autoplay: false,
+                    autoplaySpeed: 4000,
+                });
+            }
         }
     });
 }
 
 $(function () {
     $(document).on('click', '.closeBtnPopup', function (event) {
-        console.log('Cerrar popup');
         $('body').removeClass('greyscreen-open');
         $('#overlayPopup').fadeOut('fast', function () {
             $('#popup').removeClass('popupTickets');
@@ -159,7 +186,6 @@ $(function () {
 
     $(document).on('click', '[data-popup]', function (event) {
         var elemento = $(this).data().popup;
-        console.log(elemento)
         $('#popup .content').load("./content/" + elemento + ".html", function (response, status, xhr) {
             if (status == "error") {
                 alert('Ha ocurrido un error: ' + response);
@@ -176,9 +202,34 @@ $(function () {
 });
 
 function toggleNav() {
-
-    $('#menu').removeClass('horizontal-align').toggle("slide", 300,function(){        
-
-    });
+    $('#menu').removeClass('horizontal-align').toggle("slide", 300);
     $('#bg-black').toggle("fade");
+}
+
+function touch() {
+    var canvas = document.getElementById('touch');
+    canvas.addEventListener('touchstart', touchstart);
+    canvas.addEventListener('touchmove', touchmove);
+}
+
+function touchstart(e) {
+    if (e.targetTouches.length == 1) {
+        var touch = e.targetTouches[0];
+        xIni = touch.pageX;
+        yIni = touch.pageY;
+    }
+}
+
+function touchmove(e) {
+    if (e.targetTouches.length == 1) {
+        var touch = e.targetTouches[0];
+        if ((touch.pageX > xIni + 70) && (touch.pageY > yIni - 50) && (touch.pageY < yIni + 50)) {
+            $('#menu').show('slide', 200);
+            $('#bg-black').show('fade', 500);
+        }
+        if ((touch.pageX < xIni - 40) && (touch.pageY > yIni - 20) && (touch.pageY < yIni + 20)) {
+            $('#menu').hide('slide', 300);
+            $('#bg-black').hide('fade', 500);
+        }
+    }
 }

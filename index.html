@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#0554c8" />
     <title>SC-Prosoft</title>
     <link rel='stylesheet' href='css/global.css' type='text/css' media='all' />
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
@@ -13,7 +14,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 </head>
 
-<body>
+<body id="touch">
     <nav>
         <div id="sub-nav">
             <div id="boton-menu">
@@ -23,20 +24,22 @@
             <div id="bg-black"></div>
             <div id="menu" class="horizontal-align">
                 <ul class="menu-list">
-                    <li data-scroll="inicio">Inicio</li>
-                    <li class="btnNosotros">Nosotros</li>
+                    <li data-scroll="inicio">
+                        <a>Inicio</a>
+                    </li>
+                    <li class="btnNosotros"><a>Nosotros</a></li>
                     <li data-nav='sub-nav-productos'>
                         <a>Productos</a>
                         <i class="material-icons md-16">expand_more</i>
                         <ul class="sub-menu-list" data-nav='sub-nav-productos-box'>
-                            <li data-scroll="estandar">Paquete estándar</li>
-                            <li data-scroll="salud">Sector salud</li>
-                            <li data-scroll="publico">Sector público</li>
-                            <li data-scroll="especializados">Módulos especializados</li>
+                            <li data-scroll="estandar"><a>Paquete estándar</a></li>
+                            <li data-scroll="salud"><a>Sector salud</a></li>
+                            <li data-scroll="publico"><a>Sector público</a></li>
+                            <li data-scroll="especializados"><a>Módulos especializados</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a data-scroll="clientes">Clientes</a>
+                    <li data-scroll="clientes">
+                        <a>Clientes</a>
                     </li>
                     <li>
                         <a href="#">Descargas</a>

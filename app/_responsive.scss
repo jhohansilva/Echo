@@ -1,389 +1,525 @@
-@media (max-width: 1441px){
-    #sub-nav{
-        width: 90%!important;
+@media (max-width: 1441px) {
+  header {
+    background-size: 44.8% 100% !important;
+  }
+
+  header #nav-wall {
+    background-position: 93.5vh 9vh !important;
+
+    #sub-header {
+      width: 70% !important;
     }
+  }
 
-    #sub-info-main{
-        margin-top: -50px!important;
-        width: 90%!important;
+  #sub-nav {
+    width: 80% !important;
+  }
 
-        .box-grid{
-            padding: 10px 0!important;
-            // margin: 0px 10px;
-        }
+  #sub-info-main {
+    margin-top: -50px !important;
+    width: 90% !important;
+
+    .box-grid {
+      padding: 10px 0 !important;
+      // margin: 0px 10px;
     }
+  }
 
-    #sub-header .header-title p{
-        font-size: 50px!important;
+  #sub-header .header-title p {
+    font-size: 4vw !important;
+  }
+
+  .box-grid .descrip-info {
+    font-size: 14px !important;
+  }
+
+  .box-grid .image-info {
+    line-height: 150px !important;
+    width: 100px !important;
+    height: 100px !important;
+
+    img {
+      height: 60px !important;
+      width: 60px !important;
     }
+  }
 
-    .section-products{
-        // margin-top: 70px!important;
+  #producto-estandar #title {
+    font-size: 42px !important;
+  }
+
+  #producto-estandar #modulos-estandar .modulo .title-modulo {
+    font-size: 144% !important;
+  }
+
+  #productos-especializados .modulo-salud,
+  #productos-especializados .modulo-publico {
+    height: 84vh !important;
+  }
+
+  #productos-especializados .mid {
+    width: 90% !important;
+  }
+
+  #productos-especializados .mid .opciones_box .opcion .icon {
+    width: 25px !important;
+    height: 25px !important;
+
+    img {
+      width: 30px !important;
+      height: 30px !important;
     }
+  }
 
-    header{
-        // height: 76vh!important;
+  #otros-sectores .mid {
+    width: 80% !important;
 
-        #nav-wall{
-            // background-position: 92% -134%!important;
-        }
+    .tabla-sectores .sector {
+      // margin: 50px 20px!important;
     }
-
-    .box-grid .descrip-info{
-        font-size: 14px!important;
-    }
-
-    .box-grid .image-info{
-        line-height: 150px!important;
-        width: 100px!important;
-        height: 100px!important;
-
-        img{
-            height: 60px!important;
-            width: 60px!important;
-        }
-    }
-
-    #producto-estandar{
-        // padding-bottom: 80px !important;
-        // padding-top: 50px !important;
-    }
-
-    #producto-estandar #title{
-        font-size: 42px!important;
-    }
-
-    #producto-estandar .mid{
-        // padding: 80px 50px !important;
-    }
-
-    #producto-estandar #modulos-estandar .modulo .title-modulo{
-        font-size: 18px!important;
-    }
-
-    #productos-especializados .modulo-salud, #productos-especializados .modulo-publico{
-        height: 84vh!important;
-    }
-
-    #productos-especializados .mid{
-        width: 90%!important;
-    }
-
-    #productos-especializados .mid .opciones_box .opcion .icon{
-        width: 25px!important;
-        height: 25px!important;
-
-        img{
-            width: 30px!important;
-            height: 30px!important;
-        }
-    }
-
-    #otros-sectores .mid{
-        width: 80%!important;
-        
-        .tabla-sectores .sector{
-            margin: 50px 20px!important;
-        }
-    }
+  }
 }
 
-@media (max-width: 1025px){
-    header #nav-wall{
-        background-size: 65%!important;
-        background-position: 101% 114%!important;
+@media (max-width: 1025px) {
+  header {
+    background-size: 50% 100% !important;
+  }
 
-        #sub-header{
-            width: 90%!important;
-        }
+  nav {
+    background: #fff !important;
+  }
+
+  #sub-nav {
+    width: 90% !important;
+  }
+
+  header #nav-wall {
+    background-position: 49.5vh 13vh !important;
+
+    #sub-header {
+      width: 90% !important;
     }
+  }
 
-    #sub-info-main{
-        width: 100%!important;
-        
-        .box-grid .image-info{
-            width: 80px!important;
-            height: 80px!important;
-            line-height: 110px!important;
+  #productos-especializados .mid .opciones_box .opcion .text {
+    font-size: 120% !important;
+  }
 
-            img{
-                height: 40px !important;
-                width: 40px !important;
-            }
-        }
+  #sub-info-main {
+    width: 100% !important;
+
+    .box-grid .image-info {
+      width: 80px !important;
+      height: 80px !important;
+      line-height: 110px !important;
+
+      img {
+        height: 40px !important;
+        width: 40px !important;
+      }
     }
+  }
 
-    #producto-estandar .mid{
-        width: 90%!important;
-        padding: 50px 10px !important;
+  #producto-estandar .mid {
+    width: 90% !important;
+    padding: 50px 10px !important;
+  }
+
+  #producto-estandar #modulos-estandar .modulo {
+    padding: 15px 25px !important;
+
+    button {
+      padding: 8px 15px !important;
     }
+  }
 
-    #producto-estandar #modulos-estandar .modulo{
-        padding: 15px 25px!important;
-        
-        button{
-            padding: 8px 15px!important;
-        }
+  #productos-especializados .modulo-salud,
+  #productos-especializados .modulo-publico {
+    height: 80vh !important;
+  }
+
+  #productos-especializados .modulo-salud {
+    grid-template-columns: 60% 40% !important;
+
+    .right {
+      background-size: auto 100% !important;
+      background-position: 79% !important;
+      background-attachment: inherit !important;
     }
+  }
 
-    #productos-especializados .modulo-salud, #productos-especializados .modulo-publico{
-        height: 80vh !important;
+  #productos-especializados .modulo-publico .left {
+    background-size: auto 100% !important;
+    background-position: 79% !important;
+    background-attachment: inherit !important;
+  }
+
+  #productos-especializados .mid .opciones_box {
+    grid-template-columns: 100% !important;
+  }
+
+  #otros-sectores .mid {
+    width: 90% !important;
+  }
+
+  #clientes {
+    // padding: 60px 0!important;
+    margin-top: -8% !important;
+
+    .mid {
+      width: 90%;
     }
+  }
 
-    #productos-especializados .modulo-salud{
-        grid-template-columns: 60% 40%!important;
+  #trabajemos {
+    width: 80% !important;
+  }
 
-        .right{
-            background-size: 131% 90% !important;
-            background-position: 62% !important;
-        }
-    }
-
-    #productos-especializados .mid .opciones_box{
-        grid-template-columns: 100%!important;
-    }
-
-    #otros-sectores .mid{
-        width: 90%!important;
-    }
-
-    #clientes{
-        padding: 60px 0!important;
-        margin-top: -8%!important;
-
-        .mid{
-            width: 90%;
-        }
-    }
-
-    #trabajemos{
-        width: 80%!important;
-    }
-
-    #footer{
-        height: 43vh!important;
-        padding-top: 6%!important;
-    }
+  #footer {
+    height: 43vh !important;
+    padding-top: 6% !important;
+  }
 }
 
-@media (max-width: 769px){
-    #boton-menu{
-        display:inline-block!important;
-        margin-right: 15px;
-    }
+@media (max-width: 769px) {
+  #boton-menu {
+    display: inline-block !important;
+    margin: 15px;
+  }
 
-    #menu{
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 70%;
-        z-index: 999999999999;
-        display: none;        
-        margin: 0!important;
-        // padding-top: 150px;
-        background: #FFF;
+  #menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 70%;
+    z-index: 999999999999;
+    display: none;
+    margin: 0 !important;
+    // padding-top: 150px;
+    background: #fff;
 
-        ul.menu-list li{            
-            display: block !important;
-            margin-right: 0px;
-            padding: 15px 30px;
-            text-align: left;
-            text-transform: capitalize;
-            font-size: 16px;
-            color: #222;
-            font-weight: 500;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.02);
-        }
+    ul.menu-list li {
+      display: block !important;
+      margin-right: 0px;
+      padding: 0 !important;
+      text-align: left;
+      text-transform: capitalize;
+      font-size: 16px;
+      color: #333;
+      font-weight: 500;
+      // border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+
+      a {
+        padding: 20px 25px !important;
+      }
     }
+  }
 }
 
-@media (max-width: 426px){
-    .first-screen,
-    .second-screen,
-    .third-screen,
-    .four-screen,
-    .five-screen,
-    .six-screen{
-        height: auto!important;
-    }
+@media (max-width: 769px) {
+  .first-screen,
+  .second-screen,
+  .third-screen,
+  .four-screen,
+  .five-screen,
+  .six-screen {
+    height: auto !important;
+  }
 
-    #sub-info-main{
-        grid-template-columns: 50% 50%!important;        
-    }
+  #sub-info-main {
+    grid-template-columns: 50% 50% !important;
+  }
 
-    header{
-        background-size: 100% 50%!important; 
-        background-position: bottom!important;
+  nav #sub-nav {
+    padding: 0.5vh 0 !important;
+  }
 
-        #nav-wall {
-            background-size: 97% !important;
-            background-position: 0vh 36vh !important;
+  header {
+    background-size: 100% 50% !important;
+    background-position: bottom !important;
 
-            #sub-header{
-            display: block!important;
-            padding-top: 13vh!important;
-            text-align: center!important;
+    #nav-wall {
+      background-size: 97% !important;
+      background-position: 0vh 36vh !important;
 
-                .header-title{
-                    font-size: 100%!important;
-                    width: 100%!important;
-                }
-            }
+      #sub-header {
+        display: block !important;
+        padding-top: 13vh !important;
+        text-align: center !important;
+
+        .header-title {
+          font-size: 100% !important;
+          width: 100% !important;
         }
+      }
+    }
+  }
+
+  #info-main {
+    height: auto !important;
+    margin-bottom: 10px !important;
+  }
+  .box-grid .title-info {
+    font-size: 120% !important;
+  }
+
+  .section-products,
+  .section-products2 {
+    margin-top: 0px !important;
+    font-size: 100% !important;
+  }
+
+  .section-products::after {
+    opacity: 0.2 !important;
+  }
+
+  #producto-estandar {
+    height: auto !important;
+    padding-top: 2vh !important;
+
+    &::before {
+      content: "";
+      background: #14191f;
+      width: 100% !important;
+      height: 50%;
+      position: absolute;
+      left: 0px !important;
+      bottom: -25% !important;
+      -webkit-transform: none !important;
+      transform: none !important;
+      -webkit-transform-origin: none !important;
+      transform-origin: none !important;
+      z-index: 0;
     }
 
-    #info-main{
-        height: auto!important;
-        margin-bottom: 10px!important;
-    }
-    .box-grid .title-info{
-        font-size: 120%!important;
-    }
-
-    .section-products, .section-products2{
-        margin-top: 0px!important;
-        font-size: 100%!important;
+    #title {
+      width: 100% !important;
+      padding: 0 !important;
+      text-align: center !important;
+      margin: 0 !important;
     }
 
-    .section-products::after{
-        opacity: 0.2!important;
+    #modulos-estandar {
+      width: 100% !important;
+
+      .grid {
+        grid-template-columns: 50% 50% !important;
+      }
+    }
+  }
+
+  #productos-especializados .modulo-salud,
+  #productos-especializados .modulo-publico {
+    height: auto !important;
+  }
+
+  #productos-especializados .modulo-salud,
+  #productos-especializados .modulo-publico {
+    grid-template-columns: 100% !important;
+  }
+
+  #productos-especializados .mid {
+    font-size: 3vw !important;
+    text-align: justify !important;
+    padding: 25px 0 !important;
+
+    .title {
+      font-size: 8.5vw !important;
     }
 
-    #producto-estandar{
-        height: auto!important;
-        padding-top: 2vh!important;
+    .opciones_box .opcion .text {
+      font-size: 3.8vw !important;
+    }
+  }
 
-        &::before{
-            content: "";
-            background: #14191f;
-            width: 100%!important;
-            height: 50%;
-            position: absolute;
-            left: 0px!important; 
-            bottom: -25%!important;
-            -webkit-transform:none!important; 
-            transform: none!important;
-            -webkit-transform-origin: none!important;
-            transform-origin: none!important;
-            z-index: 0;
-        }
+  #productos-especializados .mid .opciones_box .opcion .icon img {
+    position: relative !important;
+    left: -2px !important;
+    top: -4px !important;
+  }
 
-        #title{
-            width: 100%!important;
-            padding: 0 !important;
-            text-align: center!important;
-            margin: 0 !important;
-        }
+  button {
+    font-size: 12px !important;
+  }
 
-        #modulos-estandar{
-            width: 100%!important;
-    
-            .grid{
-                grid-template-columns: 50% 50%!important;
-            }
-        }
+  #productos-especializados .modulo-salud .right,
+  #productos-especializados .modulo-publico .left {
+    height: 20vh !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+    background-attachment: inherit !important;
+  }
 
-    } 
+  #productos-especializados .modulo-salud .right {
+    order: 1 !important;
+  }
 
-    #productos-especializados .modulo-salud, #productos-especializados .modulo-publico{
-        height: auto!important;
+  #productos-especializados .modulo-salud .left {
+    order: 3 !important;
+  }
+
+  #popup {
+    width: 90% !important;
+
+    .headerPopup {
+      font-size: 140% !important;
+    }
+  }
+
+  #overlayPopup #popup .bodyPopup h3 {
+    font-size: 100% !important;
+  }
+
+  .item {
+    font-size: 12px !important;
+  }
+
+  #otros-sectores {
+    height: auto !important;
+    padding-bottom: 140px !important;
+
+    .mid .tabla-sectores {
+      grid-template-columns: 100% !important;
+      margin: 0 auto !important;
+    }
+  }
+
+  #otros-sectores .mid .tabla-sectores .sector {
+    margin: 20px !important;
+  }
+
+  #otros-sectores .mid .tabla-sectores .sector .title {
+    font-size: 4vw !important;
+  }
+
+  #otros-sectores::before,
+  #otros-sectores::after {
+    left: 0 !important;
+    width: 100% !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    -webkit-transform-origin: inherit !important;
+    transform-origin: inherit !important;
+  }
+
+  #clientes {
+    padding: 0 !important;
+    margin-top: 0 !important;
+
+    .title {
+      font-size: 36px !important;
+      padding: 0 20px !important;
+    }
+  }
+
+  #clientes .slider .image {
+    width: 100% !important;
+  }
+
+  #trabajemos {
+    padding: 70px 0 !important;
+  }
+
+  #clientes .slider .image {
+    width: 100% !important;
+  }
+
+  #logo {
+    background-size: 80px auto !important;
+    width: 68% !important;
+  }
+
+  #trabajemos {
+    grid-template-columns: 100% !important;
+    height: auto !important;
+    padding: 20px 0 !important;
+    width: 90% !important;
+    text-align: center !important;
+    font-size: 5.6vw !important;
+
+    .contactBtn {
+      text-align: center !important;
+      padding: 0 0 20px 0;
+      button {
+        float: none !important;
+      }
     }
 
-    #productos-especializados .modulo-salud, #productos-especializados .modulo-publico{
-        grid-template-columns:100% !important;
+    .contacText {
+      line-height: 20px !important;
+      padding: 20px 0;
+      a {
+        font-size: 4vw !important;
+      }
     }
+  }
 
-    #productos-especializados .mid{
-        font-size: 3vw!important;
-        text-align: justify!important;
-        padding: 25px 0!important;
+  #footer {
+    height: auto !important;
+    padding: 10vh 0 3vh 0 !important;
 
-        .title{
-            font-size: 8.5vw!important;
-        }
-
-        .opciones_box .opcion .text {
-            font-size: 3.8vw !important;
-        }
-
+    .sub-footer {
+      grid-template-columns: 100% !important;
+      grid-gap: 0px 0px !important;
     }
-    
-    #productos-especializados .mid .opciones_box .opcion .icon img{
-        position: relative!important;
-        left: -2px!important;
-        top: -4px!important;
+  }
+
+  #end {
+    font-size: 80% !important;
+  }
+
+  #footer .sub-footer .section .title,
+  #footer .sub-footer .section .mid {
+    font-size: 80% !important;
+    text-align: center;
+  }
+
+  #footer .sub-footer .section .mid i.material-icons {
+    font-size: 100% !important;
+  }
+
+  #footer .sub-footer .section:nth-child(4) {
+    .mid {
+      line-height: 10px !important;
     }
+  }
 
-    button{
-        font-size: 12px!important;
-    }
+  #clientes .mid {
+    width: 70% !important;
+  }
 
-    #productos-especializados .modulo-salud .right , #productos-especializados .modulo-publico .left{
-        height: 20vh!important;
-        background-size: 100% 100%!important;
-        background-position: center !important;
-        background-attachment: inherit!important;
-    }
+  #ticketsBtn {
+    right: 15px !important;
+    bottom: 100px !important;
+    z-index: 99999999999999999;
+  }
 
-    #popup{
-        width: 90%!important;
+  #scroll {
+    right: 15px !important;
+    bottom: 156px !important;
+  }
 
-        .headerPopup{
-            font-size: 140%!important;
-        }
-    }
+  #sub-info-main .box-grid {
+    margin: 1% !important;
+  }
+  .box-grid .descrip-info {
+    padding: 0 10px !important;
+  }
 
-    #overlayPopup #popup .bodyPopup h3{
-        font-size: 100%!important;
-    }
+  .box-grid .title-info {
+    padding: 10px 10px !important;
+  }
 
-    .item{
-        font-size: 12px!important;
-    }
+  .sub-menu-list {
+    position: relative !important;
+    margin: 0px auto !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
 
-    #otros-sectores{
-        height: auto!important;
-        padding-bottom: 140px!important;
-
-        .mid .tabla-sectores{
-            grid-template-columns: 100%!important;
-            margin: 0 auto!important;
-        }
-    }
-
-    #otros-sectores .mid .tabla-sectores .sector{
-        margin: 20px !important;
-    }
-
-    #otros-sectores .mid .tabla-sectores .sector .title{
-        font-size: 4vw!important;
-    }
-
-    #otros-sectores::before,#otros-sectores::after{
-        left: 0 !important;
-        width: 100%!important;
-        -webkit-transform: none!important;
-        transform: none!important;
-        -webkit-transform-origin: inherit!important;
-        transform-origin: inherit!important;
-    }
-
-    #clientes{
-        padding: 0!important;
-        margin-top: 0 !important;
-
-        .title{
-            font-size: 36px!important;            
-            padding: 0 20px!important;
-        }
-    }
-
-    #clientes .slider .image{
-        width: 100%!important;
-    }
-
-    #trabajemos{
-        padding: 70px 0!important;
-    }
+  #sub-header .header-title p {
+    font-size: 9vw !important;
+  }
 }

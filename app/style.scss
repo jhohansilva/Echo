@@ -49,12 +49,12 @@ header {
   border-bottom: 1px solid #efefef;
 
   #nav-wall {
-    background-image: url(../images/prosoft_edificio_v3.png);
+    background-image: url(../images/prosoft_edificio_v3-min.png);
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
-    background-size: 59%;
-    background-position: 92% -19%;
+    background-size: 100vh;
+    background-position: 78vh 7vh;
     /* background-size: cover; */
     background-attachment: fixed;
   }
@@ -140,7 +140,7 @@ ul.menu-list {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 75%;
     cursor: pointer;
     padding: 8px 15px;
     border-radius: 2px;
@@ -213,7 +213,7 @@ ul.sub-menu-list {
       text-transform: uppercase;
     }
 
-    font-size: 1.2vw;
+    font-size: 110%;
     width: 44%;
     letter-spacing: -1px;
     font-family: "Open sans", sans-serif;
@@ -237,12 +237,12 @@ ul.sub-menu-list {
 
 .box-grid {
   text-align: center;
-  margin: .5vh;
+  margin: 1vh;
   // box-shadow: rgba(0, 0, 0, 0.15) 0px -1px 50px 0px;
   // box-shadow: 0 23px 51px rgba(0,0,0,.08);
   box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
   background: #fff;
-  padding: .5vh;
+  padding: 1vh;
   border-radius: 2px;
   transition: all 300ms;
   position: relative;
@@ -371,15 +371,19 @@ ul.sub-menu-list {
   &::before {
     content: "";
     background: #14191f;
-    width: 102%;
-    height: 50%;
+    width: 100%;
+    height: 40%;
     position: absolute;
-    left: -16px;
-    bottom: -25%;
-    -webkit-transform: rotate(-5deg);
-    transform: rotate(-5deg);
-    -webkit-transform-origin: 3% 0;
-    transform-origin: 3% 0;
+    bottom: -12%;
+    -webkit-transform: skewY(-5deg);
+    -moz-transform: skewY(-5deg);
+    -ms-transform: skewY(-5deg);
+    -o-transform: skewY(-5deg);
+    transform: skewY(-5deg);
+    // -webkit-transform: rotate(-5deg);
+    // transform: rotate(-5deg);
+    // -webkit-transform-origin: 3% 0;
+    // transform-origin: 3% 0;
     z-index: 0;
   }
 
@@ -387,7 +391,7 @@ ul.sub-menu-list {
     margin: 0 auto;
     width: 70%;
     // padding: 100px 50px;
-    padding: 5vh 50px;
+    padding: 2vh 50px;
     box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.2);
     position: relative;
     background: #fff;
@@ -406,13 +410,12 @@ ul.sub-menu-list {
     position: relative;
     width: 25%;
     text-transform: uppercase;
-    text-align: right;
+    text-align: center;
     margin-left: 20px;
     margin-right: 10px;
     color: #084db0;
     line-height: 1.1;
     letter-spacing: 2.5px;
-    
   }
 
   #modulos-estandar {
@@ -425,8 +428,8 @@ ul.sub-menu-list {
 
     .modulo {
       //   background: #fff;
-      padding: 2vh;
-      margin: .5vh;
+      padding: 1vh;
+      margin: 1vh;
       border-radius: 3px;
       //   box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.08);
       cursor: pointer;
@@ -454,7 +457,7 @@ ul.sub-menu-list {
         display: inline-block;
         vertical-align: middle;
         width: 100%;
-        padding: 10px 0;
+        padding: .5vh 0;
         color: #222;
         font-size: 1.2vw;
       }
@@ -497,11 +500,11 @@ ul.sub-menu-list {
     content: "";
     background-color: transparent;
     position: absolute;
-    left: .7vh;
-    top: .3vh;
-    width: .4vh;
+    left: 0.7vh;
+    top: 0.3vh;
+    width: 0.4vh;
     border-bottom: 2.5px solid #fff;
-    height: .8vh;
+    height: 0.8vh;
     border-right: 2.5px solid #fff;
     transform: rotate(45deg);
     -o-transform: rotate(45deg);
@@ -530,7 +533,7 @@ ul.sub-menu-list {
   height: auto;
   position: relative;
   margin: 0 auto;
-  
+
   .modulo-salud {
     width: 100%;
     margin: 0 auto;
@@ -591,7 +594,7 @@ ul.sub-menu-list {
     width: 70%;
     margin: 0 auto;
     padding: 15px;
-    font-size: 1vw;
+    font-size: 100%;
 
     .title {
       font-size: 3.5vw;
@@ -648,8 +651,8 @@ ul.sub-menu-list {
           vertical-align: middle;
         }
 
-        .text{
-          font-size: 1vw;
+        .text {
+          font-size: 100%;
         }
       }
     }
@@ -699,7 +702,7 @@ ul.sub-menu-list {
     margin: 0 auto;
     height: 100%;
     display: flex;
-    align-items: center;    
+    align-items: center;
     // margin-top: 50px;
 
     .tabla-sectores {
@@ -710,7 +713,7 @@ ul.sub-menu-list {
 
       .sector {
         background: #fff;
-        padding: 2vh;
+        padding: 1vh;
         margin: 4vh;
         // box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -733,7 +736,7 @@ ul.sub-menu-list {
           color: #222;
           text-transform: uppercase;
           position: relative;
-          letter-spacing: .2px;
+          letter-spacing: 0.2px;
 
           &::before {
             content: "";
@@ -835,7 +838,7 @@ ul.sub-menu-list {
       text-align: center;
       margin: 0 auto;
       height: 200px;
-      width: 200px!important;
+      width: 200px !important;
       align-items: center;
       display: flex !important;
     }
@@ -857,7 +860,7 @@ ul.sub-menu-list {
   display: flex;
   align-items: center;
   display: grid;
-  grid-template-columns: 70% 30% ;
+  grid-template-columns: 70% 30%;
 }
 
 #footer {
@@ -873,13 +876,13 @@ ul.sub-menu-list {
     width: 70%;
     height: auto;
     display: grid;
-    grid-template-columns: 30% 20% 20% 30%;
+    grid-template-columns: 30% 15% 15% 40%;
     margin: 0 auto;
     grid-gap: 0px 20px;
 
     .section {
       .title {
-        font-size: .8vw;
+        font-size: 1vw;
         color: #fff;
         font-family: "Open sans", sans-serif !important;
         font-weight: 700;
@@ -891,10 +894,10 @@ ul.sub-menu-list {
         color: #fff;
         font-family: "Open sans", sans-serif !important;
         font-weight: normal;
-        font-size:.8vw;
+        font-size: 1vw;
 
         i.material-icons {
-          font-size: .8vw!important;
+          font-size: 1vw;
           margin-right: 8px;
         }
       }
@@ -908,7 +911,7 @@ ul.sub-menu-list {
   width: 100%;
   text-align: center;
   padding: 2vh 0;
-  font-size: .8vw;
+  font-size: 0.8vw;
   font-family: "Open sans", sans-serif !important;
   font-weight: normal;
 }
@@ -923,7 +926,7 @@ button {
   font-weight: 600;
   font-family: "Roboto", sans-serif;
   transition: all 300ms;
-  font-size: .8vw;
+  font-size: 0.8vw;
 
   &:hover {
     background: #084db0;
@@ -1185,7 +1188,7 @@ button {
     }
 
     .headerPopup {
-      max-width: 100%;      
+      max-width: 100%;
       padding: 7vh 2vh 2vh 2vh;
       background: linear-gradient(to right, #3f88f3, #1b2b9f);
       color: #fff;
@@ -1202,7 +1205,7 @@ button {
       color: #222;
       font-size: 18px;
 
-      h3{
+      h3 {
         margin: 2vh 0;
         font-size: 1.1vw;
       }
@@ -1292,9 +1295,10 @@ button {
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
   position: fixed;
-  z-index: 999999999999;
+  z-index: 999999999999999;
   display: none;
   top: 0;
+  left: 0;
 }
 
 .contactanosBtn:hover {
@@ -1311,6 +1315,6 @@ button {
   height: 100vh;
 }
 
-.six-screen{
+.six-screen {
   height: 80vh;
 }
