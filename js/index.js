@@ -35,12 +35,41 @@ $(document).ready(function () {
                 $('.menu-list li').addClass('navNosotros');
                 $('#logo').addClass('logoNosotros');
                 $('#footer').addClass('footer-we');
+                if (screen.width < 768) toggleNav();
             }
         }).fadeIn('slow');
     });
 
+    getBtnIframe();
 
 });
+
+function getBtnIframe() {
+    setTimeout(function () {
+        var iframe = document.getElementById('tidio-chat-iframe');
+        var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+        var button = $(innerDoc.body).find('div#button');        
+        if($(button).width() == null) getBtnIframe();
+        // console.log(button)        
+        // console.log($(button).width())
+        // console.log($(button).height())
+        
+        var bottom = 50;
+        $('.ticketContent').css({
+            'width': $(button).width() + 'px',
+            'height': $(button).height() + 'px',
+            'bottom': bottom + 'px'
+        }).show('fade');
+
+        $('.scrollContent').css({
+            'width': $(button).width() + 'px',
+            'height': $(button).height() + 'px',
+            'bottom': (bottom + 60) + 'px'
+        });
+    }, 5000)
+
+
+}
 
 window.onload = function () { $('#loaderMain').fadeOut() }
 
@@ -73,10 +102,8 @@ $(function () {
                 } else {
                     $("html, body").animate({ scrollTop: 0 }, "slow");
                     window.location.hash = '';
-                    if (elemento == 'clientes') {
-                        $('html, body').animate({
-                            scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 220
-                        }, 1000);
+                    if (elemento == 'clientes' && screen.width > 768) {
+                        $('html, body').animate({ scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 220 }, 1000);
                     } else {
                         $('html, body').animate({
                             scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 60
@@ -86,32 +113,48 @@ $(function () {
                     $('#logo').removeClass('logoNosotros');
                     $('#footer').removeClass('footer-we');
                     loadBrands();
+                    if (screen.width < 768) toggleNav();
                 }
-            }).fadeIn('slow');
-        } else {            
-            if (elemento == 'clientes') {
-                if (screen.width < 769) {
-                    $('html, body').animate({
-                        scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 100
-                    }, 1000);
-                    toggleNav();
-                } else {
-                    $('html, body').animate({
-                        scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 220
-                    }, 1000);
-                }
-            } else {
-                if (screen.width < 1025) {
-                    $('html, body').animate({
-                        scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 70
-                    }, 1000);
-                    if (screen.width < 769) toggleNav();
-                } else {
-                    $('html, body').animate({
-                        scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top
-                    }, 1000);
-                }
+            })
+        } else {
+            console.log(elemento)
+            if (elemento == 'estandar' || elemento == 'especializados') {
+                console.log('test');
+                $('html, body').animate({
+                    scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top
+                }, 1000);
+            } else if (elemento == 'salud' || elemento == 'publico') {
+                $('html, body').animate({
+                    scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 70
+                }, 1000);
+            } else if (elemento == 'clientes') {
+                $('html, body').animate({
+                    scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 250
+                }, 1000);
             }
+            // if (elemento == 'clientes') {
+            //     if (screen.width < 769) {
+            //         $('html, body').animate({
+            //             scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 100
+            //         }, 1000);
+            //         toggleNav();
+            //     } else {
+            //         $('html, body').animate({
+            //             scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 220
+            //         }, 1000);
+            //     }
+            // } else {
+            //     if (screen.width < 1025) {
+            //         $('html, body').animate({
+            //             scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 70
+            //         }, 1000);
+            //         if (screen.width < 769) toggleNav();
+            //     } else {
+            //         $('html, body').animate({
+            //             scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top
+            //         }, 1000);
+            //     }
+            // }
         }
     });
 });
