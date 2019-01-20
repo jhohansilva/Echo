@@ -152,206 +152,6 @@
   color: rgba(255, 255, 255, 0.3);
 }
 
-@media (max-width: 1441px) {
-  header {
-    background-size: 44.8% 100% !important;
-  }
-
-  header #nav-wall {
-    background-position: 93.5vh 9vh !important;
-  }
-  header #nav-wall #sub-header {
-    width: 70% !important;
-  }
-
-  #sub-nav {
-    width: 80% !important;
-  }
-
-  #sub-info-main {
-    margin-top: -50px !important;
-    width: 90% !important;
-  }
-  #sub-info-main .box-grid {
-    padding: 10px 0 !important;
-  }
-
-  #sub-header .header-title p {
-    font-size: 4vw !important;
-  }
-
-  .box-grid .descrip-info {
-    font-size: 14px !important;
-  }
-
-  .box-grid .image-info {
-    line-height: 150px !important;
-    width: 100px !important;
-    height: 100px !important;
-  }
-  .box-grid .image-info img {
-    height: 60px !important;
-    width: 60px !important;
-  }
-
-  #producto-estandar #title {
-    font-size: 42px !important;
-  }
-
-  #producto-estandar #modulos-estandar .modulo .title-modulo {
-    font-size: 144% !important;
-  }
-
-  #productos-especializados .modulo-salud,
-#productos-especializados .modulo-publico {
-    height: 84vh !important;
-  }
-
-  #productos-especializados .mid {
-    width: 90% !important;
-  }
-
-  #productos-especializados .mid .opciones_box .opcion .icon {
-    width: 25px !important;
-    height: 25px !important;
-  }
-  #productos-especializados .mid .opciones_box .opcion .icon img {
-    width: 30px !important;
-    height: 30px !important;
-  }
-
-  #otros-sectores .mid {
-    width: 80% !important;
-  }
-}
-@media (max-width: 1025px) {
-  header {
-    background-size: 50% 100% !important;
-  }
-
-  nav {
-    background: #fff !important;
-  }
-
-  #sub-nav {
-    width: 90% !important;
-  }
-
-  header #nav-wall {
-    background-position: 49.5vh 13vh !important;
-  }
-  header #nav-wall #sub-header {
-    width: 90% !important;
-  }
-
-  #productos-especializados .mid .opciones_box .opcion .text {
-    font-size: 120% !important;
-  }
-
-  #sub-info-main {
-    width: 100% !important;
-  }
-  #sub-info-main .box-grid .image-info {
-    width: 80px !important;
-    height: 80px !important;
-    line-height: 110px !important;
-  }
-  #sub-info-main .box-grid .image-info img {
-    height: 40px !important;
-    width: 40px !important;
-  }
-
-  #producto-estandar .mid {
-    width: 90% !important;
-    padding: 50px 10px !important;
-  }
-
-  #producto-estandar #modulos-estandar .modulo {
-    padding: 15px 25px !important;
-  }
-  #producto-estandar #modulos-estandar .modulo button {
-    padding: 8px 15px !important;
-  }
-
-  #productos-especializados .modulo-salud,
-#productos-especializados .modulo-publico {
-    height: 80vh !important;
-  }
-
-  #productos-especializados .modulo-salud {
-    grid-template-columns: 60% 40% !important;
-  }
-  #productos-especializados .modulo-salud .right {
-    background-size: auto 100% !important;
-    background-position: 79% !important;
-    background-attachment: inherit !important;
-  }
-
-  #productos-especializados .modulo-publico .left {
-    background-size: auto 100% !important;
-    background-position: 79% !important;
-    background-attachment: inherit !important;
-  }
-
-  #productos-especializados .mid .opciones_box {
-    grid-template-columns: 100% !important;
-  }
-
-  #otros-sectores .mid {
-    width: 90% !important;
-  }
-
-  #clientes {
-    margin-top: -8% !important;
-  }
-  #clientes .mid {
-    width: 90%;
-  }
-
-  #trabajemos {
-    width: 80% !important;
-  }
-
-  #footer {
-    height: 43vh !important;
-    padding-top: 6% !important;
-  }
-
-  #otros-sectores {
-    height: 90vh !important;
-  }
-}
-@media (max-width: 769px) {
-  #boton-menu {
-    display: inline-block !important;
-    margin: 15px;
-  }
-
-  #menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 70%;
-    z-index: 999999999999;
-    display: none;
-    margin: 0 !important;
-    background: #fff;
-  }
-  #menu ul.menu-list li {
-    display: block !important;
-    margin-right: 0px;
-    padding: 0 !important;
-    text-align: left;
-    text-transform: capitalize;
-    font-size: 16px;
-    color: #333;
-    font-weight: 500;
-  }
-  #menu ul.menu-list li a {
-    padding: 20px 25px !important;
-  }
-}
 @media (max-width: 769px) {
   .first-screen,
 .second-screen,
@@ -883,7 +683,7 @@ html,
 body {
   margin: 0 auto;
   padding: 0;
-  background: transparent;
+  background: #FFF;
   font-size: 100%;
   max-width: 100%;
   width: 100%;
@@ -915,21 +715,33 @@ html {
 header {
   background: linear-gradient(#005eea, #094cad);
   width: 100%;
-  height: 70vh;
+  height: 70%;
   background-size: 50% 100%;
   background-repeat: no-repeat;
   background-position: right;
   border-bottom: 1px solid #efefef;
 }
 header #nav-wall {
-  background-image: url(../images/prosoft_edificio_v3-min.png);
   width: 100%;
   height: 100%;
-  background-repeat: no-repeat;
-  background-size: 100vh;
-  background-position: 78vh 7vh;
-  /* background-size: cover; */
-  background-attachment: fixed;
+}
+header #nav-wall .imagen-edificio {
+  box-sizing: border-box;
+  display: block;
+  width: 50%;
+  height: 70%;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  padding-top: 4%;
+}
+header #nav-wall .imagen-edificio .edificio {
+  background: url(../images/prosoft_edificio_v4-min.png);
+  width: 100%;
+  height: 100%;
+  background-size: 100% auto;
+  margin-left: -21%;
 }
 
 a,
@@ -1079,56 +891,63 @@ ul.sub-menu-list li:hover {
 
 #info-main {
   width: 100%;
-  height: 30vh;
+  height: 30%;
 }
 
 #sub-info-main {
   margin: 0 auto;
   width: 80%;
   height: 100%;
-  margin-top: -50px;
+  max-height: 100%;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 20px 20px;
+  margin-top: -1%;
 }
 
 .box-grid {
   text-align: center;
-  margin: 1vh;
   box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
   background: #fff;
-  padding: 1vh;
   border-radius: 2px;
   transition: all 300ms;
   position: relative;
-  cursor: pointer;
+  cursor: default;
 }
 .box-grid .image-info {
   background: aliceblue;
-  width: 14vh;
-  height: 14vh;
+  width: 34%;
+  height: 44%;
   border-radius: 150%;
-  margin: 0 auto;
-  line-height: 20vh;
+  margin: 3% auto;
+  display: flex;
+  align-items: center;
 }
 .box-grid .image-info img {
-  width: 70px;
-  height: 70px;
+  width: 60%;
+  height: 60%;
+  margin: 0 auto;
 }
 .box-grid .title-info {
   font-family: "Colfax Bold";
   font-weight: normal;
   letter-spacing: 0.5px;
-  font-size: 1.3rem;
-  padding: 10px 15px;
   text-align: left;
   color: #084db0;
   font-size: 1.2vw;
+  height: 15%;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
 }
 .box-grid .descrip-info {
-  text-align: justify;
+  text-align: left;
   font-family: "Open sans", sans-serif;
   letter-spacing: 0.3px;
-  padding: 0 15px;
+  height: 30%;
+  padding: 0 5% 3% 5%;
+  display: flex;
+  align-items: center;
   font-size: 1vw;
 }
 
@@ -1199,32 +1018,25 @@ ul.sub-menu-list li:hover {
 #producto-estandar .mid {
   margin: 0 auto;
   width: 70%;
+  height: 80%;
   padding: 2vh 50px;
   box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.2);
   position: relative;
   background: #fff;
-}
-#producto-estandar #title,
-#producto-estandar #modulos-estandar {
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 25% 75%;
+  grid-gap: 20px 20px;
 }
 #producto-estandar #title {
-  font-size: 3vw;
+  font-size: 2.8vw;
   font-family: "Colfax Bold";
   position: relative;
-  width: 25%;
   text-transform: uppercase;
   text-align: center;
-  margin-left: 20px;
-  margin-right: 10px;
   color: #084db0;
   line-height: 1.1;
   letter-spacing: 2.5px;
-}
-#producto-estandar #modulos-estandar {
-  width: 70%;
 }
 #producto-estandar #modulos-estandar .grid {
   display: grid;
@@ -1376,22 +1188,31 @@ ul.sub-menu-list li:hover {
   letter-spacing: 0.3px;
   font-size: 16px;
 }
+#productos-especializados .header {
+  height: 35%;
+  display: flex;
+  align-items: center;
+  font-size: 1vw;
+  padding-bottom: 5%;
+}
 #productos-especializados .mid {
   height: auto;
   width: 70%;
   margin: 0 auto;
-  padding: 15px;
   font-size: 100%;
+  height: 50%;
 }
 #productos-especializados .mid .title {
-  font-size: 3.5vw;
+  font-size: 2.5vw;
   font-family: "Colfax Bold";
   text-transform: uppercase;
   font-weight: normal;
   color: #222;
+  display: flex;
+  align-items: center;
 }
 #productos-especializados .mid .opciones_box {
-  margin-top: 5vh;
+  height: 60%;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-gap: 20px 20px;
@@ -1399,40 +1220,38 @@ ul.sub-menu-list li:hover {
 #productos-especializados .mid .opciones_box .opcion {
   background: #fff;
   border-radius: 3px;
-  padding: 2vh;
   box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
   font-family: "Open sans", sans-serif !important;
   font-weight: 700;
-  font-size: 1rem;
   text-align: left;
   color: #333;
   cursor: pointer;
   transition: all 300ms;
   text-transform: uppercase;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  align-items: center;
 }
 #productos-especializados .mid .opciones_box .opcion:hover {
   background: #084db0;
   color: #fff;
 }
 #productos-especializados .mid .opciones_box .opcion .icon {
-  width: 4vh;
-  height: 4vh;
+  width: 70%;
+  height: 70%;
   background: #fff;
-  padding: 15px;
   border-radius: 100%;
-  margin-right: 10px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
 #productos-especializados .mid .opciones_box .opcion .icon img {
-  width: 4vh;
-  height: 4vh;
-}
-#productos-especializados .mid .opciones_box .opcion .icon,
-#productos-especializados .mid .opciones_box .opcion .text {
-  display: inline-block;
-  vertical-align: middle;
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
 }
 #productos-especializados .mid .opciones_box .opcion .text {
-  font-size: 100%;
+  font-size: 1vw;
 }
 
 #otros-sectores {
@@ -1448,57 +1267,62 @@ ul.sub-menu-list li:hover {
 #otros-sectores::before {
   content: "";
   background: #123d7d;
-  width: 108%;
-  height: 32%;
+  width: 100%;
+  height: 15%;
   position: absolute;
-  bottom: -25%;
-  -webkit-transform: rotate(-3deg);
-  transform: rotate(-3deg);
-  -webkit-transform-origin: 3% 0;
-  transform-origin: 3% 0;
+  bottom: 0;
+  -webkit-transform: skewY(-3deg);
+  -moz-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
+  -o-transform: skewY(-3deg);
+  transform: skewY(-3deg);
 }
 #otros-sectores::after {
   content: "";
   background: #fff;
-  width: 103%;
-  height: 32%;
+  width: 100%;
+  height: 15%;
   position: absolute;
-  bottom: -27%;
-  left: -5px;
-  -webkit-transform: rotate(-2deg);
-  transform: rotate(-2deg);
-  -webkit-transform-origin: 3% 0;
-  transform-origin: 3% 0;
+  bottom: -40px;
+  -webkit-transform: skewY(-3deg);
+  -moz-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
+  -o-transform: skewY(-3deg);
+  transform: skewY(-3deg);
 }
 #otros-sectores .mid {
   width: 70%;
   margin: 0 auto;
-  height: 100%;
+  height: 80%;
   display: flex;
   align-items: center;
 }
 #otros-sectores .mid .tabla-sectores {
   width: 100%;
   display: grid;
+  height: 70%;
+  grid-gap: 50px 50px;
   grid-template-columns: 33.333% 33.333% 33.333%;
-  margin-top: -5vh;
 }
 #otros-sectores .mid .tabla-sectores .sector {
   background: #fff;
-  padding: 1vh;
-  margin: 4vh;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   border-radius: 3px;
   transition: all 300ms;
   text-align: center;
+  padding-bottom: 2%;
 }
-#otros-sectores .mid .tabla-sectores .sector button {
-  margin-bottom: 15px !important;
+#otros-sectores .mid .tabla-sectores .sector .btn-space {
+  height: 20%;
+  display: flex;
+  align-items: center;
+}
+#otros-sectores .mid .tabla-sectores .sector .btn-space button {
   border: none !important;
+  margin: 0 auto;
 }
 #otros-sectores .mid .tabla-sectores .sector .title {
-  padding: 0px 0px 15px 0;
   text-align: center;
   font-family: "Roboto", sans-serif !important;
   font-weight: 700;
@@ -1507,52 +1331,28 @@ ul.sub-menu-list li:hover {
   text-transform: uppercase;
   position: relative;
   letter-spacing: 0.2px;
-}
-#otros-sectores .mid .tabla-sectores .sector .title::before {
-  content: "";
-  width: 30%;
-  height: 1px;
-  background: #084db0;
-  position: absolute;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  text-align: center;
   margin: 0 auto;
-  top: 29px;
-  left: 34%;
+}
+#otros-sectores .mid .tabla-sectores .sector .title a {
+  margin: 0 auto;
 }
 #otros-sectores .mid .tabla-sectores .sector .img {
-  height: 120px;
+  height: 58%;
   width: 80%;
   margin: 0 auto;
   border-radius: 3px;
+  display: flex;
+  align-items: center;
 }
-#otros-sectores .mid .tabla-sectores .sector .servicios-publicos {
-  background: url(https://www.ambitojuridico.com/sites/default/files/facturas-servicios-luz-02jose-patino.jpg);
-  background-size: 100% auto;
-  background-position: center;
-}
-#otros-sectores .mid .tabla-sectores .sector .bares-restaurantes {
-  background: url(https://www.envista.es/wp-content/uploads/2017/01/fotografia-instalaciones-bares-restaurantes-asturias-001.jpg);
-  background-size: 100% auto;
-  background-position: center;
-}
-#otros-sectores .mid .tabla-sectores .sector .molinos {
-  background: url(https://st2.depositphotos.com/3203643/6160/i/950/depositphotos_61605219-stock-photo-plant-rice-mill.jpg);
-  background-size: 100% auto;
-  background-position: center;
-}
-#otros-sectores .mid .tabla-sectores .sector .hoteleria {
-  background: url(http://www.gediscovery.edu.pe/blog/wp-content/uploads/2017/02/cinco-razones-turismo-hoteleria-3.jpg);
-  background-size: 100% auto;
-  background-position: center;
-}
-#otros-sectores .mid .tabla-sectores .sector .estaciones-servicio {
-  background: url(http://markin.com.co/m/wp-content/uploads/2018/06/Venta-de-Estacion-de-Servicio-en-Cali-Estaciones-de-Servicio-en-Colombia-5.jpg);
-  background-size: 100% auto;
-  background-position: bottom;
-}
-#otros-sectores .mid .tabla-sectores .sector .industrial {
-  background: url(https://s.yimg.com/ny/api/res/1.2/kGTeNGAL03L6cLaiD4sK9A--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9NjIwO2g9NDEz/http://media.zenfs.com/en-US/homerun/zacks.com/992ea53b2628c14eec64474bc1ef965e);
-  background-size: 100% auto;
-  background-position: center;
+#otros-sectores .mid .tabla-sectores .sector .img img {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  border-radius: 3px;
 }
 #otros-sectores .mid .tabla-sectores .sector:hover {
   transform: translate3d(0, -5px, 0);
@@ -2053,7 +1853,7 @@ button:hover {
 .four-screen,
 .five-screen {
   width: 100%;
-  height: 100vh;
+  height: 100vh !important;
 }
 
 .six-screen {

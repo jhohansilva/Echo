@@ -48,12 +48,12 @@ function getBtnIframe() {
     setTimeout(function () {
         var iframe = document.getElementById('tidio-chat-iframe');
         var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-        var button = $(innerDoc.body).find('div#button');        
-        if($(button).width() == null) getBtnIframe();
+        var button = $(innerDoc.body).find('div#button');
+        if ($(button).width() == null) getBtnIframe();
         // console.log(button)        
         // console.log($(button).width())
         // console.log($(button).height())
-        
+
         var bottom = 50;
         $('.ticketContent').css({
             'width': $(button).width() + 'px',
@@ -118,20 +118,30 @@ $(function () {
             })
         } else {
             console.log(elemento)
-            if (elemento == 'estandar' || elemento == 'especializados') {
-                console.log('test');
-                $('html, body').animate({
-                    scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top
-                }, 1000);
-            } else if (elemento == 'salud' || elemento == 'publico') {
-                $('html, body').animate({
-                    scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 70
-                }, 1000);
-            } else if (elemento == 'clientes') {
+            // if (elemento == 'estandar' || elemento == 'especializados') {
+            //     console.log('test');
+            //     $('html, body').animate({
+            //         scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top
+            //     }, 1000);
+            // } else if (elemento == 'salud' || elemento == 'publico') {
+            //     $('html, body').animate({
+            //         scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 70
+            //     }, 1000);
+            // } else 
+            if (elemento == 'clientes') {
                 $('html, body').animate({
                     scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 250
                 }, 1000);
+            } else {
+                $('html, body').animate({
+                    scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top
+                }, 1000);
             }
+
+
+
+            // SEGUNDA EDICION
+
             // if (elemento == 'clientes') {
             //     if (screen.width < 769) {
             //         $('html, body').animate({
