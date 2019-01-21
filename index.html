@@ -41,7 +41,7 @@
                     <li data-scroll="clientes">
                         <a>Clientes</a>
                     </li>
-                    <li>
+                    <li class="btnDescargas">
                         <a href="#">Descargas</a>
                     </li>
                 </ul>
@@ -65,24 +65,31 @@
     <div id="footer">
         <div class="sub-footer">
             <div class="section">
-
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=Prosoft&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                    <style>.mapouter{text-align:right;height:100%;width:100%;margin-bottom: 10px;}.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style>
+                </div>
+                <a target="_blank" href="https://www.google.com.co/maps/place/PROSOFT+Productores+de+Software/@4.1685859,-73.618029,18.25z/data=!4m12!1m6!3m5!1s0x8e3e2db0777d8ba5:0xb9fa5c8ced396e7a!2sPROSOFT+Productores+de+Software!8m2!3d4.1685859!4d-73.618029!3m4!1s0x8e3e2db0777d8ba5:0xb9fa5c8ced396e7a!8m2!3d4.1685859!4d-73.618029?hl=es-419&authuser=0">Abrir
+                    en otra pestaña</a>
             </div>
             <div class="section">
                 <div class="title">Enlaces</div>
                 <div class="mid">
-                    <a>Nosotros</a><br>
-                    <a>Descargas</a><br>
-                    <a>Servicio al cliente</a><br>
-                    <a>Tickets</a><br>
+                    <a class="btnNosotros">Nosotros</a><br>
+                    <a class="btnDescargas">Descargas</a><br>
+                    <a data-popup='tickets'>Tickets</a><br>
                 </div>
             </div>
             <div class="section">
                 <div class="title">Productos</div>
                 <div class="mid">
-                    <a>Páquete estándar</a><br>
-                    <a>Sector salud</a><br>
-                    <a>Sector público</a><br>
-                    <a>Especializados</a><br>
+                    <a data-scroll="estandar">Páquete estándar</a><br>
+                    <a data-scroll="salud">Sector salud</a><br>
+                    <a data-scroll="publico">Sector público</a><br>
+                    <a data-scroll="especializados">Especializados</a><br>
                 </div>
             </div>
             <div class="section">
@@ -111,7 +118,8 @@
         </div>
     </div>
     <div id="end">
-        © Todos los derechos reservados - <b>Prosoft</b> 2019
+        © Todos los derechos reservados - por Jhohan Silva<br>
+        <b>Prosoft 2019</b>
     </div>
     <div class="scrollContent">
         <a href="#" id="scroll" style="display: none;">

@@ -1,0 +1,121 @@
+<div class="headerDescargas">
+    <a>Descargas</a>
+</div>
+<div class="search-exe">
+    <!-- <div style="text-align: left;margin: 0 auto;width: 15%;"> -->
+    <label for="busquedaExe">Filtrar por nombre: </label>
+    <input type="text" id="busquedaExe" />
+    <!-- </div> -->
+</div>
+<div class="content-descargas">
+    <!-- <div class="item-descarga">
+        <div class="image">
+            <div class="image-src">
+                <image src="../images/exe.svg"></image>
+            </div>
+        </div>
+        <div class="descripcion">
+            <div class="titulo">SC-ESTAMP</div>
+            <div class="separator">
+                <div class="data">
+                    <b>Modificado: </b> 19 January, 2019 20:31:40 <br>
+                    <b>Tamaño: </b> 840.37 KB <br>
+                    <b>Tipo: </b> .exe <br>
+                    <b>Ruta: </b>http://localhost/echo/descargas/SC-ESTAMP.exe <br>
+                </div>
+                <div class="btnDownload">
+                    <div class="btn-descargar">
+                        <i class="material-icons md-16">get_app</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
+<div id="loader_descargas">
+    <div class="loading_descargas"></div>
+</div>
+<script>
+    $(document).ready(function () {
+        loadExe();
+        $("#busquedaExe").keyup(function () {
+            elemento = this;
+            $.each($(".content-descargas .item-descarga .descripcion .titulo"), function () {
+                if ($(this).text().toLowerCase().indexOf($(elemento).val().toLowerCase()) === -1) {
+                    var elementTmp = $(this).closest('div.item-descarga');
+                    $(elementTmp).hide();
+                } else {
+                    var elementTmp = $(this).closest('div.item-descarga');
+                    $(elementTmp).show();
+                }
+            });
+        });
+    });
+    function loadExe() {
+        $.ajax({
+            url: './load_exe.php',
+            type: 'get',
+            contentType: 'application/json',
+            beforeSend: function (data) {
+                $('#loader_descargas').css('display', 'flex');
+            }
+            // success: function (data) {
+            // console.log(data);
+            // var obj = JSON.parse(data);
+            // $('.slider').html('');
+            // $.each(obj, function (index, value) {
+            //     $('.slider').append(
+            //         '<div class="image"><img src="images/logos/' + value + '"></div>'
+            //     );
+            // });
+
+            // if (screen.width < 769) {
+            //     $('.slider').slick({
+            //         slidesToShow: 2,
+            //         slidesToScroll: 2,
+            //         autoplay: false,
+            //         autoplaySpeed: 4000,
+            //     });
+            //     $('#clientes .slider .image').attr('style', 'width: 90%!important;');
+            // } else {
+            //     $('.slider').slick({
+            //         slidesToShow: 4,
+            //         slidesToScroll: 4,
+            //         autoplay: false,
+            //         autoplaySpeed: 4000,
+            //     });
+            // }
+            // }
+        }).done(function (data) {
+            $('#loader_descargas').fadeOut();
+            var list_exe = JSON.parse(data);
+            $.each(list_exe, function (index, value) {
+                $('.content-descargas').append(
+                    '<div class="item-descarga">'
+                    + '<div class="image">'
+                    + '<div class="image-src">'
+                    + '<image src="./images/exe.svg"></image>'
+                    + '</div>'
+                    + '</div>'
+                    + '<div class="descripcion">'
+                    + '<div class="titulo">' + value.nombre + '</div>'
+                    + '<div class="separator">'
+                    + '<div class="data">'
+                    + '<b>Tamaño: </b> ' + value.peso + ' <br>'
+                    + '<b>Modificado: </b>' + value.modificacion + '<br>'
+                    + '<b>Tipo: </b> .' + value.extension + ' <br>'
+                    + '<b>Ruta: </b><a href="' + value.direccion + '">' + value.direccion + '</a><br>'
+                    + '</div>'
+                    + '<div class="btnDownload">'
+                    + '<a href="' + value.direccion + '"><div class="btn-descargar">'
+                    + '<i class="material-icons md-16">get_app</i>'
+                    + '</div></a>'
+                    + '</div>'
+                    + '</div>'
+                    + '</div>'
+                    + '</div>'
+                );
+            });
+        });
+    }
+</script>

@@ -73,7 +73,8 @@ header {
         width: 100%;
         height: 100%;
         background-size: 100% auto;
-        margin-left: -21%;        
+        margin-left: -21%;     
+        background-repeat: no-repeat;   
       }
     }
   }
@@ -233,7 +234,7 @@ ul.sub-menu-list {
     }
 
     font-size: 110%;
-    width: 44%;
+    width: 40%;
     letter-spacing: -1px;
     font-family: "Open sans", sans-serif;
     // letter-spacing: 0.5px;
@@ -252,7 +253,7 @@ ul.sub-menu-list {
   max-height: 100%;  
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-gap: 20px 20px;
+  // grid-gap: 20px 20px;
   margin-top: -1%;
 }
 
@@ -264,11 +265,12 @@ ul.sub-menu-list {
   transition: all 300ms;
   position: relative;
   cursor: default;
+  margin: 2%;
 
   .image-info {
     background: aliceblue;
-    width: 34%;
-    height: 44%;
+    width: 40%;
+    height: 40%;
     border-radius: 150%;
     margin: 3% auto;
     display: flex;
@@ -695,7 +697,7 @@ ul.sub-menu-list {
       width: 100%;
       display: grid;
       height: 70%;
-      grid-gap: 50px 50px;      
+      // grid-gap: 50px 50px;      
       grid-template-columns: 33.333% 33.333% 33.333%;     
       
       .sector {
@@ -709,6 +711,7 @@ ul.sub-menu-list {
         transition: all 300ms;
         text-align: center;
         padding-bottom: 2%; 
+        margin: 5%;
         
         .btn-space{
           height: 20%;
@@ -791,7 +794,7 @@ ul.sub-menu-list {
 
 #clientes {
   width: 100%;
-  height: 56vh;
+  height:75%;
   margin: 0 auto;
   text-align: center;
   margin-top: -2%;
@@ -799,6 +802,8 @@ ul.sub-menu-list {
   font-family: "Roboto";
   padding-top: 4vh;
   background: #fff;
+  display: flex;
+  align-items: center;
 
   .title {
     font-size: 40px;
@@ -808,7 +813,7 @@ ul.sub-menu-list {
   .mid {
     width: 80%;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 20px 0 0 0;
   }
 
   .slider {
@@ -825,7 +830,7 @@ ul.sub-menu-list {
 
 #trabajemos {
   width: 70%;
-  height: 20vh;
+  height: 25%;
   padding: 0 5vh;
   background: #084db0;
   box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
@@ -840,17 +845,34 @@ ul.sub-menu-list {
   display: grid;
   grid-template-columns: 70% 30%;
 
+  .contactBtn{
+    display: flex;
+    align-items: center;
+
+    button{
+      margin: 0 auto;
+      padding: 20px 50px;
+      transition: all 300ms;
+      border: 2px solid #FFF;
+
+      &:hover{
+        background: transparent !important;        
+        color: #FFF!important;
+      }
+    }
+  }
+
   a{
-    font-size: 28px!important;
+    font-size: 28px;
   }
 }
 
 #footer {
   width: 100%;
   background: #14191f;
-  height: 40vh;
-  margin-top: -10vh;
-  padding-top: 10vh;
+  height: auto;
+  margin-top: -3%;
+  padding-top: 5%;
   display: flex;
   align-items: center;
 
@@ -861,8 +883,34 @@ ul.sub-menu-list {
     grid-template-columns: 30% 15% 15% 40%;
     margin: 0 auto;
     grid-gap: 0px 20px;
+    padding: 40px 0;
+
+    .section:nth-child(1){
+      // display: flex;
+      // align-items: center;
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      text-transform: uppercase;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.8);
+
+      &:hover{
+        color: rgba(255, 255, 255, 1);
+      }
+
+      img{
+        margin: 0 auto;
+        -webkit-filter:drop-shadow(0px 0px 3px #444);
+        filter: drop-shadow(0px 0px 3px #444);
+      }
+    }
 
     .section {
+
+      a{
+        cursor: pointer;
+      }
+
       .title {
         font-size: 1vw;
         color: #fff;
@@ -988,7 +1036,7 @@ button {
   transform: translateY(0px);
   transition: none 0s ease 0s;
   visibility: visible;
-  z-index: 999999999 !important;
+  z-index:9999999999999 !important;
   text-align: center;
 }
 
@@ -1058,11 +1106,17 @@ button {
   width: 100%;
   height: 300px;
   text-align: center;
-  line-height: 330px;
+  // line-height: 330px;
+  display: flex;
+  align-items: center;
   color: #000;
   font-size: 72px;
   text-transform: uppercase;
   font-family: "Colfax Bold";
+
+  a{
+    margin: 0 auto;
+  }
 }
 
 .navNosotros {
@@ -1320,9 +1374,181 @@ button {
 .four-screen,
 .five-screen {
   width: 100%;
-  height: 100vh!important;
+  height: 100vh;
 }
 
 .six-screen {
   height: 80vh;
 }
+
+
+
+.headerDescargas {
+  background: url(../images/packs-hero-bg.svg) repeat-x 0 50%, linear-gradient(to top right, #084db0 0%, #2979ff 100%);
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  // line-height: 330px;
+  display: flex;
+  align-items: center;
+  color: #FFF;
+  font-size: 72px;
+  text-transform: uppercase;
+  font-family: "Colfax Bold";
+
+  a{
+    margin: 0 auto;
+  }
+}
+
+.search-exe{
+  padding: 15px;
+  text-align: center;
+
+  label[for=busquedaExe]{
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-right: 15px;
+  }
+
+  #busquedaExe{
+    height: auto;
+    padding: 12px 0 12px 15px;    
+    border: none;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 1px;
+    outline: 0;
+    color: #444;
+    font-weight: 400;
+    font-size: 14px;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.content-descargas{
+  background: #f4f6fc;
+  width: 100%;
+  height: auto;
+  padding: 20px 0;
+  transition: all 1s;
+
+  .item-descarga{
+    width: 40%;
+    background: #FFF;
+    border-radius: 3px;    
+    margin: 0 auto;
+    box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
+    grid-template-columns: 20% 80%;
+    display: grid;
+    margin-bottom: 25px;
+    transition: all 1s;
+
+    &:hover{
+      box-shadow:inset 0 0px 0px 1px rgba(0,0,0,.08),0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);      
+    }
+    
+    .image{
+      border-right: 1px solid rgba(0,0,0,.08);
+      display: flex;
+      align-items: center;
+
+      .image-src{
+        width: 70%;
+        height: 70%;
+        background : aliceblue;
+        margin: 0 auto;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+
+        img{
+          margin: 0 auto;
+          width: 40%;
+          height: 40%;
+        }
+      }
+    }
+
+    .descripcion{
+      padding: 10px;
+
+      .titulo{
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        border-bottom: 1px solid rgba(0,0,0,.08);
+        padding-bottom: 10px;
+        padding-left: 20px;
+      }
+
+      .separator{
+        display: grid;
+        grid-template-columns: 80% 20%;
+      }
+
+      .btnDownload{
+        display: flex;
+        align-items: center;        
+
+        .btn-descargar{
+          width: 60px;
+          height: 60px;
+          margin: 0 auto;
+          border-radius: 100%;
+          display: flex;
+          align-items: center;
+          cursor: pointer;          
+          background-color: #1769ff; 
+          box-shadow: 0 2px 2px 0 rgba(23,105,255,.14), 0 3px 1px -2px rgba(23,105,255,.2), 0 1px 5px 0 rgba(23,105,255,.12);
+          transition: all 300ms;
+
+          &:hover{
+              background: #1449ab;
+          }
+
+          i{
+            margin: 0 auto; 
+            color: #FFF;
+            font-size: 24px;
+            transition: all 100ms;
+          }
+        }
+      }
+
+      .data{
+        padding: 10px 0px 0px 10px;
+      }
+    }
+  }
+}
+
+#loader_descargas{
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0 ;			
+  align-items: center;
+  display: none;
+  z-index: 99999999;
+}
+
+.loading_descargas {
+  border: 8px solid #fff;
+  border-top: 8px solid #1769ff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {0% { transform: rotate(0deg); }100% { transform: rotate(360deg); }}

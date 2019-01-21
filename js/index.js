@@ -1,13 +1,17 @@
 $(document).ready(function () {
-
-    $("main").load("content/inicio.html", function (response, status, xhr) {
-        if (status == "error") {
-            var msg = "<h4>Ha ocurrido un error: </h4>";
-            $("main").html(msg + "<h1 style='color:#f44336'>" + xhr.status + " " + xhr.statusText + "</h1>");
-        } else {
-            $("html, body").animate({ scrollTop: 0 }, "slow");
-        }
-    });
+    var jash = location.hash;    
+    if(jash == "#descargas"){
+        load_descargas();
+    }else{
+        $("main").load("content/inicio.html", function (response, status, xhr) {
+            if (status == "error") {
+                var msg = "<h4>Ha ocurrido un error: </h4>";
+                $("main").html(msg + "<h1 style='color:#f44336'>" + xhr.status + " " + xhr.statusText + "</h1>");
+            } else {
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+            }
+        });
+    }
     validarScroll();
     validarScrollBtnUp();
     loadBrands();
@@ -35,14 +39,35 @@ $(document).ready(function () {
                 $('.menu-list li').addClass('navNosotros');
                 $('#logo').addClass('logoNosotros');
                 $('#footer').addClass('footer-we');
-                if (screen.width < 768) toggleNav();
+                if (screen.width < 768) $('#menu').hide("slide", 300); $('#bg-black').hide("fade");
             }
         }).fadeIn('slow');
+    });
+
+
+    $('.btnDescargas').click(function () {
+        load_descargas();
     });
 
     getBtnIframe();
 
 });
+
+function load_descargas(){
+    $("main").load("content/descargas.html", function (response, status, xhr) {
+        if (status == "error") {
+            var msg = "<h4>Ha ocurrido un error: </h4>";
+            $("main").html(msg + "<h1 style='color:#f44336'>" + xhr.status + " " + xhr.statusText + "</h1>");
+        } else {
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            window.location.hash = 'descargas';
+            $('.menu-list li').addClass('navNosotros');
+            $('#logo').addClass('logoNosotros');
+            $('#footer').addClass('footer-we');
+            if (screen.width < 768) $('#menu').hide("slide", 300); $('#bg-black').hide("fade");
+        }
+    }).fadeIn('slow');
+}
 
 function getBtnIframe() {
     setTimeout(function () {
@@ -50,9 +75,6 @@ function getBtnIframe() {
         var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
         var button = $(innerDoc.body).find('div#button');
         if ($(button).width() == null) getBtnIframe();
-        // console.log(button)        
-        // console.log($(button).width())
-        // console.log($(button).height())
 
         var bottom = 50;
         $('.ticketContent').css({
@@ -94,7 +116,7 @@ $(function () {
         var origen = this;
         var jash = location.hash;
         var elemento = $(origen).data().scroll;
-        if (jash == "#nosotros") {
+        if (jash == "#nosotros" || jash == "#descargas") {
             $("main").load("content/inicio.html", function (response, status, xhr) {
                 if (status == "error") {
                     var msg = "<h4>Ha ocurrido un error: </h4>";
@@ -113,58 +135,27 @@ $(function () {
                     $('#logo').removeClass('logoNosotros');
                     $('#footer').removeClass('footer-we');
                     loadBrands();
-                    if (screen.width < 768) toggleNav();
+                    if (screen.width < 768) $('#menu').hide("slide", 300); $('#bg-black').hide("fade");
                 }
             })
-        } else {
-            console.log(elemento)
-            // if (elemento == 'estandar' || elemento == 'especializados') {
-            //     console.log('test');
-            //     $('html, body').animate({
-            //         scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top
-            //     }, 1000);
-            // } else if (elemento == 'salud' || elemento == 'publico') {
-            //     $('html, body').animate({
-            //         scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 70
-            //     }, 1000);
-            // } else 
+        } else {            
             if (elemento == 'clientes') {
                 $('html, body').animate({
-                    scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 250
+                    scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 200
                 }, 1000);
             } else {
-                $('html, body').animate({
-                    scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top
-                }, 1000);
+                if (screen.width < 768){
+                    $('html, body').animate({
+                        scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 70
+                    }, 1000);
+                }else{
+                    $('html, body').animate({
+                        scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top
+                    }, 1000);
+                }
             }
 
-
-
-            // SEGUNDA EDICION
-
-            // if (elemento == 'clientes') {
-            //     if (screen.width < 769) {
-            //         $('html, body').animate({
-            //             scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 100
-            //         }, 1000);
-            //         toggleNav();
-            //     } else {
-            //         $('html, body').animate({
-            //             scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 220
-            //         }, 1000);
-            //     }
-            // } else {
-            //     if (screen.width < 1025) {
-            //         $('html, body').animate({
-            //             scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top - 70
-            //         }, 1000);
-            //         if (screen.width < 769) toggleNav();
-            //     } else {
-            //         $('html, body').animate({
-            //             scrollTop: $('[data-scroll-producto~="' + elemento + '"]').offset().top
-            //         }, 1000);
-            //     }
-            // }
+            if (screen.width < 768) $('#menu').hide("slide", 300); $('#bg-black').hide("fade");
         }
     });
 });
@@ -229,6 +220,15 @@ function loadBrands() {
 
 $(function () {
     $(document).on('click', '.closeBtnPopup', function (event) {
+        $('body').removeClass('greyscreen-open');
+        $('#overlayPopup').fadeOut('fast', function () {
+            $('#popup').removeClass('popupTickets');
+            $('#popup .content').html('');
+        });
+
+    });
+
+    $(document).on('click', '#overlayPopup', function (event) {
         $('body').removeClass('greyscreen-open');
         $('#overlayPopup').fadeOut('fast', function () {
             $('#popup').removeClass('popupTickets');
