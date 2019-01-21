@@ -228,7 +228,7 @@
   }
 
   .content-descargas .item-descarga {
-    width: 80% !important;
+    width: 90% !important;
   }
 }
 @media (max-width: 376px) {
@@ -972,7 +972,7 @@ ul.menu-list li {
   display: inline-block;
   color: #999;
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
   font-size: 75%;
   cursor: pointer;
@@ -1457,7 +1457,7 @@ ul.sub-menu-list li:hover {
 #otros-sectores .mid .tabla-sectores {
   width: 100%;
   display: grid;
-  height: 70%;
+  height: 80%;
   grid-template-columns: 33.333% 33.333% 33.333%;
 }
 #otros-sectores .mid .tabla-sectores .sector {
@@ -1471,9 +1471,10 @@ ul.sub-menu-list li:hover {
   margin: 5%;
 }
 #otros-sectores .mid .tabla-sectores .sector .btn-space {
-  height: 20%;
+  height: 14%;
   display: flex;
   align-items: center;
+  padding: 2.5% 0;
 }
 #otros-sectores .mid .tabla-sectores .sector .btn-space button {
   border: none !important;
@@ -1507,7 +1508,7 @@ ul.sub-menu-list li:hover {
 }
 #otros-sectores .mid .tabla-sectores .sector .img img {
   width: 100%;
-  height: 100%;
+  height: 100px;
   max-height: 100%;
   border-radius: 3px;
 }
@@ -1558,7 +1559,7 @@ ul.sub-menu-list li:hover {
   padding: 0 5vh;
   background: #084db0;
   box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
-  font-size: 36px;
+  font-size: 32px;
   font-family: "Colfax Medium";
   color: #fff;
   position: relative;
@@ -1577,6 +1578,7 @@ ul.sub-menu-list li:hover {
   padding: 20px 50px;
   transition: all 300ms;
   border: 2px solid #FFF;
+  font-size: 1vw !important;
 }
 #trabajemos .contactBtn button:hover {
   background: transparent !important;
@@ -2106,7 +2108,7 @@ button:hover {
   transition: all 1s;
 }
 .content-descargas .item-descarga {
-  width: 40%;
+  width: 60%;
   background: #FFF;
   border-radius: 3px;
   margin: 0 auto;

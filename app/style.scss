@@ -158,7 +158,7 @@ ul.menu-list {
     display: inline-block;
     color: #999;
     font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     text-transform: uppercase;
     font-size: 75%;
     cursor: pointer;
@@ -696,7 +696,7 @@ ul.sub-menu-list {
     .tabla-sectores {
       width: 100%;
       display: grid;
-      height: 70%;
+      height: 80%;
       // grid-gap: 50px 50px;      
       grid-template-columns: 33.333% 33.333% 33.333%;     
       
@@ -714,9 +714,10 @@ ul.sub-menu-list {
         margin: 5%;
         
         .btn-space{
-          height: 20%;
+          height: 14%;
           display: flex;
           align-items: center;
+          padding: 2.5% 0;
 
           button {
             // margin-bottom: 15px !important;
@@ -745,16 +746,6 @@ ul.sub-menu-list {
             margin: 0 auto;
           }
 
-          // &::before {
-          //   content: "";
-          //   width: 30%;
-          //   height: 1px;
-          //   background: #084db0;
-          //   position: absolute;
-          //   margin: 0 auto;
-          //   top: 29px;
-          //   left: 34%;
-          // }
         }
 
         .img {
@@ -767,7 +758,7 @@ ul.sub-menu-list {
 
           img{            
             width: 100%;
-            height: 100%;
+            height: 100px;
             max-height: 100%;
             border-radius: 3px;
           }
@@ -834,7 +825,7 @@ ul.sub-menu-list {
   padding: 0 5vh;
   background: #084db0;
   box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
-  font-size: 36px;
+  font-size: 32px;
   font-family: "Colfax Medium";
   color: #fff;
   // line-height: 35px;
@@ -854,6 +845,7 @@ ul.sub-menu-list {
       padding: 20px 50px;
       transition: all 300ms;
       border: 2px solid #FFF;
+      font-size: 1vw!important;
 
       &:hover{
         background: transparent !important;        
@@ -1437,7 +1429,7 @@ button {
   transition: all 1s;
 
   .item-descarga{
-    width: 40%;
+    width: 60%;
     background: #FFF;
     border-radius: 3px;    
     margin: 0 auto;
