@@ -76,16 +76,16 @@ function getBtnIframe() {
         var button = $(innerDoc.body).find('div#button');
         if ($(button).width() == null) getBtnIframe();
 
-        var bottom = 50;
+        var bottom = 120;
         $('.ticketContent').css({
             'width': $(button).width() + 'px',
-            'height': $(button).height() + 'px',
+            'height': 'auto',
             'bottom': bottom + 'px'
         }).show('fade');
 
         $('.scrollContent').css({
             'width': $(button).width() + 'px',
-            'height': $(button).height() + 'px',
+            'height':'auto',
             'bottom': (bottom + 60) + 'px'
         });
     }, 5000)
