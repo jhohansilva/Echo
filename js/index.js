@@ -228,14 +228,14 @@ $(function () {
 
     });
 
-    $(document).on('click', '#overlayPopup', function (event) {
-        $('body').removeClass('greyscreen-open');
-        $('#overlayPopup').fadeOut('fast', function () {
-            $('#popup').removeClass('popupTickets');
-            $('#popup .content').html('');
-        });
+    // $(document).on('click', '#overlayPopup', function (event) {
+    //     $('body').removeClass('greyscreen-open');
+    //     $('#overlayPopup').fadeOut('fast', function () {
+    //         $('#popup').removeClass('popupTickets');
+    //         $('#popup .content').html('');
+    //     });
 
-    });
+    // });
 
     $(document).on('click', '[data-popup]', function (event) {
         var elemento = $(this).data().popup;

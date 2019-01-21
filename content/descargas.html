@@ -1,43 +1,133 @@
+<style>
+
+    .bgVerificar{
+        width: 100%;
+        height: auto;
+        background: #f4f6fc;
+        display: flex;
+        align-items: center;
+    }
+
+    #verificarUsuario{
+        width: 30%;
+        margin: 50px auto;
+        height: auto;
+        padding: 15px;
+        box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.06);
+        border-radius: 2px;
+        background: #FFF;
+    }
+
+    #verificarUsuario h3{
+        margin: 0;
+    }
+
+    #verificarUsuario hr{
+        border: .5px solid rgba(0,0,0,0.08);
+    }
+    #verificarUsuario label,#verificarUsuario input{
+        width: 100%;
+    }
+
+    #verificarUsuario label{
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.5);
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        text-transform: uppercase;
+        font-size: 11px;
+        margin-right: 15px;
+    }
+
+    #verificarUsuario input{
+        height: auto;
+        padding: 12px 0;    
+        border: none;
+        background: rgba(0, 0, 0, 0.03);
+        border-radius: 1px;
+        outline: 0;
+        color: #444;
+        font-weight: 400;
+        font-size: 14px;
+        box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.15);
+        margin-bottom: 15px;
+    }
+
+    #verificarUsuario .alert{
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        background: #F44336;
+        color: #FFF;
+        margin: 10px 0 0 0;
+        font-size: 14px;
+        display: none;
+    }
+</style>
 <div class="headerDescargas">
     <a>Descargas</a>
 </div>
-<div class="search-exe">
-    <!-- <div style="text-align: left;margin: 0 auto;width: 15%;"> -->
-    <label for="busquedaExe">Filtrar por nombre: </label>
-    <input type="text" id="busquedaExe" />
-    <!-- </div> -->
-</div>
-<div class="content-descargas">
-    <!-- <div class="item-descarga">
-        <div class="image">
-            <div class="image-src">
-                <image src="../images/exe.svg"></image>
-            </div>
-        </div>
-        <div class="descripcion">
-            <div class="titulo">SC-ESTAMP</div>
-            <div class="separator">
-                <div class="data">
-                    <b>Modificado: </b> 19 January, 2019 20:31:40 <br>
-                    <b>Tamaño: </b> 840.37 KB <br>
-                    <b>Tipo: </b> .exe <br>
-                    <b>Ruta: </b>http://localhost/echo/descargas/SC-ESTAMP.exe <br>
-                </div>
-                <div class="btnDownload">
-                    <div class="btn-descargar">
-                        <i class="material-icons md-16">get_app</i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
+<div class="bgVerificar">
+    <div id="verificarUsuario">
+        <h3>Control de seguridad</h3>
+        <hr>
+        <label for="usuario">Usuario: </label>
+        <input type="text" id="usuario" />
+        <label for="clave">Contraseña: </label>
+        <input type="password" id="clave" />
+        <button id="verificarIdentidad" style="float:right;font-size: 14px ">Verificar</button>
+        <div style="clear:both;"></div>
+
+        <div class="alert"></div>
+    </div>
 </div>
 <div id="loader_descargas">
     <div class="loading_descargas"></div>
 </div>
 <script>
     $(document).ready(function () {
-        loadExe();
+        $('#verificarIdentidad').click(function () {
+            var usuario = $('#usuario').val();
+            var clave = $('#clave').val();
+
+            if (usuario.length < 1 || clave.length < 1) {
+                $('#verificarUsuario .alert').html('Debes completar todos los campos').fadeIn();
+            } else {
+                var datosEnvio = new FormData();
+                datosEnvio.append('usuario', usuario);
+                datosEnvio.append('clave', clave);
+                $.ajax({
+                    url: './verificacion.php',
+                    type: 'POST',
+                    data: datosEnvio,
+                    processData: false,
+                    contentType: false,
+                    beforeSend: function (data) {
+                        $('#loader_descargas').css('display', 'flex');
+                    }
+                }).done(function (data) {
+                    $('#loader_descargas').fadeOut();
+                    var respuesta = JSON.parse(data);                    
+                    if (respuesta.codigo == "1") {
+                        $('#verificarUsuario .alert').html(respuesta.mensaje).fadeIn();
+                    } else if (respuesta.codigo == "0") {
+                        $('.bgVerificar').hide();
+                        $('main').append(
+                            '<div class="search-exe">'
+                            + '<label for="busquedaExe">Filtrar por nombre: </label>'
+                            + '<input type="text" id="busquedaExe" />'
+                            + '</div>'
+                            + '<div class="content-descargas"></div>'
+                        );
+
+                        loadExe();
+                    }
+                });
+            }
+        });
+    });
+
+    function loadExe() {
         $("#busquedaExe").keyup(function () {
             elemento = this;
             $.each($(".content-descargas .item-descarga .descripcion .titulo"), function () {
@@ -50,8 +140,7 @@
                 }
             });
         });
-    });
-    function loadExe() {
+
         $.ajax({
             url: './load_exe.php',
             type: 'get',
@@ -59,33 +148,6 @@
             beforeSend: function (data) {
                 $('#loader_descargas').css('display', 'flex');
             }
-            // success: function (data) {
-            // console.log(data);
-            // var obj = JSON.parse(data);
-            // $('.slider').html('');
-            // $.each(obj, function (index, value) {
-            //     $('.slider').append(
-            //         '<div class="image"><img src="images/logos/' + value + '"></div>'
-            //     );
-            // });
-
-            // if (screen.width < 769) {
-            //     $('.slider').slick({
-            //         slidesToShow: 2,
-            //         slidesToScroll: 2,
-            //         autoplay: false,
-            //         autoplaySpeed: 4000,
-            //     });
-            //     $('#clientes .slider .image').attr('style', 'width: 90%!important;');
-            // } else {
-            //     $('.slider').slick({
-            //         slidesToShow: 4,
-            //         slidesToScroll: 4,
-            //         autoplay: false,
-            //         autoplaySpeed: 4000,
-            //     });
-            // }
-            // }
         }).done(function (data) {
             $('#loader_descargas').fadeOut();
             var list_exe = JSON.parse(data);

@@ -20,21 +20,23 @@ foreach ($list_files as $item => $valor) {
     $url = 'http://sc-prosoft.com/descargas/' . $item;
     $info_file = pathinfo($url);
     
-    $size = formatSizeUnits($valor['size']);
-    $modificacion = $valor['day'] . ' ' . $valor['month'] . ' , ' . $valor['time'];       
-
-    $elementos[] = [
-        'id' => $i,
-        'nombre' => $info_file['filename'],
-        'extension' => $info_file['extension'],
-        'basename' => $info_file['basename'],
-        'peso' => $size,
-        'modificacion' => $modificacion,
-        'direccion' => $url
-    ];         
-
-    $i++;
-
+    $cut = substr($info_file['filename'], -2);
+    if($cut == '-T'){
+        $size = formatSizeUnits($valor['size']);
+        $modificacion = $valor['day'] . ' ' . $valor['month'] . ' , ' . $valor['time'];       
+    
+        $elementos[] = [
+            'id' => $i,
+            'nombre' => $info_file['filename'],
+            'extension' => $info_file['extension'],
+            'basename' => $info_file['basename'],
+            'peso' => $size,
+            'modificacion' => $modificacion,
+            'direccion' => $url
+        ];         
+    
+        $i++;
+    }
 }
 
 ftp_close($ftp_conn);
